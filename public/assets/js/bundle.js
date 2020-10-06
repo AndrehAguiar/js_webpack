@@ -101,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\nspan{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n}", "",{"version":3,"sources":["webpack://src/assets/css/form.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,aAAa;AACjB;AACA;IACI,mBAAmB;IACnB,eAAe;IACf,eAAe;IACf,gBAAgB;AACpB;AACA;IACI,iBAAiB;IACjB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;AACvB","sourcesContent":["form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\nspan{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: bold;\r\n}", "",{"version":3,"sources":["webpack://src/assets/css/form.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,aAAa;AACjB;AACA;IACI,mBAAmB;IACnB,eAAe;IACf,eAAe;IACf,gBAAgB;AACpB;AACA;IACI,iBAAiB;IACjB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,iBAAiB;AACrB;AACA;IACI,UAAU;IACV,iBAAiB;AACrB","sourcesContent":["form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: bold;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -760,7 +760,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCPF", function() { return getCPF; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHome", function() { return getHome; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPassword", function() { return getPassword; });
-/* harmony import */ var _modules_cpf_GenerateCPF__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/cpf/GenerateCPF */ "./src/modules/cpf/GenerateCPF.js");
+/* harmony import */ var _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/cpf/view/vwCPF */ "./src/modules/cpf/view/vwCPF.js");
 /* harmony import */ var _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../modules/password/view/vwPassword */ "./src/modules/password/view/vwPassword.js");
 /* harmony import */ var _modules_home_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../modules/home/Home */ "./src/modules/home/Home.js");
 
@@ -774,14 +774,13 @@ var getHome = function getHome() {
 };
 
 var getCPF = function getCPF() {
-  var generator = new _modules_cpf_GenerateCPF__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  container.innerText = generator.newCPF();
+  var clsForm = new _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  container.appendChild(clsForm.form);
 };
 
 var getPassword = function getPassword() {
   var clsForm = new _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_1__["default"]();
   container.appendChild(clsForm.form);
-  var formPass = document.getElementById('formPass');
 };
 
 switch (path) {
@@ -835,17 +834,66 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/modules/cpf/GenerateCPF.js":
-/*!****************************************!*\
-  !*** ./src/modules/cpf/GenerateCPF.js ***!
-  \****************************************/
+/***/ "./src/modules/cpf/control/ctrlCPF.js":
+/*!********************************************!*\
+  !*** ./src/modules/cpf/control/ctrlCPF.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _model_GenerateCPF__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../model/GenerateCPF */ "./src/modules/cpf/model/GenerateCPF.js");
+/* harmony import */ var _model_ValidCPF__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/ValidCPF */ "./src/modules/cpf/model/ValidCPF.js");
+
+
+
+var checkValue = function checkValue(event) {
+  var objCPF = new _model_ValidCPF__WEBPACK_IMPORTED_MODULE_1__["default"](event.target.value);
+  event.target.value = objCPF.formatCPF();
+  if (objCPF.cleanCPF.length === 11) return objCPF.validate();
+};
+
+var validate = function validate(result) {
+  if (result) {
+    inpCPF.style.backgroundColor = 'yellowgreen';
+    spnValidate.innerText = 'Valid CPF';
+    spnValidate.style.color = 'green';
+  } else {
+    inpCPF.style.backgroundColor = 'tomato';
+    spnValidate.innerText = 'Invalid CPF';
+    spnValidate.style.color = 'red';
+  }
+};
+
+var ctrlCPF = function ctrlCPF(event) {
+  switch (event.type) {
+    case 'keyup':
+      validate(checkValue(event));
+      break;
+
+    case 'submit':
+      var cpf = new _model_GenerateCPF__WEBPACK_IMPORTED_MODULE_0__["default"]();
+      var newCPF = cpf.newCPF();
+      return newCPF;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ctrlCPF);
+
+/***/ }),
+
+/***/ "./src/modules/cpf/model/GenerateCPF.js":
+/*!**********************************************!*\
+  !*** ./src/modules/cpf/model/GenerateCPF.js ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return GenerateCPF; });
-/* harmony import */ var _ValidCPF__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ValidCPF */ "./src/modules/cpf/ValidCPF.js");
+/* harmony import */ var _ValidCPF__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ValidCPF */ "./src/modules/cpf/model/ValidCPF.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -889,10 +937,10 @@ var GenerateCPF = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./src/modules/cpf/ValidCPF.js":
-/*!*************************************!*\
-  !*** ./src/modules/cpf/ValidCPF.js ***!
-  \*************************************/
+/***/ "./src/modules/cpf/model/ValidCPF.js":
+/*!*******************************************!*\
+  !*** ./src/modules/cpf/model/ValidCPF.js ***!
+  \*******************************************/
 /*! exports provided: default, ValidCPF */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -925,6 +973,15 @@ var ValidCPF = /*#__PURE__*/function () {
   }
 
   _createClass(ValidCPF, [{
+    key: "formatCPF",
+    value: function formatCPF() {
+      if (this.cleanCPF.length === 3) return "".concat(this.cleanCPF, ".");
+      if (this.cleanCPF.length === 6) return "".concat(this.cleanCPF.slice(0, 3), ".").concat(this.cleanCPF.slice(3, 6), ".");
+      if (this.cleanCPF.length === 9) return "".concat(this.cleanCPF.slice(0, 3), ".").concat(this.cleanCPF.slice(3, 6), ".").concat(this.cleanCPF.slice(6, 9), "-");
+      if (this.cleanCPF.length >= 10) return "".concat(this.cleanCPF.slice(0, 3), ".").concat(this.cleanCPF.slice(3, 6), ".").concat(this.cleanCPF.slice(6, 9), "-").concat(this.cleanCPF.slice(9, 12));
+      return this.cleanCPF;
+    }
+  }, {
     key: "isSequence",
     value: function isSequence() {
       return this.cleanCPF.charAt(0).repeat(this.cleanCPF.length) === this.cleanCPF;
@@ -976,6 +1033,73 @@ var ValidCPF = /*#__PURE__*/function () {
   return ValidCPF;
 }();
 
+
+
+
+/***/ }),
+
+/***/ "./src/modules/cpf/view/vwCPF.js":
+/*!***************************************!*\
+  !*** ./src/modules/cpf/view/vwCPF.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CpfForm; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _control_ctrlCPF__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlCPF */ "./src/modules/cpf/control/ctrlCPF.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+var CpfForm = function CpfForm() {
+  var _this = this;
+
+  _classCallCheck(this, CpfForm);
+
+  this.title = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createH1"])({
+    text: 'Valid CPF Generator'
+  });
+  this.form = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createForm"])({
+    id: 'formCPF',
+    method: 'dialog'
+  });
+  this.label = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+    id: 'lblCPF',
+    "for": 'inpCPF',
+    text: 'Type the CPF to check if is valid'
+  });
+  this.input = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
+    type: 'text',
+    id: 'inpCPF'
+  });
+  this.input.placeholder = '___.___.___-__';
+  this.input.maxLength = 14;
+  this.input.minLength = 14;
+  this.span = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createSpan"])({
+    id: 'spnValidate',
+    text: ''
+  });
+  this.button = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createButton"])({
+    type: 'submit',
+    id: 'btnSubmit',
+    text: 'Generate'
+  });
+  this.form.appendChild(this.title);
+  this.form.appendChild(this.label);
+  this.form.appendChild(this.input);
+  this.form.appendChild(this.span);
+  this.form.appendChild(this.button);
+  this.form.addEventListener('submit', function (event) {
+    _this.input.value = Object(_control_ctrlCPF__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
+  });
+  this.form.addEventListener('keyup', function (event) {
+    Object(_control_ctrlCPF__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
+  });
+};
 
 
 
@@ -1063,16 +1187,25 @@ var createPass = function createPass(password) {
   var newPassword = '';
 
   while (newPassword.length < password.len) {
-    var charCode = password.rand();
+    var charCode = _model_PassGenerator__WEBPACK_IMPORTED_MODULE_0__["default"].rand();
     var strChar = checkChar(charCode, password);
     if (strChar !== null) newPassword += strChar;
-    console.log(newPassword);
   }
 
   return newPassword;
 };
 
-var control = function control(child) {
+var createError = function createError(input, msg) {
+  console.log(input['special']);
+  var span = document.createElement('span');
+  span.classList.add('errorText');
+  span.id = 'error';
+  span.innerText = msg;
+  input['special'].insertAdjacentElement('afterend', span);
+};
+
+var ctrlPass = function ctrlPass(child) {
+  if (!child['error'] === false) child['error'].remove();
   var passLen = child['chars'].children['inpQtdChars'].value;
   var num = child['number'].children['inpNumber'].checked;
   var upper = child['upper'].children['inpUpper'].checked;
@@ -1085,10 +1218,16 @@ var control = function control(child) {
     'lower': lower,
     'special': special
   });
-  return createPass(password);
+
+  if (!num && !upper && !lower && !special) {
+    createError(child, 'Select an option.');
+    return 'Nothing Selected';
+  } else {
+    return createPass(password);
+  }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (control);
+/* harmony default export */ __webpack_exports__["default"] = (ctrlPass);
 
 /***/ }),
 
@@ -1155,7 +1294,7 @@ var PassGenerator = /*#__PURE__*/function () {
     });
   }
 
-  _createClass(PassGenerator, [{
+  _createClass(PassGenerator, null, [{
     key: "rand",
     value: function rand() {
       var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 48;
@@ -1202,16 +1341,26 @@ var PassForm = function PassForm() {
     id: 'spnPassword',
     text: ''
   });
+  this.lblChars = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+    id: 'chars',
+    "for": 'inpQtdChars',
+    text: 'Number of characters'
+  });
   this.input = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
     type: 'number',
     id: 'inpQtdChars',
     "class": 'qtdChars'
   });
   this.input.value = 6;
-  this.lblChars = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
-    id: 'chars',
-    "for": 'inpQtdChars',
-    text: 'Number of characters'
+  this.input.maxlength = '2';
+  this.input.max = 12;
+  this.input.minlength = '1';
+  this.input.min = 6;
+  this.input.required = true;
+  this.lblNumber = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+    id: 'number',
+    "for": 'inpNumber',
+    text: 'Numbers'
   });
   this.checkNumber = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
     type: 'checkbox',
@@ -1219,10 +1368,10 @@ var PassForm = function PassForm() {
     "class": 'Number'
   });
   this.checkNumber.checked = true;
-  this.lblNumber = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
-    id: 'number',
-    "for": 'inpNumber',
-    text: 'Numbers'
+  this.lblUpper = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+    id: 'upper',
+    "for": 'inpUpper',
+    text: 'Capital letters'
   });
   this.checkUpper = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
     type: 'checkbox',
@@ -1230,10 +1379,10 @@ var PassForm = function PassForm() {
     "class": 'Upper'
   });
   this.checkUpper.checked = true;
-  this.lblUpper = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
-    id: 'upper',
-    "for": 'inpUpper',
-    text: 'Capital letters'
+  this.lblLower = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+    id: 'lower',
+    "for": 'inpLower',
+    text: 'Small letters'
   });
   this.checkLower = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
     type: 'checkbox',
@@ -1241,10 +1390,10 @@ var PassForm = function PassForm() {
     "class": 'Lower'
   });
   this.checkLower.checked = true;
-  this.lblLower = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
-    id: 'lower',
-    "for": 'inpLower',
-    text: 'Small letters'
+  this.lblSpecial = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+    id: 'special',
+    "for": 'inpSpecial',
+    text: 'Special Characters'
   });
   this.checkSpecial = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
     type: 'checkbox',
@@ -1252,11 +1401,6 @@ var PassForm = function PassForm() {
     "class": 'Special'
   });
   this.checkSpecial.checked = true;
-  this.lblSpecial = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
-    id: 'special',
-    "for": 'inpSpecial',
-    text: 'Special Characters'
-  });
   this.btnSubmit = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createButton"])({
     type: 'submit',
     id: 'btnSubmit',
@@ -1276,6 +1420,7 @@ var PassForm = function PassForm() {
   this.lblSpecial.appendChild(this.checkSpecial);
   this.form.appendChild(this.btnSubmit);
   this.form.addEventListener('submit', function (event) {
+    event.preventDefault();
     event.target.children['spnPassword'].innerText = Object(_control_ctrlPassword__WEBPACK_IMPORTED_MODULE_1__["default"])(event.target.children);
   });
 };

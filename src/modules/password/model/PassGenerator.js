@@ -19,7 +19,7 @@ export default class PassGenerator {
             Array.from({ length: (127 - 123) }, (v, k) => k + 123);
     }
 
-    rand(min = 48, max = 126) {
+    static rand(min = 48, max = 126) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 }

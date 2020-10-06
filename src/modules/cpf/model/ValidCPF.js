@@ -8,6 +8,14 @@ export default class ValidCPF {
         });
     }
 
+    formatCPF() {
+        if (this.cleanCPF.length === 3) return `${this.cleanCPF}.`;
+        if (this.cleanCPF.length === 6) return `${this.cleanCPF.slice(0, 3)}.${this.cleanCPF.slice(3, 6)}.`;
+        if (this.cleanCPF.length === 9) return `${this.cleanCPF.slice(0, 3)}.${this.cleanCPF.slice(3, 6)}.${this.cleanCPF.slice(6, 9)}-`;
+        if (this.cleanCPF.length >= 10) return `${this.cleanCPF.slice(0, 3)}.${this.cleanCPF.slice(3, 6)}.${this.cleanCPF.slice(6, 9)}-${this.cleanCPF.slice(9, 12)}`;
+        return this.cleanCPF;
+    }
+
     isSequence() {
         return this.cleanCPF.charAt(0).repeat(this.cleanCPF.length) === this.cleanCPF;
     }

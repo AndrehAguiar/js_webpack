@@ -12,9 +12,17 @@ input{
     min-width: 1rem;
     min-height: 1rem;
 }
-span{
+#spnPassword{
     font-weight: bold;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: darkcyan;
+}
+#spnValidate{
+    font-weight: bold;
+}
+.errorText{
+    color: red;
+    font-weight: bold;
 }

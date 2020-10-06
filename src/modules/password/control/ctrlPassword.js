@@ -14,20 +14,29 @@ const checkChar = (charCode, password) => {
     if (password.special.includes(charCode) && password.specialChar) return String.fromCharCode(charCode);
     return strChar;
 }
+
 const createPass = (password) => {
     let newPassword = '';
 
     while (newPassword.length < password.len) {
-        let charCode = password.rand();
+        let charCode = PassGenerator.rand();
         let strChar = checkChar(charCode, password);
         if (strChar !== null) newPassword += strChar;
-        console.log(newPassword)
     }
     return newPassword;
 }
 
-const control = (child) => {
+const createError = (input, msg) => {
+    console.log(input['special']);
+    const span = document.createElement('span');
+    span.classList.add('errorText');
+    span.id = 'error';
+    span.innerText = msg;
+    input['special'].insertAdjacentElement('afterend', span);
+}
 
+const ctrlPass = (child) => {
+    if (!child['error'] === false) child['error'].remove()
     const passLen = child['chars'].children['inpQtdChars'].value;
     const num = child['number'].children['inpNumber'].checked;
     const upper = child['upper'].children['inpUpper'].checked;
@@ -42,7 +51,12 @@ const control = (child) => {
         'special': special
     });
 
-    return createPass(password);
+    if (!num && !upper && !lower && !special) {
+        createError(child, 'Select an option.');
+        return 'Nothing Selected'
+    } else {
+        return createPass(password);
+    }
 }
 
-export default control;
+export default ctrlPass;
