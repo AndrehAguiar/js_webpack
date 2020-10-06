@@ -1,0 +1,20 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    cursor: pointer;
+    padding: 1rem;
+}
+input{
+    margin-left: 0.3rem;
+    padding: 0.5rem;
+    min-width: 1rem;
+    min-height: 1rem;
+}
+span{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
