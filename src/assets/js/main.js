@@ -3,6 +3,7 @@ import 'regenerator-runtime/runtime';
 import CalcForm from '../../modules/calculator/view/vwCalculator';
 import CpfForm from '../../modules/cpf/view/vwCPF';
 import PassForm from '../../modules/password/view/vwPassword';
+import RegisterForm from '../../modules/register/view/vwForm';
 import BankForm from '../../modules/bank/view/vwBank';
 import { Home } from '../../modules/home/Home';
 
@@ -31,6 +32,11 @@ const getPassword = () => {
     container.appendChild(clsForm.form);
     container.classList.add('password');
 }
+const getRegister = () => {
+    const clsForm = new RegisterForm();
+    container.appendChild(clsForm.form);
+    container.classList.add('registerForm');
+}
 
 const getBank = () => {
     const clsForm = new BankForm();
@@ -52,10 +58,13 @@ switch (path) {
     case '/public/password/':
         getPassword();
         break;
+    case '/public/register/':
+        getRegister();
+        break;
     case '/public/bank/':
         getBank();
         break;
     default:
         getHome();
 }
-export { getCPF, getHome, getPassword, getBank, getCalculator };
+export { getCPF, getHome, getPassword, getBank, getCalculator, getRegister };

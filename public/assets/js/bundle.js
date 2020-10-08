@@ -14703,7 +14703,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#btnSubmit{\r\n    color: var(--primary);\r\n    text-transform: uppercase;\r\n    background-color: var(--backGround);\r\n    box-shadow: var(--contentShadown);\r\n}\r\n#btnSubmit:hover{\r\n    background-color: darkcyan;\r\n    box-shadow: var(--contHovShadown);\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: bold;\r\n}", "",{"version":3,"sources":["webpack://src/assets/css/form.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,aAAa;AACjB;AACA;IACI,mBAAmB;IACnB,eAAe;IACf,eAAe;IACf,gBAAgB;AACpB;AACA;IACI,qBAAqB;IACrB,yBAAyB;IACzB,mCAAmC;IACnC,iCAAiC;AACrC;AACA;IACI,0BAA0B;IAC1B,iCAAiC;AACrC;AACA;IACI,iBAAiB;IACjB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,iBAAiB;AACrB;AACA;IACI,UAAU;IACV,iBAAiB;AACrB","sourcesContent":["form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#btnSubmit{\r\n    color: var(--primary);\r\n    text-transform: uppercase;\r\n    background-color: var(--backGround);\r\n    box-shadow: var(--contentShadown);\r\n}\r\n#btnSubmit:hover{\r\n    background-color: darkcyan;\r\n    box-shadow: var(--contHovShadown);\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: bold;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#btnSubmit{\r\n    color: var(--primary);\r\n    text-transform: uppercase;\r\n    background-color: var(--backGround);\r\n    box-shadow: var(--contentShadown);\r\n}\r\n#btnSubmit:hover{\r\n    background-color: darkcyan;\r\n    box-shadow: var(--contHovShadown);\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: 400;\r\n    font-size:small;\r\n}", "",{"version":3,"sources":["webpack://src/assets/css/form.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,aAAa;AACjB;AACA;IACI,mBAAmB;IACnB,eAAe;IACf,eAAe;IACf,gBAAgB;AACpB;AACA;IACI,qBAAqB;IACrB,yBAAyB;IACzB,mCAAmC;IACnC,iCAAiC;AACrC;AACA;IACI,0BAA0B;IAC1B,iCAAiC;AACrC;AACA;IACI,iBAAiB;IACjB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,iBAAiB;AACrB;AACA;IACI,UAAU;IACV,gBAAgB;IAChB,eAAe;AACnB","sourcesContent":["form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#btnSubmit{\r\n    color: var(--primary);\r\n    text-transform: uppercase;\r\n    background-color: var(--backGround);\r\n    box-shadow: var(--contentShadown);\r\n}\r\n#btnSubmit:hover{\r\n    background-color: darkcyan;\r\n    box-shadow: var(--contHovShadown);\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: 400;\r\n    font-size:small;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -16221,7 +16221,7 @@ var Dom = function Dom() {
 /*!*******************************!*\
   !*** ./src/assets/js/main.js ***!
   \*******************************/
-/*! exports provided: getCPF, getHome, getPassword, getBank, getCalculator */
+/*! exports provided: getCPF, getHome, getPassword, getBank, getCalculator, getRegister */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16231,6 +16231,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPassword", function() { return getPassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBank", function() { return getBank; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCalculator", function() { return getCalculator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRegister", function() { return getRegister; });
 /* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/stable */ "./node_modules/core-js/stable/index.js");
 /* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
@@ -16238,8 +16239,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_calculator_view_vwCalculator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../modules/calculator/view/vwCalculator */ "./src/modules/calculator/view/vwCalculator.js");
 /* harmony import */ var _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../modules/cpf/view/vwCPF */ "./src/modules/cpf/view/vwCPF.js");
 /* harmony import */ var _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../modules/password/view/vwPassword */ "./src/modules/password/view/vwPassword.js");
-/* harmony import */ var _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/bank/view/vwBank */ "./src/modules/bank/view/vwBank.js");
-/* harmony import */ var _modules_home_Home__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/home/Home */ "./src/modules/home/Home.js");
+/* harmony import */ var _modules_register_view_vwForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/register/view/vwForm */ "./src/modules/register/view/vwForm.js");
+/* harmony import */ var _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/bank/view/vwBank */ "./src/modules/bank/view/vwBank.js");
+/* harmony import */ var _modules_home_Home__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/home/Home */ "./src/modules/home/Home.js");
+
 
 
 
@@ -16251,7 +16254,7 @@ var path = window.location.pathname;
 var container = document.querySelector('.container');
 
 var getHome = function getHome() {
-  container.innerHTML = _modules_home_Home__WEBPACK_IMPORTED_MODULE_6__["Home"];
+  container.innerHTML = _modules_home_Home__WEBPACK_IMPORTED_MODULE_7__["Home"];
 };
 
 var getCalculator = function getCalculator() {
@@ -16272,8 +16275,14 @@ var getPassword = function getPassword() {
   container.classList.add('password');
 };
 
+var getRegister = function getRegister() {
+  var clsForm = new _modules_register_view_vwForm__WEBPACK_IMPORTED_MODULE_5__["default"]();
+  container.appendChild(clsForm.form);
+  container.classList.add('registerForm');
+};
+
 var getBank = function getBank() {
-  var clsForm = new _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_5__["default"]();
+  var clsForm = new _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_6__["default"]();
   container.appendChild(clsForm.form);
   container.classList.add('bank');
   clsForm.form.insertAdjacentElement('afterend', clsForm.h2);
@@ -16294,6 +16303,10 @@ switch (path) {
 
   case '/public/password/':
     getPassword();
+    break;
+
+  case '/public/register/':
+    getRegister();
     break;
 
   case '/public/bank/':
@@ -18275,6 +18288,7 @@ var menu = {
   calculator: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getCalculator"],
   cpf: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getCPF"],
   password: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getPassword"],
+  register: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getRegister"],
   bank: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getBank"]
 };
 
@@ -18561,6 +18575,463 @@ var PassForm = function PassForm() {
   this.form.addEventListener('submit', function (event) {
     event.preventDefault();
     event.target.children['spnPassword'].innerText = Object(_control_ctrlPassword__WEBPACK_IMPORTED_MODULE_1__["default"])(event.target.children);
+  });
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/register/control/ctrlRegister.js":
+/*!******************************************************!*\
+  !*** ./src/modules/register/control/ctrlRegister.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ControlRegister; });
+/* harmony import */ var _model_ValidForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../model/ValidForm */ "./src/modules/register/model/ValidForm.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var ControlRegister = /*#__PURE__*/function (_ValidForm) {
+  _inherits(ControlRegister, _ValidForm);
+
+  var _super = _createSuper(ControlRegister);
+
+  function ControlRegister() {
+    var _this;
+
+    _classCallCheck(this, ControlRegister);
+
+    _this = _super.call(this, _model_ValidForm__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.form = document.querySelector('#registerForm');
+
+    _this.handleSubmit = function (e) {
+      e.preventDefault();
+
+      var validInputs = _this.isValidInputs();
+
+      var validPassword = _this.isValidPassowds();
+
+      if (validInputs && validPassword) {
+        alert('Form submitted');
+
+        _this.form.submit();
+      }
+    };
+
+    _this.isValidPassowds = function () {
+      var isValid = true;
+
+      var passowrd = _this.form.querySelector('#inpPassword');
+
+      var rePassowrd = _this.form.querySelector('#inpConfirmPass');
+
+      if (passowrd.value !== rePassowrd.value) {
+        isValid = false;
+
+        _this.createError(passowrd, 'Passwords are not the same.');
+
+        _this.createError(rePassowrd, 'Passwords are not the same.');
+      }
+
+      if (passowrd.value.length < 6 || passowrd.value.length > 12) {
+        isValid = false;
+
+        _this.createError(passowrd, 'Password must be 6 to 12 characters long.');
+      }
+
+      return isValid;
+    };
+
+    _this.isValidInputs = function () {
+      var isValid = true;
+
+      var _iterator = _createForOfIteratorHelper(_this.form.querySelectorAll('.errorText')),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var errorText = _step.value;
+          errorText.remove();
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      var _iterator2 = _createForOfIteratorHelper(_this.form.querySelectorAll('.validate')),
+          _step2;
+
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var input = _step2.value;
+          var label = input.previousElementSibling.innerText;
+
+          if (!input.value) {
+            _this.createError(input, "The \"".concat(label.slice(0, -1), "\" cant be empty."));
+
+            isValid = false;
+          }
+
+          if (input.classList.contains('inpCPF')) {
+            console.log(_this.validateCPF);
+            if (!_this.validateCPF(input)) isValid = false;
+          }
+
+          if (input.classList.contains('inpLogin')) {
+            if (!_this.validateUser(input)) isValid = false;
+          }
+        }
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
+
+      return isValid;
+    };
+
+    return _this;
+  }
+
+  return ControlRegister;
+}(_model_ValidForm__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./src/modules/register/model/ValidCPF.js":
+/*!************************************************!*\
+  !*** ./src/modules/register/model/ValidCPF.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ValidCPF; });
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var ValidCPF = /*#__PURE__*/function () {
+  function ValidCPF() {
+    var _this = this;
+
+    _classCallCheck(this, ValidCPF);
+
+    this.cleanCPF = function (postedCPF) {
+      _this.cleanCPF = postedCPF.replace(/\D+/g, '');
+    };
+  }
+
+  _createClass(ValidCPF, [{
+    key: "isSequence",
+    value: function isSequence() {
+      return this.cleanCPF.charAt(0).repeat(this.cleanCPF.length) === this.cleanCPF;
+    }
+  }, {
+    key: "cpfGenerate",
+    value: function cpfGenerate() {
+      var cpfPart = this.cleanCPF.slice(0, -2);
+      var digitOne = ValidCPF.generateDigit(cpfPart);
+      var digitTwo = ValidCPF.generateDigit(cpfPart + digitOne);
+      this.newCPF = "".concat(cpfPart).concat(digitOne).concat(digitTwo);
+    }
+  }, {
+    key: "validate",
+    value: function validate() {
+      if (!this.cleanCPF) return false;
+      if (typeof this.cleanCPF !== 'string') return false;
+      if (this.cleanCPF.length !== 11) return false;
+      if (this.isSequence()) return false;
+      this.cpfGenerate();
+      return this.newCPF === this.cleanCPF;
+    }
+  }], [{
+    key: "generateDigit",
+    value: function generateDigit(cpfPart) {
+      var total = 0;
+      var decrement = cpfPart.length + 1;
+
+      var _iterator = _createForOfIteratorHelper(cpfPart),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var strNumeric = _step.value;
+          total += decrement * Number(strNumeric);
+          decrement--;
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      var digit = 11 - total % 11;
+      return digit <= 9 ? String(digit) : '0';
+    }
+  }]);
+
+  return ValidCPF;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/modules/register/model/ValidForm.js":
+/*!*************************************************!*\
+  !*** ./src/modules/register/model/ValidForm.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ValidForm; });
+/* harmony import */ var _ValidCPF_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ValidCPF.js */ "./src/modules/register/model/ValidCPF.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var ValidForm = /*#__PURE__*/function (_ValidCPF) {
+  _inherits(ValidForm, _ValidCPF);
+
+  var _super = _createSuper(ValidForm);
+
+  function ValidForm() {
+    _classCallCheck(this, ValidForm);
+
+    return _super.call(this, _ValidCPF_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+  }
+
+  _createClass(ValidForm, [{
+    key: "validateUser",
+    value: function validateUser(input) {
+      var user = input.value;
+      var isValid = true;
+
+      if (user.length < 3 || user.length > 12) {
+        this.createError(input, 'Username must be 3 to 12 characters long.');
+        isValid = false;
+      }
+
+      if (!user.match(/^[a-zA-Z0-9]+$/g)) {
+        this.createError(input, 'Username must have only letters and/or numbers.');
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  }, {
+    key: "validateCPF",
+    value: function validateCPF(input) {
+      this.cleanCPF(input.value);
+
+      if (!this.validate()) {
+        this.createError(input, 'Invalid CPF');
+        return false;
+      }
+
+      return true;
+    }
+  }, {
+    key: "createError",
+    value: function createError(input, msg) {
+      var div = document.createElement('div');
+      div.innerText = msg;
+      div.classList.add('errorText');
+      input.insertAdjacentElement('afterend', div);
+    }
+  }]);
+
+  return ValidForm;
+}(_ValidCPF_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./src/modules/register/view/vwForm.js":
+/*!*********************************************!*\
+  !*** ./src/modules/register/view/vwForm.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return RegiterForm; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _control_ctrlRegister__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlRegister */ "./src/modules/register/control/ctrlRegister.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+var RegiterForm = function RegiterForm() {
+  _classCallCheck(this, RegiterForm);
+
+  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  this.title = this.dom.createH1({
+    text: 'Register Form'
+  });
+  this.form = this.dom.createForm({
+    id: 'registerForm',
+    action: '',
+    method: 'dialog'
+  });
+  this.lblName = this.dom.createLabel({
+    "for": 'inpName',
+    id: 'lbName',
+    text: 'Name:'
+  });
+  this.inpName = this.dom.createInput({
+    type: 'text',
+    id: 'inpName'
+  });
+  this.inpName.className = 'validate';
+  this.inpName.placeholder = 'Type your name';
+  this.lblLastName = this.dom.createLabel({
+    "for": 'inpLastName',
+    id: 'lbLastName',
+    text: 'Last Name:'
+  });
+  this.inpLastName = this.dom.createInput({
+    type: 'text',
+    id: 'inpLastName'
+  });
+  this.inpLastName.className = 'validate';
+  this.inpLastName.placeholder = 'Type your last name';
+  this.lblCPF = this.dom.createLabel({
+    id: 'lblCPF',
+    "for": 'inpCPF',
+    text: 'Type the CPF:'
+  });
+  this.inpCPF = this.dom.createInput({
+    type: 'text',
+    id: 'inpCPF'
+  });
+  this.inpCPF.className = 'validate';
+  this.inpCPF.classList.add('inpCPF');
+  this.inpCPF.placeholder = '___.___.___-__';
+  this.inpCPF.maxLength = 14;
+  this.inpCPF.minLength = 14;
+  this.lblUser = this.dom.createLabel({
+    "for": 'inpLogin',
+    id: 'lbLogin',
+    text: 'Username:'
+  });
+  this.inpUser = this.dom.createInput({
+    type: 'text',
+    id: 'inpLogin'
+  });
+  this.inpUser.className = 'validate';
+  this.inpUser.placeholder = 'Create a login user';
+  this.lblPass = this.dom.createLabel({
+    "for": 'inpPassord',
+    id: 'lbPassword',
+    text: 'Password:'
+  });
+  this.inpPass = this.dom.createInput({
+    type: 'password',
+    id: 'inpPassword'
+  });
+  this.inpPass.className = 'validate';
+  this.inpPass.placeholder = 'Create a password';
+  this.lblConfirmPass = this.dom.createLabel({
+    "for": 'inpConfirmPass',
+    id: 'lbConfirmPass',
+    text: 'Confirm Password:'
+  });
+  this.inpConfirmPass = this.dom.createInput({
+    type: 'password',
+    id: 'inpConfirmPass'
+  });
+  this.inpConfirmPass.className = 'validate';
+  this.inpConfirmPass.placeholder = 'Retype the password';
+  this.btnSubmit = this.dom.createButton({
+    type: 'submit',
+    id: 'btnSubmit',
+    text: 'Register'
+  });
+  this.form.appendChild(this.title);
+  this.form.appendChild(this.lblName);
+  this.form.appendChild(this.inpName);
+  this.form.appendChild(this.lblLastName);
+  this.form.appendChild(this.inpLastName);
+  this.form.appendChild(this.lblCPF);
+  this.form.appendChild(this.inpCPF);
+  this.form.appendChild(this.lblUser);
+  this.form.appendChild(this.inpUser);
+  this.form.appendChild(this.lblPass);
+  this.form.appendChild(this.inpPass);
+  this.form.appendChild(this.lblConfirmPass);
+  this.form.appendChild(this.inpConfirmPass);
+  this.form.appendChild(this.btnSubmit);
+  this.form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var control = new _control_ctrlRegister__WEBPACK_IMPORTED_MODULE_1__["default"]();
+    control.handleSubmit(event);
   });
 };
 
