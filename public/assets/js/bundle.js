@@ -86,6 +86,28 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/assets/css/bank.css":
+/*!***********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/assets/css/bank.css ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".bank>#option>h1{\r\n    border: none;\r\n    background-color: var(--backGround);\r\n    padding: 1rem;\r\n    margin: 0.8rem 0;\r\n    color: whitesmoke;\r\n    border-radius: 0.3rem 0.3rem 0 0;\r\n}\r\n.bank>h2{\r\n    padding: 1rem;\r\n    text-align: left;\r\n    max-width: 25rem;\r\n}\r\n.bank>h3{\r\n    text-align: right;\r\n    margin-top: -3.5rem;\r\n}\r\n#barOption>label{\r\n    padding: 1rem;\r\n}\r\n\r\n#barOption>label,#barOption>label>input, #barOption>button{\r\n    cursor: pointer;\r\n}\r\n\r\n#option{\r\n    width: 40%;\r\n    min-width: 25rem;\r\n    max-width: 50em;\r\n    margin: 0 auto;\r\n}\r\n\r\n#barOption>input{\r\n    padding: 0.5rem;\r\n}\r\n#option, #optAccount{\r\n    display: flex;\r\n    flex-direction: column;\r\n    text-align: center;\r\n}\r\n#barOption>label{\r\n    background-color: var(--btnHover);\r\n    \r\n}\r\n#barAccount>label{\r\n    background-color: var(--btnPrimary);\r\n    padding: 0.5rem;\r\n\r\n}\r\n#barAccount>label:first-of-type{\r\n    border-radius: 5rem 0 0 5rem;\r\n}\r\n#barAccount>label:last-of-type{\r\n    border-radius: 0 5rem 5rem 0;\r\n}\r\n#barOption>label, #barAccount>label{\r\n    box-shadow: var(--contHovShadown);\r\n}\r\n\r\n#barOption>label:hover, #barAccount>label:hover{\r\n    box-shadow: var(--contentShadown);\r\n}\r\n\r\n#barOption>label>input, #barAccount>label>input{\r\n    display: none;\r\n}\r\n\r\n#content{\r\n    font-weight: bold;\r\n    display: flex;\r\n    padding: 1rem;\r\n    flex-direction: row;\r\n    justify-content: space-between;\r\n    max-width: 30rem;\r\n    margin: 0 auto;\r\n}\r\n#bankForm{\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n#bankForm>label{\r\n    padding: 0.5rem;\r\n    font-size: 0.8rem;\r\n    background-color: lightgrey;\r\n    box-shadow: var(--contHovShadown);\r\n    font-weight: bold;\r\n}\r\n#bankForm>label:hover{\r\n    background-color: gray;\r\n    box-shadow: 0 0.1rem 0.1rem gray;\r\n}\r\n#bankForm>div{\r\n    display: flex;\r\n    flex-direction: row;\r\n    width: 65%;\r\n}\r\n#bankForm>div>input{\r\n    max-width: 230%;\r\n    min-width: 7rem;\r\n    text-align: right;\r\n    font-size: 1.5rem;\r\n}\r\n#bankForm>div>button{\r\n    width: 6.5rem;\r\n    text-transform: uppercase;\r\n    font-size: 0.8rem;\r\n    border-radius: 0 5rem 5rem 0;\r\n    background-color: var(--backGround);\r\n    color: whitesmoke;\r\n}\r\n#bankForm>div>button:hover{\r\n    background-color: yellowgreen;\r\n    color: black;\r\n}\r\n#bankForm>div>button:focus{\r\n    outline: none;\r\n}", "",{"version":3,"sources":["webpack://src/assets/css/bank.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,mCAAmC;IACnC,aAAa;IACb,gBAAgB;IAChB,iBAAiB;IACjB,gCAAgC;AACpC;AACA;IACI,aAAa;IACb,gBAAgB;IAChB,gBAAgB;AACpB;AACA;IACI,iBAAiB;IACjB,mBAAmB;AACvB;AACA;IACI,aAAa;AACjB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,UAAU;IACV,gBAAgB;IAChB,eAAe;IACf,cAAc;AAClB;;AAEA;IACI,eAAe;AACnB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,kBAAkB;AACtB;AACA;IACI,iCAAiC;;AAErC;AACA;IACI,mCAAmC;IACnC,eAAe;;AAEnB;AACA;IACI,4BAA4B;AAChC;AACA;IACI,4BAA4B;AAChC;AACA;IACI,iCAAiC;AACrC;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,aAAa;IACb,mBAAmB;IACnB,8BAA8B;IAC9B,gBAAgB;IAChB,cAAc;AAClB;AACA;IACI,aAAa;IACb,mBAAmB;AACvB;AACA;IACI,eAAe;IACf,iBAAiB;IACjB,2BAA2B;IAC3B,iCAAiC;IACjC,iBAAiB;AACrB;AACA;IACI,sBAAsB;IACtB,gCAAgC;AACpC;AACA;IACI,aAAa;IACb,mBAAmB;IACnB,UAAU;AACd;AACA;IACI,eAAe;IACf,eAAe;IACf,iBAAiB;IACjB,iBAAiB;AACrB;AACA;IACI,aAAa;IACb,yBAAyB;IACzB,iBAAiB;IACjB,4BAA4B;IAC5B,mCAAmC;IACnC,iBAAiB;AACrB;AACA;IACI,6BAA6B;IAC7B,YAAY;AAChB;AACA;IACI,aAAa;AACjB","sourcesContent":[".bank>#option>h1{\r\n    border: none;\r\n    background-color: var(--backGround);\r\n    padding: 1rem;\r\n    margin: 0.8rem 0;\r\n    color: whitesmoke;\r\n    border-radius: 0.3rem 0.3rem 0 0;\r\n}\r\n.bank>h2{\r\n    padding: 1rem;\r\n    text-align: left;\r\n    max-width: 25rem;\r\n}\r\n.bank>h3{\r\n    text-align: right;\r\n    margin-top: -3.5rem;\r\n}\r\n#barOption>label{\r\n    padding: 1rem;\r\n}\r\n\r\n#barOption>label,#barOption>label>input, #barOption>button{\r\n    cursor: pointer;\r\n}\r\n\r\n#option{\r\n    width: 40%;\r\n    min-width: 25rem;\r\n    max-width: 50em;\r\n    margin: 0 auto;\r\n}\r\n\r\n#barOption>input{\r\n    padding: 0.5rem;\r\n}\r\n#option, #optAccount{\r\n    display: flex;\r\n    flex-direction: column;\r\n    text-align: center;\r\n}\r\n#barOption>label{\r\n    background-color: var(--btnHover);\r\n    \r\n}\r\n#barAccount>label{\r\n    background-color: var(--btnPrimary);\r\n    padding: 0.5rem;\r\n\r\n}\r\n#barAccount>label:first-of-type{\r\n    border-radius: 5rem 0 0 5rem;\r\n}\r\n#barAccount>label:last-of-type{\r\n    border-radius: 0 5rem 5rem 0;\r\n}\r\n#barOption>label, #barAccount>label{\r\n    box-shadow: var(--contHovShadown);\r\n}\r\n\r\n#barOption>label:hover, #barAccount>label:hover{\r\n    box-shadow: var(--contentShadown);\r\n}\r\n\r\n#barOption>label>input, #barAccount>label>input{\r\n    display: none;\r\n}\r\n\r\n#content{\r\n    font-weight: bold;\r\n    display: flex;\r\n    padding: 1rem;\r\n    flex-direction: row;\r\n    justify-content: space-between;\r\n    max-width: 30rem;\r\n    margin: 0 auto;\r\n}\r\n#bankForm{\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n#bankForm>label{\r\n    padding: 0.5rem;\r\n    font-size: 0.8rem;\r\n    background-color: lightgrey;\r\n    box-shadow: var(--contHovShadown);\r\n    font-weight: bold;\r\n}\r\n#bankForm>label:hover{\r\n    background-color: gray;\r\n    box-shadow: 0 0.1rem 0.1rem gray;\r\n}\r\n#bankForm>div{\r\n    display: flex;\r\n    flex-direction: row;\r\n    width: 65%;\r\n}\r\n#bankForm>div>input{\r\n    max-width: 230%;\r\n    min-width: 7rem;\r\n    text-align: right;\r\n    font-size: 1.5rem;\r\n}\r\n#bankForm>div>button{\r\n    width: 6.5rem;\r\n    text-transform: uppercase;\r\n    font-size: 0.8rem;\r\n    border-radius: 0 5rem 5rem 0;\r\n    background-color: var(--backGround);\r\n    color: whitesmoke;\r\n}\r\n#bankForm>div>button:hover{\r\n    background-color: yellowgreen;\r\n    color: black;\r\n}\r\n#bankForm>div>button:focus{\r\n    outline: none;\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/assets/css/form.css":
 /*!***********************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/assets/css/form.css ***!
@@ -101,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: bold;\r\n}", "",{"version":3,"sources":["webpack://src/assets/css/form.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,aAAa;AACjB;AACA;IACI,mBAAmB;IACnB,eAAe;IACf,eAAe;IACf,gBAAgB;AACpB;AACA;IACI,iBAAiB;IACjB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,iBAAiB;AACrB;AACA;IACI,UAAU;IACV,iBAAiB;AACrB","sourcesContent":["form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: bold;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#btnSubmit{\r\n    color: var(--primary);\r\n    text-transform: uppercase;\r\n    background-color: var(--backGround);\r\n    box-shadow: var(--contentShadown);\r\n}\r\n#btnSubmit:hover{\r\n    background-color: darkcyan;\r\n    box-shadow: var(--contHovShadown);\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: bold;\r\n}", "",{"version":3,"sources":["webpack://src/assets/css/form.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,eAAe;IACf,aAAa;AACjB;AACA;IACI,mBAAmB;IACnB,eAAe;IACf,eAAe;IACf,gBAAgB;AACpB;AACA;IACI,qBAAqB;IACrB,yBAAyB;IACzB,mCAAmC;IACnC,iCAAiC;AACrC;AACA;IACI,0BAA0B;IAC1B,iCAAiC;AACrC;AACA;IACI,iBAAiB;IACjB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,eAAe;AACnB;AACA;IACI,iBAAiB;AACrB;AACA;IACI,UAAU;IACV,iBAAiB;AACrB","sourcesContent":["form{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nlabel{\r\n    cursor: pointer;\r\n    padding: 1rem;\r\n}\r\ninput{\r\n    margin-left: 0.3rem;\r\n    padding: 0.5rem;\r\n    min-width: 1rem;\r\n    min-height: 1rem;\r\n}\r\n#btnSubmit{\r\n    color: var(--primary);\r\n    text-transform: uppercase;\r\n    background-color: var(--backGround);\r\n    box-shadow: var(--contentShadown);\r\n}\r\n#btnSubmit:hover{\r\n    background-color: darkcyan;\r\n    box-shadow: var(--contHovShadown);\r\n}\r\n#spnPassword{\r\n    font-weight: bold;\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    margin-bottom: 1rem;\r\n    color: darkcyan;\r\n}\r\n#spnValidate{\r\n    font-weight: bold;\r\n}\r\n.errorText{\r\n    color: red;\r\n    font-weight: bold;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -560,6 +582,35 @@ module.exports = function (list, options) {
 
 /***/ }),
 
+/***/ "./src/assets/css/bank.css":
+/*!*********************************!*\
+  !*** ./src/assets/css/bank.css ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./bank.css */ "./node_modules/css-loader/dist/cjs.js!./src/assets/css/bank.css");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+
 /***/ "./src/assets/css/form.css":
 /*!*********************************!*\
   !*** ./src/assets/css/form.css ***!
@@ -680,68 +731,87 @@ module.exports = content.locals || {};
 /*!******************************!*\
   !*** ./src/assets/js/dom.js ***!
   \******************************/
-/*! exports provided: createH1, createNav, createSpan, createForm, createInput, createLabel, createButton */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createH1", function() { return createH1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNav", function() { return createNav; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSpan", function() { return createSpan; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createForm", function() { return createForm; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createInput", function() { return createInput; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createLabel", function() { return createLabel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createButton", function() { return createButton; });
-var createH1 = function createH1(args) {
-  var h1 = document.createElement('h1');
-  h1.innerText = args.text;
-  return h1;
-};
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Dom; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var createNav = function createNav(args) {
-  var nav = document.createElement('nav');
-  nav.id = args.id;
-  nav.innerText = args.id;
-  return nav;
-};
+var Dom = function Dom() {
+  _classCallCheck(this, Dom);
 
-var createSpan = function createSpan(args) {
-  var span = document.createElement('span');
-  span.id = args.id;
-  span.innerText = args.text;
-  return span;
-};
+  this.createH1 = function (args) {
+    var h1 = document.createElement('h1');
+    h1.innerText = args.text;
+    return h1;
+  };
 
-var createLabel = function createLabel(args) {
-  var label = document.createElement('label');
-  label.id = args.id;
-  label.htmlFor = args["for"];
-  label.innerText = args.text;
-  return label;
-};
+  this.createH2 = function (args) {
+    var h2 = document.createElement('h2');
+    h2.innerText = args.text;
+    return h2;
+  };
 
-var createForm = function createForm(args) {
-  var form = document.createElement('form');
-  form.id = args.id;
-  form.method = args.method;
-  form.action = args.action;
-  return form;
-};
+  this.createH3 = function (args) {
+    var h3 = document.createElement('h3');
+    h3.innerText = args.text;
+    return h3;
+  };
 
-var createInput = function createInput(args) {
-  var input = document.createElement('input');
-  input.type = args.type;
-  input.id = args.id;
-  input["class"] = args["class"];
-  return input;
-};
+  this.createNav = function (args) {
+    var nav = document.createElement('nav');
+    nav.id = args.id;
+    nav.innerText = args.id;
+    return nav;
+  };
 
-var createButton = function createButton(args) {
-  var button = document.createElement('button');
-  button.type = args.type;
-  button.id = args.id;
-  button.innerText = args.text;
-  return button;
+  this.createSpan = function (args) {
+    var span = document.createElement('span');
+    span.id = args.id;
+    span.innerText = args.text;
+    return span;
+  };
+
+  this.createDiv = function (args) {
+    var div = document.createElement('div');
+    div.id = args.id;
+    div.innerText = args.text;
+    return div;
+  };
+
+  this.createLabel = function (args) {
+    var label = document.createElement('label');
+    label.id = args.id;
+    label.htmlFor = args["for"];
+    label.innerText = args.text;
+    return label;
+  };
+
+  this.createForm = function (args) {
+    var form = document.createElement('form');
+    form.id = args.id;
+    form.method = args.method;
+    form.action = args.action;
+    return form;
+  };
+
+  this.createInput = function (args) {
+    var input = document.createElement('input');
+    input.type = args.type;
+    input.id = args.id;
+    input["class"] = args["class"];
+    return input;
+  };
+
+  this.createButton = function (args) {
+    var button = document.createElement('button');
+    button.type = args.type;
+    button.id = args.id;
+    button.innerText = args.text;
+    return button;
+  };
 };
 
 
@@ -752,7 +822,7 @@ var createButton = function createButton(args) {
 /*!*******************************!*\
   !*** ./src/assets/js/main.js ***!
   \*******************************/
-/*! exports provided: getCPF, getHome, getPassword */
+/*! exports provided: getCPF, getHome, getPassword, getBank */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -760,9 +830,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCPF", function() { return getCPF; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHome", function() { return getHome; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPassword", function() { return getPassword; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBank", function() { return getBank; });
 /* harmony import */ var _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../modules/cpf/view/vwCPF */ "./src/modules/cpf/view/vwCPF.js");
 /* harmony import */ var _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../modules/password/view/vwPassword */ "./src/modules/password/view/vwPassword.js");
-/* harmony import */ var _modules_home_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../modules/home/Home */ "./src/modules/home/Home.js");
+/* harmony import */ var _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../modules/bank/view/vwBank */ "./src/modules/bank/view/vwBank.js");
+/* harmony import */ var _modules_home_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../modules/home/Home */ "./src/modules/home/Home.js");
+
 
 
 
@@ -770,17 +843,26 @@ var path = window.location.pathname;
 var container = document.querySelector('.container');
 
 var getHome = function getHome() {
-  container.innerHTML = _modules_home_Home__WEBPACK_IMPORTED_MODULE_2__["Home"];
+  container.innerHTML = _modules_home_Home__WEBPACK_IMPORTED_MODULE_3__["Home"];
 };
 
 var getCPF = function getCPF() {
   var clsForm = new _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_0__["default"]();
   container.appendChild(clsForm.form);
+  container.classList.add('cpf');
 };
 
 var getPassword = function getPassword() {
   var clsForm = new _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_1__["default"]();
   container.appendChild(clsForm.form);
+  container.classList.add('password');
+};
+
+var getBank = function getBank() {
+  var clsForm = new _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  container.appendChild(clsForm.form);
+  container.classList.add('bank');
+  clsForm.form.insertAdjacentElement('afterend', clsForm.h2);
 };
 
 switch (path) {
@@ -794,6 +876,10 @@ switch (path) {
 
   case '/public/password/':
     getPassword();
+    break;
+
+  case '/public/bank/':
+    getBank();
     break;
 
   default:
@@ -822,6 +908,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_home_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_css_home_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _assets_css_form_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/css/form.css */ "./src/assets/css/form.css");
 /* harmony import */ var _assets_css_form_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_css_form_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_css_bank_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/css/bank.css */ "./src/assets/css/bank.css");
+/* harmony import */ var _assets_css_bank_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_css_bank_css__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -831,6 +920,1291 @@ __webpack_require__.r(__webpack_exports__);
 (function () {
   Object(_modules_menu_Menu__WEBPACK_IMPORTED_MODULE_0__["default"])();
 })();
+
+/***/ }),
+
+/***/ "./src/modules/bank/control/ctrlAccess.js":
+/*!************************************************!*\
+  !*** ./src/modules/bank/control/ctrlAccess.js ***!
+  \************************************************/
+/*! exports provided: setAccess, setLogout, setUserAccess, checkAccess, revokAccess, getSession */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setAccess", function() { return setAccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setLogout", function() { return setLogout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUserAccess", function() { return setUserAccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkAccess", function() { return checkAccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "revokAccess", function() { return revokAccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSession", function() { return getSession; });
+/* harmony import */ var _ctrlAccount_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ctrlAccount.js */ "./src/modules/bank/control/ctrlAccount.js");
+
+
+var getSession = function getSession() {
+  var strAccess = localStorage.getItem('Access');
+  if (!strAccess) return false;
+  var access = JSON.parse(strAccess);
+  return access;
+};
+
+var checkAccess = function checkAccess() {
+  var access = getSession();
+  if (!access) return true;
+  var date = new Date(access.date);
+  date.setHours(date.getHours + 3);
+  var now = new Date();
+  now.setHours(now.getHours + 3);
+  now.setHours(now.getHours() - 1);
+  return now > date;
+};
+
+var revokAccess = function revokAccess() {
+  localStorage.removeItem('Access');
+};
+
+var setLogout = function setLogout() {
+  revokAccess();
+  window.location.reload();
+};
+
+var setAccess = function setAccess(e) {
+  var clientName = e.target.children['inpName'].value;
+  var numAccount = e.target.children['inpAccount'].value;
+  var access = Object(_ctrlAccount_js__WEBPACK_IMPORTED_MODULE_0__["getClient"])(clientName, numAccount);
+  var elChild = document.querySelector("#".concat(e.target.id));
+  elChild.remove();
+  setUserAccess(access);
+};
+
+var setUserAccess = function setUserAccess(access) {
+  if (!access) return;
+  access.registerAccess(access);
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/control/ctrlAccount.js":
+/*!*************************************************!*\
+  !*** ./src/modules/bank/control/ctrlAccount.js ***!
+  \*************************************************/
+/*! exports provided: setAccount, getClient, withdraw, deposit */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setAccount", function() { return setAccount; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getClient", function() { return getClient; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withdraw", function() { return withdraw; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deposit", function() { return deposit; });
+/* harmony import */ var _model_pessoa_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../model/pessoa.js */ "./src/modules/bank/model/pessoa.js");
+/* harmony import */ var _model_account_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/account.js */ "./src/modules/bank/model/account.js");
+/* harmony import */ var _model_accCurrent_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/accCurrent.js */ "./src/modules/bank/model/accCurrent.js");
+/* harmony import */ var _model_accSavings_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../model/accSavings.js */ "./src/modules/bank/model/accSavings.js");
+/* harmony import */ var _model_access_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../model/access.js */ "./src/modules/bank/model/access.js");
+/* harmony import */ var _ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ctrlAccess.js */ "./src/modules/bank/control/ctrlAccess.js");
+
+
+
+
+
+
+
+var getAccounts = function getAccounts() {
+  var clients = JSON.parse(localStorage.getItem('Client'));
+  return clients === null ? {} : clients;
+};
+
+var registerPessoa = function registerPessoa(clients) {
+  var users = JSON.stringify(clients);
+  localStorage.setItem('Client', users);
+};
+
+var getClient = function getClient(clientName, numAccount) {
+  var clients = getAccounts();
+  var client = clients[numAccount];
+
+  if (!client) {
+    alert('Account not found!');
+    return;
+  }
+
+  var check = clientName === client.Account.name && numAccount === client.Account.number;
+
+  if (check) {
+    var user = new _model_pessoa_js__WEBPACK_IMPORTED_MODULE_0__["default"](client.Account.name, client.Account.id);
+    var account = new _model_account_js__WEBPACK_IMPORTED_MODULE_1__["default"](user, client.Account.number, client.Account.balance, client.Account.date);
+    var accCurrent = new _model_accCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, client.limit);
+    var accSavings = new _model_accSavings_js__WEBPACK_IMPORTED_MODULE_3__["default"](account, client.income);
+    account.balance = accSavings.sumIncome();
+    var access = new _model_access_js__WEBPACK_IMPORTED_MODULE_4__["default"](account, accCurrent.limit, accSavings.income);
+    return access;
+  } else {
+    return false;
+  }
+};
+
+var setAccount = function setAccount(e) {
+  var clients = getAccounts();
+  var name = e.target.children['inpName'].value;
+  var id = e.target.children['inpID'].value;
+  var user = new _model_pessoa_js__WEBPACK_IMPORTED_MODULE_0__["default"](name, id);
+  var account = new _model_account_js__WEBPACK_IMPORTED_MODULE_1__["default"](user);
+  account.createNumber();
+  var current = new _model_accCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, 100);
+  var savings = new _model_accSavings_js__WEBPACK_IMPORTED_MODULE_3__["default"](account, 0);
+  var client = new _model_access_js__WEBPACK_IMPORTED_MODULE_4__["default"](account, current.limit, savings.income);
+  clients[account.number] = client;
+  registerPessoa(clients);
+  var elChild = document.querySelector("#".concat(e.target.id));
+  elChild.remove();
+  Object(_ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["setUserAccess"])(client);
+};
+
+var updateAccount = function updateAccount(account, current, session) {
+  account.balance = current.balance;
+  var client = new _model_access_js__WEBPACK_IMPORTED_MODULE_4__["default"](account, current.limit, session.income);
+  var clients = getAccounts();
+  clients[account.number] = client;
+  registerPessoa(clients);
+  Object(_ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["setUserAccess"])(client);
+};
+
+var withdraw = function withdraw(value) {
+  var session = Object(_ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["getSession"])();
+  var account = new _model_account_js__WEBPACK_IMPORTED_MODULE_1__["default"](session.Account, session.Account.number, session.Account.balance);
+  account.setDate();
+  var current = new _model_accCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, session.limit);
+  current.withdraw(value);
+  updateAccount(account, current, session);
+};
+
+var deposit = function deposit(value) {
+  var session = Object(_ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["getSession"])();
+  var account = new _model_account_js__WEBPACK_IMPORTED_MODULE_1__["default"](session.Account, session.Account.number, session.Account.balance);
+  account.setDate();
+  var current = new _model_accCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, session.limit);
+  current.deposit(value);
+  updateAccount(account, current, session);
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/control/ctrlAction.js":
+/*!************************************************!*\
+  !*** ./src/modules/bank/control/ctrlAction.js ***!
+  \************************************************/
+/*! exports provided: action, optDeposit, optWithdraw */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "action", function() { return action; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "optDeposit", function() { return optDeposit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "optWithdraw", function() { return optWithdraw; });
+/* harmony import */ var _view_vwResume__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../view/vwResume */ "./src/modules/bank/view/vwResume.js");
+/* harmony import */ var _ctrlAccount__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ctrlAccount */ "./src/modules/bank/control/ctrlAccount.js");
+
+
+
+var optWithdraw = function optWithdraw(inpWithdraw, bntWithdraw) {
+  var inpDopsit = document.querySelector('#inpDeposit');
+  var btnDopsit = document.querySelector('#btnDeposit');
+  var formDiv = document.querySelector('#dvInput');
+
+  if (inpDopsit !== null) {
+    inpDopsit.value = null;
+    formDiv.removeChild(inpDopsit);
+    formDiv.removeChild(btnDopsit);
+  }
+
+  dvInput.appendChild(inpWithdraw);
+  dvInput.appendChild(bntWithdraw);
+};
+
+var optDeposit = function optDeposit(inpDeposit, bntDeposit) {
+  var inpWithdraw = document.querySelector('#inpWithdraw');
+  var btnWithdraw = document.querySelector('#btnWithdraw');
+  var formDiv = document.querySelector('#dvInput');
+
+  if (inpWithdraw !== null) {
+    inpWithdraw.value = null;
+    formDiv.removeChild(inpWithdraw);
+    formDiv.removeChild(btnWithdraw);
+  }
+
+  dvInput.appendChild(inpDeposit);
+  dvInput.appendChild(bntDeposit);
+};
+
+var action = function action(e) {
+  var action = e.submitter.value;
+  var content = document.querySelector('#content');
+  var optAccount = document.querySelector('#optAccount');
+
+  switch (action) {
+    case 'Withdraw':
+      var withdrawValue = Number(e.target[0].value).toFixed(2);
+      Object(_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__["withdraw"])(withdrawValue);
+      e.target.remove();
+      content.remove();
+      optAccount.remove();
+      new _view_vwResume__WEBPACK_IMPORTED_MODULE_0__["default"]();
+      break;
+
+    case 'Deposit':
+      var depositValue = Number(e.target[0].value).toFixed(2);
+      Object(_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__["deposit"])(depositValue);
+      e.target.remove();
+      content.remove();
+      optAccount.remove();
+      new _view_vwResume__WEBPACK_IMPORTED_MODULE_0__["default"]();
+      break;
+  }
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/control/ctrlBank.js":
+/*!**********************************************!*\
+  !*** ./src/modules/bank/control/ctrlBank.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _view_vwAccess__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../view/vwAccess */ "./src/modules/bank/view/vwAccess.js");
+/* harmony import */ var _view_vwAccount__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../view/vwAccount */ "./src/modules/bank/view/vwAccount.js");
+/* harmony import */ var _view_vwResume__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwResume */ "./src/modules/bank/view/vwResume.js");
+/* harmony import */ var _view_vwLogout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../view/vwLogout */ "./src/modules/bank/view/vwLogout.js");
+/* harmony import */ var _ctrlAccess__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
+
+
+
+
+
+
+var resumeAccount = function resumeAccount() {
+  if (!document.querySelector('#content')) {
+    var btnLogout = document.querySelector('#btnLogout');
+    if (btnLogout) btnLogout.remove();
+    new _view_vwResume__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  }
+};
+
+var accountForm = function accountForm() {
+  if (!document.querySelector('#formAccount')) {
+    var formAccess = document.querySelector('#formAccess');
+    if (formAccess) formAccess.remove();
+    new _view_vwAccount__WEBPACK_IMPORTED_MODULE_1__["default"]();
+  }
+};
+
+var accessForm = function accessForm() {
+  if (!document.querySelector('#formAccess')) {
+    var formAccount = document.querySelector('#formAccount');
+    if (formAccount) formAccount.remove();
+    new _view_vwAccess__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  }
+};
+
+var logoutForm = function logoutForm() {
+  if (!document.querySelector('#btnLogout')) {
+    var content = document.querySelector('#content');
+    var optAccount = document.querySelector('#optAccount');
+    var numAccount = document.querySelector('#numAccount');
+    if (numAccount) numAccount.remove();
+
+    if (optAccount || content) {
+      content.remove();
+      optAccount.remove();
+    }
+
+    new _view_vwLogout__WEBPACK_IMPORTED_MODULE_3__["default"]();
+  }
+};
+
+var setOption = function setOption(event) {
+  var bankForm = document.querySelector('#bankForm');
+  if (bankForm) bankForm.remove();
+  var optUser = event.target.children[0].value;
+  var check = event.target.children[0];
+  check.checked = true;
+
+  switch (optUser) {
+    case 'account':
+      Object(_ctrlAccess__WEBPACK_IMPORTED_MODULE_4__["checkAccess"])() ? accountForm() : logoutForm();
+      break;
+
+    case 'access':
+      Object(_ctrlAccess__WEBPACK_IMPORTED_MODULE_4__["checkAccess"])() ? accessForm() : resumeAccount();
+      break;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (setOption);
+
+/***/ }),
+
+/***/ "./src/modules/bank/control/ctrlResume.js":
+/*!************************************************!*\
+  !*** ./src/modules/bank/control/ctrlResume.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ctrlAccess__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
+/* harmony import */ var _view_vwCurrent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../view/vwCurrent */ "./src/modules/bank/view/vwCurrent.js");
+/* harmony import */ var _view_vwSavings__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwSavings */ "./src/modules/bank/view/vwSavings.js");
+
+
+
+
+var createSavings = function createSavings(session) {
+  if (!document.querySelector('#spnIncome')) {
+    var spnLimit = document.querySelector('#spnLimit');
+    if (spnLimit) spnLimit.remove();
+    if (document.querySelector('#bankForm')) bankForm.remove();
+    new _view_vwSavings__WEBPACK_IMPORTED_MODULE_2__["default"](session);
+  }
+};
+
+var createCurrent = function createCurrent(session) {
+  if (!document.querySelector('#spnLimit')) {
+    if (document.querySelector('#spnIncome')) spnIncome.remove();
+    if (document.querySelector('#bankForm')) bankForm.remove();
+    new _view_vwCurrent__WEBPACK_IMPORTED_MODULE_1__["default"](session);
+  }
+};
+
+var resumeAccount = function resumeAccount(e) {
+  var session = Object(_ctrlAccess__WEBPACK_IMPORTED_MODULE_0__["getSession"])();
+  if (!e) return session;
+  var optAccount = e.target.children[0].value;
+  e.target.children[0].checked = true;
+
+  switch (optAccount) {
+    case 'savings':
+      createSavings(session);
+      break;
+
+    case 'current':
+      createCurrent(session);
+      break;
+  }
+
+  var numAccount = document.querySelector('#numAccount');
+  if (numAccount) numAccount.remove();
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (resumeAccount);
+
+/***/ }),
+
+/***/ "./src/modules/bank/model/accCurrent.js":
+/*!**********************************************!*\
+  !*** ./src/modules/bank/model/accCurrent.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Current; });
+/* harmony import */ var _account_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./account.js */ "./src/modules/bank/model/account.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var Current = /*#__PURE__*/function (_Account) {
+  _inherits(Current, _Account);
+
+  var _super = _createSuper(Current);
+
+  function Current(Account, limit) {
+    var _this;
+
+    _classCallCheck(this, Current);
+
+    _this = _super.call(this, Account);
+    _this.number = Account.number;
+    _this.balance = Account.balance;
+    _this.limit = limit;
+    return _this;
+  }
+
+  _createClass(Current, [{
+    key: "withdraw",
+    value: function withdraw(value) {
+      if (Number(value) <= Number(this.balance) + Number(this.limit) || Number(value) <= Number(this.limit)) {
+        if (Number(value) > Number(this.balance)) {
+          if (Number(this.balance) > 0) {
+            this.limit -= Number(value) - Number(this.balance);
+          } else {
+            this.limit -= Number(value);
+          }
+        }
+
+        this.accWithdraw(value);
+      } else {
+        alert('The balance and limit is not enough!');
+      }
+    }
+  }, {
+    key: "deposit",
+    value: function deposit(value) {
+      if (this.balance <= 0 || this.limit < 100) {
+        this.limit = Number(value) + Number(this.limit) >= 100 ? 100 : Number(value) + Number(this.limit);
+      }
+
+      this.accDeposit(value);
+    }
+  }]);
+
+  return Current;
+}(_account_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/model/accSavings.js":
+/*!**********************************************!*\
+  !*** ./src/modules/bank/model/accSavings.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Savings; });
+/* harmony import */ var _account_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./account.js */ "./src/modules/bank/model/account.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var Savings = /*#__PURE__*/function (_Account) {
+  _inherits(Savings, _Account);
+
+  var _super = _createSuper(Savings);
+
+  function Savings(Account, income) {
+    var _this;
+
+    _classCallCheck(this, Savings);
+
+    _this = _super.call(this, Account);
+    _this.number = Account.number;
+    _this.balance = Account.balance;
+    _this.date = Account.date;
+    _this.income = income;
+    return _this;
+  }
+
+  _createClass(Savings, [{
+    key: "sumIncome",
+    value: function sumIncome() {
+      var now = new Date();
+      now.setHours(now.getHours() - 3);
+      var lastMoviment = new Date(this.date);
+      var period = ((now.getTime() - lastMoviment.getTime()) / (1000 * 60 * 60)).toFixed(0);
+      this.income = Number(this.balance) * (0.01 * Number(period));
+      return Number(this.balance) + Number(this.income);
+    }
+  }]);
+
+  return Savings;
+}(_account_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/model/access.js":
+/*!******************************************!*\
+  !*** ./src/modules/bank/model/access.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Access; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Access = /*#__PURE__*/function () {
+  function Access(Account, limit, income) {
+    _classCallCheck(this, Access);
+
+    this.Account = Account;
+    this.limit = limit;
+    this.income = income;
+    this.date = this.setDate();
+  }
+
+  _createClass(Access, [{
+    key: "setDate",
+    value: function setDate() {
+      var date = new Date();
+      date.setHours(date.getHours() - 3);
+      this.date = date;
+    }
+  }, {
+    key: "getDate",
+    value: function getDate() {
+      return this.date;
+    }
+  }, {
+    key: "registerAccess",
+    value: function registerAccess(access) {
+      var strAccess = JSON.stringify(access);
+      localStorage.setItem('Access', strAccess);
+    }
+  }, {
+    key: "checkAccess",
+    value: function checkAccess() {
+      var strAccess = localStorage.getItem('Access');
+      var access = JSON.parse(strAccess);
+      return access;
+    }
+  }]);
+
+  return Access;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/model/account.js":
+/*!*******************************************!*\
+  !*** ./src/modules/bank/model/account.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Account; });
+/* harmony import */ var _pessoa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pessoa */ "./src/modules/bank/model/pessoa.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var Account = /*#__PURE__*/function (_Pessoa) {
+  _inherits(Account, _Pessoa);
+
+  var _super = _createSuper(Account);
+
+  function Account(Pessoa, number, balance, date) {
+    var _this;
+
+    _classCallCheck(this, Account);
+
+    _this = _super.call(this, Pessoa);
+    _this.name = Pessoa.name;
+    _this.id = Pessoa.id;
+    _this.number = number;
+    _this.balance = balance;
+    _this.date = date;
+    return _this;
+  }
+
+  _createClass(Account, [{
+    key: "setDate",
+    value: function setDate() {
+      var date = new Date();
+      date.setHours(date.getHours() - 3);
+      this.date = date;
+    }
+  }, {
+    key: "accDeposit",
+    value: function accDeposit(value) {
+      this.balance = (Number(this.balance) + Number(value)).toFixed(2);
+      this.setDate();
+    }
+  }, {
+    key: "accWithdraw",
+    value: function accWithdraw(value) {
+      Number(this.balance -= value).toFixed(2);
+      this.setDate();
+    }
+  }, {
+    key: "createNumber",
+    value: function createNumber() {
+      var numberAccount = '';
+
+      for (var i = 0; i < 6; i++) {
+        numberAccount += String(Math.floor(Math.random() * 10));
+      }
+
+      this.number = numberAccount;
+      this.balance = 0;
+      this.setDate();
+    }
+  }]);
+
+  return Account;
+}(_pessoa__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/model/pessoa.js":
+/*!******************************************!*\
+  !*** ./src/modules/bank/model/pessoa.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Pessoa; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Pessoa = function Pessoa(name, id) {
+  _classCallCheck(this, Pessoa);
+
+  this.name = name;
+  this.id = id;
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/view/vwAccess.js":
+/*!*******************************************!*\
+  !*** ./src/modules/bank/view/vwAccess.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AccessForm; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
+/* harmony import */ var _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwResume.js */ "./src/modules/bank/view/vwResume.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+
+var AccessForm = function AccessForm() {
+  _classCallCheck(this, AccessForm);
+
+  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  this.subTitle = document.querySelector('#subTitle');
+  this.subTitle.innerText = 'Access account';
+  this.formAccess = this.dom.createForm({
+    id: 'formAccess',
+    method: 'dialog',
+    action: ''
+  });
+  this.inpName = this.dom.createInput({
+    type: 'text',
+    id: 'inpName'
+  });
+  this.inpName.name = 'nameAccount';
+  this.inpName.placeholder = 'Type your name';
+  this.inpName.required = true;
+  this.inpAccount = this.dom.createInput({
+    type: 'text',
+    id: 'inpAccount'
+  });
+  this.inpAccount.name = 'numAccount';
+  this.inpAccount.placeholder = 'Enter the account number';
+  this.inpAccount.required = true;
+  this.bntSubmit = this.dom.createButton({
+    type: 'submit',
+    id: 'btnAccess',
+    text: 'Access'
+  });
+  this.bntSubmit.value = 'Access';
+  this.formAccess.appendChild(this.inpName);
+  this.formAccess.appendChild(this.inpAccount);
+  this.formAccess.appendChild(this.bntSubmit);
+  this.subTitle.insertAdjacentElement('afterend', this.formAccess);
+  this.formAccess.addEventListener('submit', function (event) {
+    event.preventDefault();
+    Object(_control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__["setAccess"])(event);
+    new _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  });
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/view/vwAccount.js":
+/*!********************************************!*\
+  !*** ./src/modules/bank/view/vwAccount.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return accountForm; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _control_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAccount */ "./src/modules/bank/control/ctrlAccount.js");
+/* harmony import */ var _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwResume.js */ "./src/modules/bank/view/vwResume.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+
+var accountForm = function accountForm() {
+  _classCallCheck(this, accountForm);
+
+  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  this.subTitle = document.querySelector('#subTitle');
+  this.subTitle.innerText = 'Create new account';
+  this.formAccount = this.dom.createForm({
+    id: 'formAccount',
+    action: '',
+    method: 'dialog'
+  });
+  this.inpName = this.dom.createInput({
+    type: 'text',
+    id: 'inpName'
+  });
+  this.inpName.name = 'nameAccount';
+  this.inpName.placeholder = 'Type your name';
+  this.inpName.required = true;
+  this.inpAccount = this.dom.createInput({
+    type: 'text',
+    id: 'inpID'
+  });
+  this.inpAccount.name = 'numID';
+  this.inpAccount.placeholder = 'Type your ID number';
+  this.inpAccount.required = true;
+  this.bntSubmit = this.dom.createButton({
+    type: 'submit',
+    text: 'Create',
+    id: 'btnAccount'
+  });
+  this.bntSubmit.value = 'Create';
+  this.formAccount.appendChild(this.inpName);
+  this.formAccount.appendChild(this.inpAccount);
+  this.formAccount.appendChild(this.bntSubmit);
+  this.subTitle.insertAdjacentElement('afterend', this.formAccount);
+  this.formAccount.addEventListener('submit', function (event) {
+    event.preventDefault();
+    Object(_control_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__["setAccount"])(event);
+    new _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  });
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/view/vwAction.js":
+/*!*******************************************!*\
+  !*** ./src/modules/bank/view/vwAction.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Action; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAction */ "./src/modules/bank/control/ctrlAction.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+var Action = function Action() {
+  var _this = this;
+
+  _classCallCheck(this, Action);
+
+  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  this.bankForm = this.dom.createForm({
+    id: 'bankForm',
+    action: '',
+    method: 'dialog'
+  });
+  this.labelWithdraw = this.dom.createLabel({
+    "for": 'inpWithdraw',
+    text: 'Withdraw',
+    id: 'lblWidraw'
+  });
+  this.inpWithdraw = this.dom.createInput({
+    type: 'number',
+    id: 'inpWithdraw'
+  });
+  this.inpWithdraw.placeholder = '0.00';
+  this.inpWithdraw.step = '0.01';
+  this.inpWithdraw.name = 'withdraw';
+  this.inpWithdraw.required = true;
+  this.bntWithdraw = this.dom.createButton({
+    type: 'submit',
+    text: 'Withdraw',
+    id: 'btnWithdraw'
+  });
+  this.bntWithdraw.value = 'Withdraw';
+  this.labelDeposit = this.dom.createLabel({
+    "for": 'inpDeposit',
+    text: 'Deposit',
+    id: 'lblDeposit'
+  });
+  this.inpDeposit = this.dom.createInput({
+    type: 'number',
+    id: 'inpDeposit'
+  });
+  this.inpDeposit.placeholder = '0.00';
+  this.inpDeposit.step = '0.01';
+  this.inpDeposit.name = 'deposit';
+  this.inpDeposit.required = true;
+  this.bntDeposit = this.dom.createButton({
+    type: 'submit',
+    text: 'Deposit',
+    id: 'btnDeposit'
+  });
+  this.bntDeposit.value = 'Deposit';
+  this.dvInput = this.dom.createDiv({
+    id: 'dvInput',
+    text: ''
+  });
+  this.bankForm.appendChild(this.labelWithdraw);
+  this.bankForm.appendChild(this.labelDeposit);
+  this.bankForm.appendChild(this.dvInput);
+  this.labelWithdraw.addEventListener('click', function (event) {
+    event.preventDefault();
+    Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["optWithdraw"])(_this.inpWithdraw, _this.bntWithdraw);
+  });
+  this.labelDeposit.addEventListener('click', function (event) {
+    event.preventDefault();
+    Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["optDeposit"])(_this.inpDeposit, _this.bntDeposit);
+  });
+  this.bankForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["action"])(event);
+  });
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/view/vwBank.js":
+/*!*****************************************!*\
+  !*** ./src/modules/bank/view/vwBank.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BankForm; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _control_ctrlBank__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlBank */ "./src/modules/bank/control/ctrlBank.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+var BankForm = function BankForm() {
+  _classCallCheck(this, BankForm);
+
+  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  this.h1 = this.dom.createH1({
+    text: 'Bank'
+  });
+  this.h2 = this.dom.createH2({
+    text: 'Select an option'
+  });
+  this.h2.id = 'subTitle';
+  this.form = this.dom.createForm({
+    id: 'option',
+    method: 'dialog',
+    action: ''
+  });
+  this.labelAcc = this.dom.createLabel({
+    id: 'accAccount',
+    text: 'Access Account',
+    "for": 'accAccount'
+  });
+  this.accAccount = this.dom.createInput({
+    type: 'radio',
+    id: 'accAccount'
+  });
+  this.accAccount.value = 'access';
+  this.accAccount.name = 'optAccount';
+  this.labelNew = this.dom.createLabel({
+    id: 'newAccount',
+    text: 'Create Account',
+    "for": 'newAccount'
+  });
+  this.newAccount = this.dom.createInput({
+    type: 'radio',
+    id: 'newAccount'
+  });
+  this.newAccount.value = 'account';
+  this.newAccount.name = 'optAccount';
+  this.dvContent = this.dom.createDiv({
+    id: 'barOption',
+    text: ''
+  });
+  this.form.appendChild(this.h1);
+  this.form.appendChild(this.dvContent);
+  this.dvContent.appendChild(this.labelAcc);
+  this.labelAcc.appendChild(this.accAccount);
+  this.dvContent.appendChild(this.labelNew);
+  this.labelNew.appendChild(this.newAccount);
+  this.form.addEventListener('click', function (event) {
+    event.preventDefault();
+    Object(_control_ctrlBank__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
+  });
+};
+
+
+;
+
+/***/ }),
+
+/***/ "./src/modules/bank/view/vwCurrent.js":
+/*!********************************************!*\
+  !*** ./src/modules/bank/view/vwCurrent.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CreateCurrent; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _vwAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vwAction */ "./src/modules/bank/view/vwAction.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var CreateCurrent = /*#__PURE__*/function (_Action) {
+  _inherits(CreateCurrent, _Action);
+
+  var _super = _createSuper(CreateCurrent);
+
+  function CreateCurrent(session) {
+    var _this;
+
+    _classCallCheck(this, CreateCurrent);
+
+    _this = _super.call(this, _vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+    _this.session = session;
+    _this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    _this.spnLimit = _this.dom.createSpan({
+      id: 'spnLimit',
+      text: 'Limit: R$ '
+    });
+    _this.content = document.querySelector('#content');
+
+    _this.content.appendChild(_this.spnLimit);
+
+    _this.spnLimit.innerText += Number(session.limit).toFixed(2);
+
+    _this.content.insertAdjacentElement('afterend', new _vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]().bankForm);
+
+    return _this;
+  }
+
+  return CreateCurrent;
+}(_vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/view/vwLogout.js":
+/*!*******************************************!*\
+  !*** ./src/modules/bank/view/vwLogout.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LogoutForm; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+var LogoutForm = function LogoutForm() {
+  _classCallCheck(this, LogoutForm);
+
+  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  this.subTitle = document.querySelector('#subTitle');
+  this.subTitle.innerText = 'Logout first';
+  this.btnLogout = this.dom.createButton({
+    type: 'button',
+    text: 'Logout',
+    id: 'btnLogout'
+  });
+  this.btnLogout.value = 'Logout';
+  this.subTitle.insertAdjacentElement('afterend', this.btnLogout);
+  this.btnLogout.addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log(event);
+    Object(_control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__["setLogout"])();
+  });
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/view/vwResume.js":
+/*!*******************************************!*\
+  !*** ./src/modules/bank/view/vwResume.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResumeAccount; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlResume */ "./src/modules/bank/control/ctrlResume.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+var ResumeAccount = function ResumeAccount() {
+  _classCallCheck(this, ResumeAccount);
+
+  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  this.subtitle = document.querySelector('#subTitle');
+  this.formOptAccount = this.dom.createForm({
+    id: 'optAccount',
+    action: '',
+    method: 'dialog'
+  });
+  this.dvBarOption = this.dom.createDiv({
+    id: 'barAccount',
+    text: ''
+  });
+  this.labelCurrent = this.dom.createLabel({
+    id: 'inpCurrent',
+    text: 'Current Account',
+    "for": 'inpCurrent'
+  });
+  this.inpCurrent = this.dom.createInput({
+    type: 'radio',
+    id: 'inpCurrent'
+  });
+  this.inpCurrent.name = 'optAccount';
+  this.inpCurrent.value = 'current';
+  this.labelSavings = this.dom.createLabel({
+    id: 'inpSavings',
+    text: 'Savings Account',
+    "for": 'inpSavings'
+  });
+  this.inpSavings = this.dom.createInput({
+    type: 'radio',
+    id: 'inpSavings'
+  });
+  this.inpSavings.name = 'optAccount';
+  this.inpSavings.value = 'savings';
+  this.content = this.dom.createDiv({
+    id: 'content',
+    text: ''
+  });
+  this.balance = this.dom.createSpan({
+    id: 'spnBalance',
+    text: 'Balance: R$ '
+  });
+  this.formOptAccount.appendChild(this.dvBarOption);
+  this.dvBarOption.appendChild(this.labelCurrent);
+  this.labelCurrent.appendChild(this.inpCurrent);
+  this.dvBarOption.appendChild(this.labelSavings);
+  this.labelSavings.appendChild(this.inpSavings);
+  this.content.appendChild(this.balance);
+  this.subtitle.insertAdjacentElement('afterend', this.formOptAccount);
+  this.formOptAccount.insertAdjacentElement('afterend', this.content);
+  this.session = Object(_control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  this.subtitle.innerText = "Ol\xE1, ".concat(this.session.Account.name, "!");
+  this.h3 = this.dom.createH3({
+    text: "Acc: ".concat(this.session.Account.number)
+  });
+  this.h3.id = 'numAccount';
+  this.subtitle.insertAdjacentElement('afterend', this.h3);
+  this.balance.innerText += Number(this.session.Account.balance).toFixed(2);
+  this.formOptAccount.addEventListener('click', function (event) {
+    event.preventDefault();
+    Object(_control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
+  });
+};
+
+
+
+/***/ }),
+
+/***/ "./src/modules/bank/view/vwSavings.js":
+/*!********************************************!*\
+  !*** ./src/modules/bank/view/vwSavings.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CreateSavings; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _vwAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vwAction */ "./src/modules/bank/view/vwAction.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var CreateSavings = /*#__PURE__*/function (_Action) {
+  _inherits(CreateSavings, _Action);
+
+  var _super = _createSuper(CreateSavings);
+
+  function CreateSavings(session) {
+    var _this;
+
+    _classCallCheck(this, CreateSavings);
+
+    _this = _super.call(this, _vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+    _this.session = session;
+    _this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    _this.spnIncome = _this.dom.createSpan({
+      id: 'spnIncome',
+      text: 'Income: R$ '
+    });
+    _this.content = document.querySelector('#content');
+
+    _this.content.appendChild(_this.spnIncome);
+
+    _this.spnIncome.innerText += Number(_this.session.income.toFixed(2));
+
+    _this.content.insertAdjacentElement('afterend', new _vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]().bankForm);
+
+    return _this;
+  }
+
+  return CreateSavings;
+}(_vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+
 
 /***/ }),
 
@@ -874,8 +2248,8 @@ var ctrlCPF = function ctrlCPF(event) {
 
     case 'submit':
       var cpf = new _model_GenerateCPF__WEBPACK_IMPORTED_MODULE_0__["default"]();
-      var newCPF = cpf.newCPF();
-      return newCPF;
+      validate(true);
+      return cpf.newCPF();
   }
 };
 
@@ -1060,30 +2434,31 @@ var CpfForm = function CpfForm() {
 
   _classCallCheck(this, CpfForm);
 
-  this.title = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createH1"])({
+  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  this.title = this.dom.createH1({
     text: 'Valid CPF Generator'
   });
-  this.form = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createForm"])({
+  this.form = this.dom.createForm({
     id: 'formCPF',
     method: 'dialog'
   });
-  this.label = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+  this.label = this.dom.createLabel({
     id: 'lblCPF',
     "for": 'inpCPF',
     text: 'Type the CPF to check if is valid'
   });
-  this.input = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
+  this.input = this.dom.createInput({
     type: 'text',
     id: 'inpCPF'
   });
   this.input.placeholder = '___.___.___-__';
   this.input.maxLength = 14;
   this.input.minLength = 14;
-  this.span = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createSpan"])({
+  this.span = this.dom.createSpan({
     id: 'spnValidate',
     text: ''
   });
-  this.button = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createButton"])({
+  this.button = this.dom.createButton({
     type: 'submit',
     id: 'btnSubmit',
     text: 'Generate'
@@ -1134,15 +2509,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var menuDOM = document.querySelector('#menu');
+var dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_1__["default"]();
 var menu = {
   home: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getHome"],
   cpf: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getCPF"],
-  password: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getPassword"]
+  password: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getPassword"],
+  bank: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getBank"]
 };
 
 var setMenu = function setMenu() {
   Object.keys(menu).forEach(function (element) {
-    var navMenu = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_1__["createNav"])({
+    var navMenu = dom.createNav({
       id: element
     });
     menuDOM.appendChild(navMenu);
@@ -1330,23 +2707,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var PassForm = function PassForm() {
   _classCallCheck(this, PassForm);
 
-  this.title = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createH1"])({
+  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  this.title = this.dom.createH1({
     text: 'Password Generator'
   });
-  this.form = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createForm"])({
+  this.form = this.dom.createForm({
     id: 'formPass',
     method: 'dialog'
   });
-  this.span = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createSpan"])({
+  this.span = this.dom.createSpan({
     id: 'spnPassword',
     text: ''
   });
-  this.lblChars = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+  this.lblChars = this.dom.createLabel({
     id: 'chars',
     "for": 'inpQtdChars',
     text: 'Number of characters'
   });
-  this.input = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
+  this.input = this.dom.createInput({
     type: 'number',
     id: 'inpQtdChars',
     "class": 'qtdChars'
@@ -1357,51 +2735,51 @@ var PassForm = function PassForm() {
   this.input.minlength = '1';
   this.input.min = 6;
   this.input.required = true;
-  this.lblNumber = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+  this.lblNumber = this.dom.createLabel({
     id: 'number',
     "for": 'inpNumber',
     text: 'Numbers'
   });
-  this.checkNumber = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
+  this.checkNumber = this.dom.createInput({
     type: 'checkbox',
     id: 'inpNumber',
     "class": 'Number'
   });
   this.checkNumber.checked = true;
-  this.lblUpper = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+  this.lblUpper = this.dom.createLabel({
     id: 'upper',
     "for": 'inpUpper',
     text: 'Capital letters'
   });
-  this.checkUpper = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
+  this.checkUpper = this.dom.createInput({
     type: 'checkbox',
     id: 'inpUpper',
     "class": 'Upper'
   });
   this.checkUpper.checked = true;
-  this.lblLower = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+  this.lblLower = this.dom.createLabel({
     id: 'lower',
     "for": 'inpLower',
     text: 'Small letters'
   });
-  this.checkLower = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
+  this.checkLower = this.dom.createInput({
     type: 'checkbox',
     id: 'inpLower',
     "class": 'Lower'
   });
   this.checkLower.checked = true;
-  this.lblSpecial = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createLabel"])({
+  this.lblSpecial = this.dom.createLabel({
     id: 'special',
     "for": 'inpSpecial',
     text: 'Special Characters'
   });
-  this.checkSpecial = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createInput"])({
+  this.checkSpecial = this.dom.createInput({
     type: 'checkbox',
     id: 'inpSpecial',
     "class": 'Special'
   });
   this.checkSpecial.checked = true;
-  this.btnSubmit = Object(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["createButton"])({
+  this.btnSubmit = this.dom.createButton({
     type: 'submit',
     id: 'btnSubmit',
     text: 'Generate'

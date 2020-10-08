@@ -29,8 +29,8 @@ const ctrlCPF = (event) => {
             break;
         case 'submit':
             const cpf = new GenerateCPF();
-            const newCPF = cpf.newCPF();
-            return newCPF;
+            validate(true);
+            return cpf.newCPF();
     }
 };
 export default ctrlCPF;

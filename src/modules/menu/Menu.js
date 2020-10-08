@@ -1,17 +1,18 @@
-import { getCPF, getHome, getPassword } from '../../assets/js/main';
-import { createNav } from '../../assets/js/dom';
+import { getCPF, getHome, getPassword, getBank } from '../../assets/js/main';
+import Dom from '../../assets/js/dom';
 
 const menuDOM = document.querySelector('#menu');
-
+const dom = new Dom();
 const menu = {
     home: getHome,
     cpf: getCPF,
-    password: getPassword
+    password: getPassword,
+    bank: getBank
 }
 
 const setMenu = () => {
     Object.keys(menu).forEach(element => {
-        let navMenu = createNav({ id: element });
+        let navMenu = dom.createNav({ id: element });
         menuDOM.appendChild(navMenu);
 
         navMenu.addEventListener('click', function () {

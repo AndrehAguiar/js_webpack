@@ -12,6 +12,16 @@ input{
     min-width: 1rem;
     min-height: 1rem;
 }
+#btnSubmit{
+    color: var(--primary);
+    text-transform: uppercase;
+    background-color: var(--backGround);
+    box-shadow: var(--contentShadown);
+}
+#btnSubmit:hover{
+    background-color: darkcyan;
+    box-shadow: var(--contHovShadown);
+}
 #spnPassword{
     font-weight: bold;
     text-align: center;
