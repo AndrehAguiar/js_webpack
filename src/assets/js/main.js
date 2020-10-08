@@ -8,6 +8,7 @@ import BankForm from '../../modules/bank/view/vwBank';
 import { Home } from '../../modules/home/Home';
 
 const path = window.location.pathname;
+
 const urlPath = "/js_webpack/public"; // test
 //const urlPath = "/public"; // dev
 
