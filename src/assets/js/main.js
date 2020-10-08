@@ -1,3 +1,6 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import CalcForm from '../../modules/calculator/view/vwCalculator';
 import CpfForm from '../../modules/cpf/view/vwCPF';
 import PassForm from '../../modules/password/view/vwPassword';
 import BankForm from '../../modules/bank/view/vwBank';
@@ -9,6 +12,12 @@ const container = document.querySelector('.container');
 
 const getHome = () => {
     container.innerHTML = Home;
+}
+
+const getCalculator = () => {
+    const clsForm = new CalcForm();
+    container.appendChild(clsForm.dvGrid);
+    container.classList.add('calculator');
 }
 
 const getCPF = () => {
@@ -34,6 +43,9 @@ switch (path) {
     case '/public/home/':
         getHome();
         break;
+    case '/public/calculator/':
+        getCalculator();
+        break;
     case '/public/cpf/':
         getCPF();
         break;
@@ -46,4 +58,4 @@ switch (path) {
     default:
         getHome();
 }
-export { getCPF, getHome, getPassword, getBank };
+export { getCPF, getHome, getPassword, getBank, getCalculator };

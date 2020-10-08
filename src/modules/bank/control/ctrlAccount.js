@@ -1,8 +1,8 @@
-import Pessoa from '../model/pessoa.js';
-import Account from '../model/account.js';
-import Current from '../model/accCurrent.js';
-import Savings from '../model/accSavings.js';
-import Access from '../model/access.js';
+import Pessoa from '../model/Pessoa.js';
+import Account from '../model/Account.js';
+import Current from '../model/AccCurrent.js';
+import Savings from '../model/AccSavings.js';
+import Access from '../model/Access.js';
 import { setUserAccess, getSession } from './ctrlAccess.js';
 
 const getAccounts = () => {

@@ -1,4 +1,4 @@
-import Account from "./account.js";
+import Account from "./Account.js";
 
 export default class Savings extends (Account) {
     constructor(Account, income) {

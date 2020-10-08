@@ -1,4 +1,4 @@
-import Pessoa from './pessoa';
+import Pessoa from './Pessoa';
 
 export default class Account extends (Pessoa) {
     constructor(Pessoa, number, balance, date) {

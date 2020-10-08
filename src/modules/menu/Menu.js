@@ -1,10 +1,11 @@
-import { getCPF, getHome, getPassword, getBank } from '../../assets/js/main';
+import { getCPF, getHome, getPassword, getBank, getCalculator } from '../../assets/js/main';
 import Dom from '../../assets/js/dom';
 
 const menuDOM = document.querySelector('#menu');
 const dom = new Dom();
 const menu = {
     home: getHome,
+    calculator: getCalculator,
     cpf: getCPF,
     password: getPassword,
     bank: getBank
