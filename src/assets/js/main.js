@@ -8,6 +8,8 @@ import BankForm from '../../modules/bank/view/vwBank';
 import { Home } from '../../modules/home/Home';
 
 const path = window.location.pathname;
+const urlPath = "/js_webpack/public"; // test
+//const urlPath = "/public"; // dev
 
 const container = document.querySelector('.container');
 
@@ -46,22 +48,22 @@ const getBank = () => {
 }
 
 switch (path) {
-    case '/public/home/':
+    case `${urlPath}/home/`:
         getHome();
         break;
-    case '/public/calculator/':
+    case `${urlPath}/calculator/`:
         getCalculator();
         break;
-    case '/public/cpf/':
+    case `${urlPath}/cpf/`:
         getCPF();
         break;
-    case '/public/password/':
+    case `${urlPath}/password/`:
         getPassword();
         break;
-    case '/public/register/':
+    case `${urlPath}/register/`:
         getRegister();
         break;
-    case '/public/bank/':
+    case `${urlPath}/bank/`:
         getBank();
         break;
     default:

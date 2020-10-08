@@ -43,7 +43,7 @@ const logoutForm = () => {
 }
 
 const setOption = (event) => {
-
+    console.log(event);
     const bankForm = document.querySelector('#bankForm');
     if (bankForm) bankForm.remove()
     const optUser = event.target.children[0].value;

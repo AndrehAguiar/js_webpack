@@ -31,9 +31,9 @@ export default class BankForm {
         this.dvContent.appendChild(this.labelNew);
         this.labelNew.appendChild(this.newAccount);
 
-        this.form.addEventListener('click', event => {
-            event.preventDefault();
-            setOption(event);
+        this.form.addEventListener('click', e => {
+            e.preventDefault();
+            setOption(e);
         })
     }
 };
