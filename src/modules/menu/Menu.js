@@ -3,6 +3,9 @@ import {
 } from '../../assets/js/main';
 import Dom from '../../assets/js/dom';
 
+const urlPath = '/js_webpack/public'
+//const urlPath = '/public'
+
 const menuDOM = document.querySelector('#menu');
 const dom = new Dom();
 const menu = {
@@ -21,8 +24,8 @@ const setMenu = () => {
 
         navMenu.addEventListener('click', function () {
             element !== 'home'
-                ? location.replace(`/public/${element}/`)
-                : location.replace(`/public/`);
+                ? location.replace(`${urlPath}/${element}/`)
+                : location.replace(`${urlPath}/`);
         })
     });
 }
