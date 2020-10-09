@@ -24,8 +24,8 @@ const setMenu = () => {
 
         navMenu.addEventListener('click', function () {
             element !== 'home'
-                ? window.location.replace(`${urlPath}/${element}/`)
-                : window.location.replace(`${urlPath}/`);
+                ? location.replace(`${urlPath}/${element}/`)
+                : location.replace(`${urlPath}/`);
         })
     });
 }
