@@ -1,29 +1,29 @@
 import Dom from '../../../assets/js/dom';
 import resume from '../control/ctrlResume';
 
-export default class ResumeAccount {
+export default class ResumeAccount extends Dom {
     constructor() {
 
-        this.dom = new Dom();
+        super(Dom);
 
         this.subtitle = document.querySelector('#subTitle');
 
-        this.formOptAccount = this.dom.createForm({ id: 'optAccount', action: '', method: 'dialog' });
+        this.formOptAccount = this.createForm({ id: 'optAccount', action: '', method: 'dialog' });
 
-        this.dvBarOption = this.dom.createDiv({ id: 'barAccount', text: '' });
+        this.dvBarOption = this.createDiv({ id: 'barAccount', text: '' });
 
-        this.labelCurrent = this.dom.createLabel({ id: 'inpCurrent', text: 'Current Account', for: 'inpCurrent' });
-        this.inpCurrent = this.dom.createInput({ type: 'radio', id: 'inpCurrent' });
+        this.labelCurrent = this.createLabel({ id: 'inpCurrent', text: 'Current Account', for: 'inpCurrent' });
+        this.inpCurrent = this.createInput({ type: 'radio', id: 'inpCurrent' });
         this.inpCurrent.name = 'optAccount';
         this.inpCurrent.value = 'current';
 
-        this.labelSavings = this.dom.createLabel({ id: 'inpSavings', text: 'Savings Account', for: 'inpSavings' });
-        this.inpSavings = this.dom.createInput({ type: 'radio', id: 'inpSavings' });
+        this.labelSavings = this.createLabel({ id: 'inpSavings', text: 'Savings Account', for: 'inpSavings' });
+        this.inpSavings = this.createInput({ type: 'radio', id: 'inpSavings' });
         this.inpSavings.name = 'optAccount';
         this.inpSavings.value = 'savings';
 
-        this.content = this.dom.createDiv({ id: 'content', text: '' });
-        this.balance = this.dom.createSpan({ id: 'spnBalance', text: 'Balance: R$ ' });
+        this.content = this.createDiv({ id: 'content', text: '' });
+        this.balance = this.createSpan({ id: 'spnBalance', text: 'Balance: R$ ' });
 
         this.formOptAccount.appendChild(this.dvBarOption);
 
@@ -41,7 +41,7 @@ export default class ResumeAccount {
         this.session = resume();
         this.subtitle.innerText = `Olá, ${this.session.Account.name}!`;
 
-        this.h3 = this.dom.createH3({ text: `Acc: ${this.session.Account.number}` });
+        this.h3 = this.createH3({ text: `Acc: ${this.session.Account.number}` });
         this.h3.id = 'numAccount';
         this.subtitle.insertAdjacentElement('afterend', this.h3);
 

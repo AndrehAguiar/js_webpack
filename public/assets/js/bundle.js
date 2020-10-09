@@ -16170,6 +16170,7 @@ var Dom = function Dom() {
     var span = document.createElement('span');
     span.id = args.id;
     span.innerText = args.text;
+    span.className = args["class"];
     return span;
   };
 
@@ -16177,6 +16178,7 @@ var Dom = function Dom() {
     var div = document.createElement('div');
     div.id = args.id;
     div.innerText = args.text;
+    div.className = args["class"];
     return div;
   };
 
@@ -16200,7 +16202,7 @@ var Dom = function Dom() {
     var input = document.createElement('input');
     input.type = args.type;
     input.id = args.id;
-    input["class"] = args["class"];
+    input.className = args["class"];
     return input;
   };
 
@@ -16210,6 +16212,12 @@ var Dom = function Dom() {
     button.id = args.id;
     button.innerText = args.text;
     return button;
+  };
+
+  this.createDL = function (args) {
+    var dl = document.createElement('dl');
+    dl.id = args.id;
+    dl.innerText = args.text;
   };
 };
 
@@ -16250,7 +16258,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var path = window.location.pathname;
+var path = window.location.pathname; //const urlPath = "/js_webpack/public"; // test
+
+var urlPath = "/public"; // dev
+
 var container = document.querySelector('.container');
 
 var getHome = function getHome() {
@@ -16289,27 +16300,27 @@ var getBank = function getBank() {
 };
 
 switch (path) {
-  case '/public/home/':
+  case "".concat(urlPath, "/home/"):
     getHome();
     break;
 
-  case '/public/calculator/':
+  case "".concat(urlPath, "/calculator/"):
     getCalculator();
     break;
 
-  case '/public/cpf/':
+  case "".concat(urlPath, "/cpf/"):
     getCPF();
     break;
 
-  case '/public/password/':
+  case "".concat(urlPath, "/password/"):
     getPassword();
     break;
 
-  case '/public/register/':
+  case "".concat(urlPath, "/register/"):
     getRegister();
     break;
 
-  case '/public/bank/':
+  case "".concat(urlPath, "/bank/"):
     getBank();
     break;
 
@@ -16666,6 +16677,7 @@ var logoutForm = function logoutForm() {
 };
 
 var setOption = function setOption(event) {
+  console.log(event);
   var bankForm = document.querySelector('#bankForm');
   if (bankForm) bankForm.remove();
   var optUser = event.target.children[0].value;
@@ -17094,53 +17106,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
 /* harmony import */ var _control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
 /* harmony import */ var _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwResume.js */ "./src/modules/bank/view/vwResume.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
 
-var AccessForm = function AccessForm() {
-  _classCallCheck(this, AccessForm);
 
-  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.subTitle = document.querySelector('#subTitle');
-  this.subTitle.innerText = 'Access account';
-  this.formAccess = this.dom.createForm({
-    id: 'formAccess',
-    method: 'dialog',
-    action: ''
-  });
-  this.inpName = this.dom.createInput({
-    type: 'text',
-    id: 'inpName'
-  });
-  this.inpName.name = 'nameAccount';
-  this.inpName.placeholder = 'Type your name';
-  this.inpName.required = true;
-  this.inpAccount = this.dom.createInput({
-    type: 'text',
-    id: 'inpAccount'
-  });
-  this.inpAccount.name = 'numAccount';
-  this.inpAccount.placeholder = 'Enter the account number';
-  this.inpAccount.required = true;
-  this.bntSubmit = this.dom.createButton({
-    type: 'submit',
-    id: 'btnAccess',
-    text: 'Access'
-  });
-  this.bntSubmit.value = 'Access';
-  this.formAccess.appendChild(this.inpName);
-  this.formAccess.appendChild(this.inpAccount);
-  this.formAccess.appendChild(this.bntSubmit);
-  this.subTitle.insertAdjacentElement('afterend', this.formAccess);
-  this.formAccess.addEventListener('submit', function (event) {
-    event.preventDefault();
-    Object(_control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__["setAccess"])(event);
-    new _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
-  });
-};
+var AccessForm = /*#__PURE__*/function (_Dom) {
+  _inherits(AccessForm, _Dom);
+
+  var _super = _createSuper(AccessForm);
+
+  function AccessForm() {
+    var _this;
+
+    _classCallCheck(this, AccessForm);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.subTitle = document.querySelector('#subTitle');
+    _this.subTitle.innerText = 'Access account';
+    _this.formAccess = _this.createForm({
+      id: 'formAccess',
+      method: 'dialog',
+      action: ''
+    });
+    _this.inpName = _this.createInput({
+      type: 'text',
+      id: 'inpName'
+    });
+    _this.inpName.name = 'nameAccount';
+    _this.inpName.placeholder = 'Type your name';
+    _this.inpName.required = true;
+    _this.inpAccount = _this.createInput({
+      type: 'text',
+      id: 'inpAccount'
+    });
+    _this.inpAccount.name = 'numAccount';
+    _this.inpAccount.placeholder = 'Enter the account number';
+    _this.inpAccount.required = true;
+    _this.bntSubmit = _this.createButton({
+      type: 'submit',
+      id: 'btnAccess',
+      text: 'Access'
+    });
+    _this.bntSubmit.value = 'Access';
+
+    _this.formAccess.appendChild(_this.inpName);
+
+    _this.formAccess.appendChild(_this.inpAccount);
+
+    _this.formAccess.appendChild(_this.bntSubmit);
+
+    _this.subTitle.insertAdjacentElement('afterend', _this.formAccess);
+
+    _this.formAccess.addEventListener('submit', function (event) {
+      event.preventDefault();
+      Object(_control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__["setAccess"])(event);
+      new _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    });
+
+    return _this;
+  }
+
+  return AccessForm;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
@@ -17159,53 +17204,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
 /* harmony import */ var _control_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAccount */ "./src/modules/bank/control/ctrlAccount.js");
 /* harmony import */ var _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwResume.js */ "./src/modules/bank/view/vwResume.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
 
-var accountForm = function accountForm() {
-  _classCallCheck(this, accountForm);
 
-  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.subTitle = document.querySelector('#subTitle');
-  this.subTitle.innerText = 'Create new account';
-  this.formAccount = this.dom.createForm({
-    id: 'formAccount',
-    action: '',
-    method: 'dialog'
-  });
-  this.inpName = this.dom.createInput({
-    type: 'text',
-    id: 'inpName'
-  });
-  this.inpName.name = 'nameAccount';
-  this.inpName.placeholder = 'Type your name';
-  this.inpName.required = true;
-  this.inpAccount = this.dom.createInput({
-    type: 'text',
-    id: 'inpID'
-  });
-  this.inpAccount.name = 'numID';
-  this.inpAccount.placeholder = 'Type your ID number';
-  this.inpAccount.required = true;
-  this.bntSubmit = this.dom.createButton({
-    type: 'submit',
-    text: 'Create',
-    id: 'btnAccount'
-  });
-  this.bntSubmit.value = 'Create';
-  this.formAccount.appendChild(this.inpName);
-  this.formAccount.appendChild(this.inpAccount);
-  this.formAccount.appendChild(this.bntSubmit);
-  this.subTitle.insertAdjacentElement('afterend', this.formAccount);
-  this.formAccount.addEventListener('submit', function (event) {
-    event.preventDefault();
-    Object(_control_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__["setAccount"])(event);
-    new _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
-  });
-};
+var accountForm = /*#__PURE__*/function (_Dom) {
+  _inherits(accountForm, _Dom);
+
+  var _super = _createSuper(accountForm);
+
+  function accountForm() {
+    var _this;
+
+    _classCallCheck(this, accountForm);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.subTitle = document.querySelector('#subTitle');
+    _this.subTitle.innerText = 'Create new account';
+    _this.formAccount = _this.createForm({
+      id: 'formAccount',
+      action: '',
+      method: 'dialog'
+    });
+    _this.inpName = _this.createInput({
+      type: 'text',
+      id: 'inpName'
+    });
+    _this.inpName.name = 'nameAccount';
+    _this.inpName.placeholder = 'Type your name';
+    _this.inpName.required = true;
+    _this.inpAccount = _this.createInput({
+      type: 'text',
+      id: 'inpID'
+    });
+    _this.inpAccount.name = 'numID';
+    _this.inpAccount.placeholder = 'Type your ID number';
+    _this.inpAccount.required = true;
+    _this.bntSubmit = _this.createButton({
+      type: 'submit',
+      text: 'Create',
+      id: 'btnAccount'
+    });
+    _this.bntSubmit.value = 'Create';
+
+    _this.formAccount.appendChild(_this.inpName);
+
+    _this.formAccount.appendChild(_this.inpAccount);
+
+    _this.formAccount.appendChild(_this.bntSubmit);
+
+    _this.subTitle.insertAdjacentElement('afterend', _this.formAccount);
+
+    _this.formAccount.addEventListener('submit', function (event) {
+      event.preventDefault();
+      Object(_control_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__["setAccount"])(event);
+      new _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    });
+
+    return _this;
+  }
+
+  return accountForm;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
@@ -17223,80 +17301,112 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Action; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
 /* harmony import */ var _control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAction */ "./src/modules/bank/control/ctrlAction.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-var Action = function Action() {
-  var _this = this;
 
-  _classCallCheck(this, Action);
+var Action = /*#__PURE__*/function (_Dom) {
+  _inherits(Action, _Dom);
 
-  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.bankForm = this.dom.createForm({
-    id: 'bankForm',
-    action: '',
-    method: 'dialog'
-  });
-  this.labelWithdraw = this.dom.createLabel({
-    "for": 'inpWithdraw',
-    text: 'Withdraw',
-    id: 'lblWidraw'
-  });
-  this.inpWithdraw = this.dom.createInput({
-    type: 'number',
-    id: 'inpWithdraw'
-  });
-  this.inpWithdraw.placeholder = '0.00';
-  this.inpWithdraw.step = '0.01';
-  this.inpWithdraw.name = 'withdraw';
-  this.inpWithdraw.required = true;
-  this.bntWithdraw = this.dom.createButton({
-    type: 'submit',
-    text: 'Withdraw',
-    id: 'btnWithdraw'
-  });
-  this.bntWithdraw.value = 'Withdraw';
-  this.labelDeposit = this.dom.createLabel({
-    "for": 'inpDeposit',
-    text: 'Deposit',
-    id: 'lblDeposit'
-  });
-  this.inpDeposit = this.dom.createInput({
-    type: 'number',
-    id: 'inpDeposit'
-  });
-  this.inpDeposit.placeholder = '0.00';
-  this.inpDeposit.step = '0.01';
-  this.inpDeposit.name = 'deposit';
-  this.inpDeposit.required = true;
-  this.bntDeposit = this.dom.createButton({
-    type: 'submit',
-    text: 'Deposit',
-    id: 'btnDeposit'
-  });
-  this.bntDeposit.value = 'Deposit';
-  this.dvInput = this.dom.createDiv({
-    id: 'dvInput',
-    text: ''
-  });
-  this.bankForm.appendChild(this.labelWithdraw);
-  this.bankForm.appendChild(this.labelDeposit);
-  this.bankForm.appendChild(this.dvInput);
-  this.labelWithdraw.addEventListener('click', function (event) {
-    event.preventDefault();
-    Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["optWithdraw"])(_this.inpWithdraw, _this.bntWithdraw);
-  });
-  this.labelDeposit.addEventListener('click', function (event) {
-    event.preventDefault();
-    Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["optDeposit"])(_this.inpDeposit, _this.bntDeposit);
-  });
-  this.bankForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["action"])(event);
-  });
-};
+  var _super = _createSuper(Action);
+
+  function Action() {
+    var _this;
+
+    _classCallCheck(this, Action);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.bankForm = _this.createForm({
+      id: 'bankForm',
+      action: '',
+      method: 'dialog'
+    });
+    _this.labelWithdraw = _this.createLabel({
+      "for": 'inpWithdraw',
+      text: 'Withdraw',
+      id: 'lblWidraw'
+    });
+    _this.inpWithdraw = _this.createInput({
+      type: 'number',
+      id: 'inpWithdraw'
+    });
+    _this.inpWithdraw.placeholder = '0.00';
+    _this.inpWithdraw.step = '0.01';
+    _this.inpWithdraw.name = 'withdraw';
+    _this.inpWithdraw.required = true;
+    _this.bntWithdraw = _this.createButton({
+      type: 'submit',
+      text: 'Withdraw',
+      id: 'btnWithdraw'
+    });
+    _this.bntWithdraw.value = 'Withdraw';
+    _this.labelDeposit = _this.createLabel({
+      "for": 'inpDeposit',
+      text: 'Deposit',
+      id: 'lblDeposit'
+    });
+    _this.inpDeposit = _this.createInput({
+      type: 'number',
+      id: 'inpDeposit'
+    });
+    _this.inpDeposit.placeholder = '0.00';
+    _this.inpDeposit.step = '0.01';
+    _this.inpDeposit.name = 'deposit';
+    _this.inpDeposit.required = true;
+    _this.bntDeposit = _this.createButton({
+      type: 'submit',
+      text: 'Deposit',
+      id: 'btnDeposit'
+    });
+    _this.bntDeposit.value = 'Deposit';
+    _this.dvInput = _this.createDiv({
+      id: 'dvInput',
+      text: ''
+    });
+
+    _this.bankForm.appendChild(_this.labelWithdraw);
+
+    _this.bankForm.appendChild(_this.labelDeposit);
+
+    _this.bankForm.appendChild(_this.dvInput);
+
+    _this.labelWithdraw.addEventListener('click', function (event) {
+      event.preventDefault();
+      Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["optWithdraw"])(_this.inpWithdraw, _this.bntWithdraw);
+    });
+
+    _this.labelDeposit.addEventListener('click', function (event) {
+      event.preventDefault();
+      Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["optDeposit"])(_this.inpDeposit, _this.bntDeposit);
+    });
+
+    _this.bankForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["action"])(event);
+    });
+
+    return _this;
+  }
+
+  return Action;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
@@ -17314,64 +17424,99 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BankForm; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
 /* harmony import */ var _control_ctrlBank__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlBank */ "./src/modules/bank/control/ctrlBank.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-var BankForm = function BankForm() {
-  _classCallCheck(this, BankForm);
 
-  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.h1 = this.dom.createH1({
-    text: 'Bank'
-  });
-  this.h2 = this.dom.createH2({
-    text: 'Select an option'
-  });
-  this.h2.id = 'subTitle';
-  this.form = this.dom.createForm({
-    id: 'option',
-    method: 'dialog',
-    action: ''
-  });
-  this.labelAcc = this.dom.createLabel({
-    id: 'accAccount',
-    text: 'Access Account',
-    "for": 'accAccount'
-  });
-  this.accAccount = this.dom.createInput({
-    type: 'radio',
-    id: 'accAccount'
-  });
-  this.accAccount.value = 'access';
-  this.accAccount.name = 'optAccount';
-  this.labelNew = this.dom.createLabel({
-    id: 'newAccount',
-    text: 'Create Account',
-    "for": 'newAccount'
-  });
-  this.newAccount = this.dom.createInput({
-    type: 'radio',
-    id: 'newAccount'
-  });
-  this.newAccount.value = 'account';
-  this.newAccount.name = 'optAccount';
-  this.dvContent = this.dom.createDiv({
-    id: 'barOption',
-    text: ''
-  });
-  this.form.appendChild(this.h1);
-  this.form.appendChild(this.dvContent);
-  this.dvContent.appendChild(this.labelAcc);
-  this.labelAcc.appendChild(this.accAccount);
-  this.dvContent.appendChild(this.labelNew);
-  this.labelNew.appendChild(this.newAccount);
-  this.form.addEventListener('click', function (event) {
-    event.preventDefault();
-    Object(_control_ctrlBank__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
-  });
-};
+var BankForm = /*#__PURE__*/function (_Dom) {
+  _inherits(BankForm, _Dom);
+
+  var _super = _createSuper(BankForm);
+
+  function BankForm() {
+    var _this;
+
+    _classCallCheck(this, BankForm);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.h1 = _this.createH1({
+      text: 'Bank'
+    });
+    _this.h2 = _this.createH2({
+      text: 'Select an option'
+    });
+    _this.h2.id = 'subTitle';
+    _this.form = _this.createForm({
+      id: 'option',
+      method: 'dialog',
+      action: ''
+    });
+    _this.labelAcc = _this.createLabel({
+      id: 'accAccount',
+      text: 'Access Account',
+      "for": 'accAccount'
+    });
+    _this.accAccount = _this.createInput({
+      type: 'radio',
+      id: 'accAccount'
+    });
+    _this.accAccount.value = 'access';
+    _this.accAccount.name = 'optAccount';
+    _this.labelNew = _this.createLabel({
+      id: 'newAccount',
+      text: 'Create Account',
+      "for": 'newAccount'
+    });
+    _this.newAccount = _this.createInput({
+      type: 'radio',
+      id: 'newAccount'
+    });
+    _this.newAccount.value = 'account';
+    _this.newAccount.name = 'optAccount';
+    _this.dvContent = _this.createDiv({
+      id: 'barOption',
+      text: ''
+    });
+
+    _this.form.appendChild(_this.h1);
+
+    _this.form.appendChild(_this.dvContent);
+
+    _this.dvContent.appendChild(_this.labelAcc);
+
+    _this.labelAcc.appendChild(_this.accAccount);
+
+    _this.dvContent.appendChild(_this.labelNew);
+
+    _this.labelNew.appendChild(_this.newAccount);
+
+    _this.form.addEventListener('click', function (e) {
+      e.preventDefault();
+      Object(_control_ctrlBank__WEBPACK_IMPORTED_MODULE_1__["default"])(e);
+    });
+
+    return _this;
+  }
+
+  return BankForm;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 ;
@@ -17411,8 +17556,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var CreateCurrent = /*#__PURE__*/function (_Action) {
-  _inherits(CreateCurrent, _Action);
+var CreateCurrent = /*#__PURE__*/function (_Dom) {
+  _inherits(CreateCurrent, _Dom);
 
   var _super = _createSuper(CreateCurrent);
 
@@ -17421,10 +17566,9 @@ var CreateCurrent = /*#__PURE__*/function (_Action) {
 
     _classCallCheck(this, CreateCurrent);
 
-    _this = _super.call(this, _vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
     _this.session = session;
-    _this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-    _this.spnLimit = _this.dom.createSpan({
+    _this.spnLimit = _this.createSpan({
       id: 'spnLimit',
       text: 'Limit: R$ '
     });
@@ -17440,7 +17584,7 @@ var CreateCurrent = /*#__PURE__*/function (_Action) {
   }
 
   return CreateCurrent;
-}(_vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
@@ -17458,30 +17602,60 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LogoutForm; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
 /* harmony import */ var _control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-var LogoutForm = function LogoutForm() {
-  _classCallCheck(this, LogoutForm);
 
-  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.subTitle = document.querySelector('#subTitle');
-  this.subTitle.innerText = 'Logout first';
-  this.btnLogout = this.dom.createButton({
-    type: 'button',
-    text: 'Logout',
-    id: 'btnLogout'
-  });
-  this.btnLogout.value = 'Logout';
-  this.subTitle.insertAdjacentElement('afterend', this.btnLogout);
-  this.btnLogout.addEventListener('click', function (event) {
-    event.preventDefault();
-    console.log(event);
-    Object(_control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__["setLogout"])();
-  });
-};
+var LogoutForm = /*#__PURE__*/function (_Dom) {
+  _inherits(LogoutForm, _Dom);
+
+  var _super = _createSuper(LogoutForm);
+
+  function LogoutForm() {
+    var _this;
+
+    _classCallCheck(this, LogoutForm);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.subTitle = document.querySelector('#subTitle');
+    _this.subTitle.innerText = 'Logout first';
+    _this.btnLogout = _this.createButton({
+      type: 'button',
+      text: 'Logout',
+      id: 'btnLogout'
+    });
+    _this.btnLogout.value = 'Logout';
+
+    _this.subTitle.insertAdjacentElement('afterend', _this.btnLogout);
+
+    _this.btnLogout.addEventListener('click', function (event) {
+      event.preventDefault();
+      console.log(event);
+      Object(_control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__["setLogout"])();
+    });
+
+    return _this;
+  }
+
+  return LogoutForm;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
@@ -17499,76 +17673,116 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResumeAccount; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
 /* harmony import */ var _control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlResume */ "./src/modules/bank/control/ctrlResume.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-var ResumeAccount = function ResumeAccount() {
-  _classCallCheck(this, ResumeAccount);
 
-  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.subtitle = document.querySelector('#subTitle');
-  this.formOptAccount = this.dom.createForm({
-    id: 'optAccount',
-    action: '',
-    method: 'dialog'
-  });
-  this.dvBarOption = this.dom.createDiv({
-    id: 'barAccount',
-    text: ''
-  });
-  this.labelCurrent = this.dom.createLabel({
-    id: 'inpCurrent',
-    text: 'Current Account',
-    "for": 'inpCurrent'
-  });
-  this.inpCurrent = this.dom.createInput({
-    type: 'radio',
-    id: 'inpCurrent'
-  });
-  this.inpCurrent.name = 'optAccount';
-  this.inpCurrent.value = 'current';
-  this.labelSavings = this.dom.createLabel({
-    id: 'inpSavings',
-    text: 'Savings Account',
-    "for": 'inpSavings'
-  });
-  this.inpSavings = this.dom.createInput({
-    type: 'radio',
-    id: 'inpSavings'
-  });
-  this.inpSavings.name = 'optAccount';
-  this.inpSavings.value = 'savings';
-  this.content = this.dom.createDiv({
-    id: 'content',
-    text: ''
-  });
-  this.balance = this.dom.createSpan({
-    id: 'spnBalance',
-    text: 'Balance: R$ '
-  });
-  this.formOptAccount.appendChild(this.dvBarOption);
-  this.dvBarOption.appendChild(this.labelCurrent);
-  this.labelCurrent.appendChild(this.inpCurrent);
-  this.dvBarOption.appendChild(this.labelSavings);
-  this.labelSavings.appendChild(this.inpSavings);
-  this.content.appendChild(this.balance);
-  this.subtitle.insertAdjacentElement('afterend', this.formOptAccount);
-  this.formOptAccount.insertAdjacentElement('afterend', this.content);
-  this.session = Object(_control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  this.subtitle.innerText = "Ol\xE1, ".concat(this.session.Account.name, "!");
-  this.h3 = this.dom.createH3({
-    text: "Acc: ".concat(this.session.Account.number)
-  });
-  this.h3.id = 'numAccount';
-  this.subtitle.insertAdjacentElement('afterend', this.h3);
-  this.balance.innerText += Number(this.session.Account.balance).toFixed(2);
-  this.formOptAccount.addEventListener('click', function (event) {
-    event.preventDefault();
-    Object(_control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
-  });
-};
+var ResumeAccount = /*#__PURE__*/function (_Dom) {
+  _inherits(ResumeAccount, _Dom);
+
+  var _super = _createSuper(ResumeAccount);
+
+  function ResumeAccount() {
+    var _this;
+
+    _classCallCheck(this, ResumeAccount);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.subtitle = document.querySelector('#subTitle');
+    _this.formOptAccount = _this.createForm({
+      id: 'optAccount',
+      action: '',
+      method: 'dialog'
+    });
+    _this.dvBarOption = _this.createDiv({
+      id: 'barAccount',
+      text: ''
+    });
+    _this.labelCurrent = _this.createLabel({
+      id: 'inpCurrent',
+      text: 'Current Account',
+      "for": 'inpCurrent'
+    });
+    _this.inpCurrent = _this.createInput({
+      type: 'radio',
+      id: 'inpCurrent'
+    });
+    _this.inpCurrent.name = 'optAccount';
+    _this.inpCurrent.value = 'current';
+    _this.labelSavings = _this.createLabel({
+      id: 'inpSavings',
+      text: 'Savings Account',
+      "for": 'inpSavings'
+    });
+    _this.inpSavings = _this.createInput({
+      type: 'radio',
+      id: 'inpSavings'
+    });
+    _this.inpSavings.name = 'optAccount';
+    _this.inpSavings.value = 'savings';
+    _this.content = _this.createDiv({
+      id: 'content',
+      text: ''
+    });
+    _this.balance = _this.createSpan({
+      id: 'spnBalance',
+      text: 'Balance: R$ '
+    });
+
+    _this.formOptAccount.appendChild(_this.dvBarOption);
+
+    _this.dvBarOption.appendChild(_this.labelCurrent);
+
+    _this.labelCurrent.appendChild(_this.inpCurrent);
+
+    _this.dvBarOption.appendChild(_this.labelSavings);
+
+    _this.labelSavings.appendChild(_this.inpSavings);
+
+    _this.content.appendChild(_this.balance);
+
+    _this.subtitle.insertAdjacentElement('afterend', _this.formOptAccount);
+
+    _this.formOptAccount.insertAdjacentElement('afterend', _this.content);
+
+    _this.session = Object(_control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    _this.subtitle.innerText = "Ol\xE1, ".concat(_this.session.Account.name, "!");
+    _this.h3 = _this.createH3({
+      text: "Acc: ".concat(_this.session.Account.number)
+    });
+    _this.h3.id = 'numAccount';
+
+    _this.subtitle.insertAdjacentElement('afterend', _this.h3);
+
+    _this.balance.innerText += Number(_this.session.Account.balance).toFixed(2);
+
+    _this.formOptAccount.addEventListener('click', function (event) {
+      event.preventDefault();
+      Object(_control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
+    });
+
+    return _this;
+  }
+
+  return ResumeAccount;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
@@ -17607,8 +17821,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var CreateSavings = /*#__PURE__*/function (_Action) {
-  _inherits(CreateSavings, _Action);
+var CreateSavings = /*#__PURE__*/function (_Dom) {
+  _inherits(CreateSavings, _Dom);
 
   var _super = _createSuper(CreateSavings);
 
@@ -17617,10 +17831,9 @@ var CreateSavings = /*#__PURE__*/function (_Action) {
 
     _classCallCheck(this, CreateSavings);
 
-    _this = _super.call(this, _vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
     _this.session = session;
-    _this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-    _this.spnIncome = _this.dom.createSpan({
+    _this.spnIncome = _this.createSpan({
       id: 'spnIncome',
       text: 'Income: R$ '
     });
@@ -17636,7 +17849,7 @@ var CreateSavings = /*#__PURE__*/function (_Action) {
   }
 
   return CreateSavings;
-}(_vwAction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
@@ -17651,106 +17864,328 @@ var CreateSavings = /*#__PURE__*/function (_Action) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ControlCalc; });
 /* harmony import */ var _model_Calculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../model/Calculator */ "./src/modules/calculator/model/Calculator.js");
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-var clickButton = function clickButton(e, calculator) {
-  var el = e.target;
-  var btnValue = el.innerText;
-  if (el.classList[0] != 'func') return;
+var ControlCalc = /*#__PURE__*/function (_Calculator) {
+  _inherits(ControlCalc, _Calculator);
 
-  switch (el.classList[1]) {
-    case 'num':
-      calculator.btnDisplay(btnValue);
-      break;
+  var _super = _createSuper(ControlCalc);
 
-    case 'dot':
-      calculator.formatDecimal(btnValue);
-      break;
+  function ControlCalc() {
+    var _this;
 
-    case 'equal':
-      calculator.setFormula(btnValue);
-      break;
+    _classCallCheck(this, ControlCalc);
 
-    case 'del':
-      calculator.delValue();
-      break;
+    _this = _super.call(this, _model_Calculator__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-    case 'clear':
-      calculator.clearDisplay();
-      break;
+    _this.btnDisplay = function (btnValue) {
+      if (_this.display.value === '0' && btnValue !== '0' || _this.resultState.value === 'true') {
+        _this.display.value = btnValue;
+        _this.resultState.value = false;
+      } else {
+        console.log('btn', _this.formula.innerText);
+        _this.display.value += btnValue;
+        _this.resultState.value = false;
+      }
+    };
 
-    case 'lpar' || false:
-      calculator.formatFormula(btnValue);
-      break;
+    _this.setFormula = function (btnValue) {
+      if (_this.operations.includes(btnValue) && _this.resultState.value === 'true' || _this.formula.innerText.includes('=')) {
+        _this.formula.innerText = "".concat(display.value).concat(btnValue);
+        _this.resultState.value = true;
+      } else {
+        if (_this.formula.innerText.slice(-1) === ')') {
+          _this.formula.innerText += "".concat(btnValue);
+        } else {
+          _this.formula.innerText += "".concat(_this.display.value).concat(btnValue);
+        }
 
-    default:
-      calculator.setFormula(btnValue);
+        _this.resultState.value = true;
+      }
+
+      _this.preResult();
+    };
+
+    _this.checkFormula = function () {
+      var arrFormula = Array.from(_this.formula.innerText);
+      var qtdRpar = arrFormula.reduce(function (accumulator, val) {
+        if (val === ')') accumulator += 1;
+        return accumulator;
+      }, 0);
+      var qtdLpar = arrFormula.reduce(function (accumulator, val) {
+        if (val === '(') accumulator += 1;
+        return accumulator;
+      }, 0);
+      return qtdRpar < qtdLpar;
+    };
+
+    _this.formatFormula = function (btnValue) {
+      if (btnValue === ')') {
+        if (_this.checkFormula()) {
+          _this.resultState.value = false;
+
+          _this.setFormula(btnValue);
+        }
+
+        ;
+        _this.resultState.value = false;
+      } else {
+        if (_this.operations.includes(_this.formula.innerText.slice(-1))) {
+          if (!_this.formula.innerText.includes('=')) {
+            _this.formula.innerText += "".concat(btnValue);
+          } else {
+            _this.formula.innerText = "".concat(btnValue);
+          }
+        }
+      }
+    };
+
+    _this.preResult = function () {
+      var math = _this.result();
+
+      if (math) _this.display.value = "".concat(math);
+      _this.resultState.value = true;
+    };
+
+    _this.setResult = function () {
+      _this.setFormula('=');
+
+      var math = _this.result();
+
+      _this.formula.innerText += "".concat(math);
+      _this.display.value = "".concat(math);
+      _this.resultState.value = true;
+    };
+
+    return _this;
   }
-};
 
-var pressKey = function pressKey(e, calculator) {
-  var funcValue = e.key;
-  console.log(e.key in _toConsumableArray(Array(10).keys()));
-  if (e.key in _toConsumableArray(Array(10).keys())) funcValue = 'num';
-  if (calculator.operations.includes(e.key)) funcValue = 'oper';
+  return ControlCalc;
+}(_model_Calculator__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-  switch (funcValue) {
-    case 'Escape':
-      calculator.clearDisplay();
-      break;
 
-    case 'Enter':
-      calculator.setFormula('=');
-      break;
 
-    case 'num':
-      calculator.btnDisplay(e.key);
-      break;
+/***/ }),
 
-    case 'oper':
-      calculator.setFormula(e.key);
-      break;
+/***/ "./src/modules/calculator/control/ctrlClick.js":
+/*!*****************************************************!*\
+  !*** ./src/modules/calculator/control/ctrlClick.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-    case '.':
-      calculator.formatDecimal(e.key);
-      break;
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ControlClick; });
+/* harmony import */ var _ctrlCalculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ctrlCalculator */ "./src/modules/calculator/control/ctrlCalculator.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-    case '(':
-      calculator.setFormula(e.key);
-      break;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    case ')':
-      calculator.setFormula(e.key);
-      break;
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-    case 'Backspace':
-      calculator.delValue();
-      break;
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-    default:
-      return;
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var ControlClick = /*#__PURE__*/function (_ControlCalc) {
+  _inherits(ControlClick, _ControlCalc);
+
+  var _super = _createSuper(ControlClick);
+
+  function ControlClick(event) {
+    var _this;
+
+    _classCallCheck(this, ControlClick);
+
+    _this = _super.call(this, _ctrlCalculator__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.event = event;
+    return _this;
   }
-};
 
-var control = function control(e) {
-  var calculator = new _model_Calculator__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  e.type === 'click' ? clickButton(e, calculator) : pressKey(e, calculator);
-};
+  _createClass(ControlClick, [{
+    key: "clickButton",
+    value: function clickButton() {
+      var el = this.event.target;
+      var btnValue = el.innerText;
+      if (el.classList[0] != 'func') return;
 
-/* harmony default export */ __webpack_exports__["default"] = (control);
+      switch (el.classList[1]) {
+        case 'num':
+          this.btnDisplay(btnValue);
+          break;
+
+        case 'dot':
+          this.formatDecimal(btnValue);
+          break;
+
+        case 'equal':
+          this.setResult();
+          break;
+
+        case 'del':
+          this.delValue();
+          break;
+
+        case 'clear':
+          this.clearDisplay();
+          break;
+
+        case 'lpar':
+          this.formatFormula(btnValue);
+          break;
+
+        case 'rpar':
+          this.formatFormula(btnValue);
+          break;
+
+        default:
+          this.setFormula(btnValue);
+      }
+    }
+  }]);
+
+  return ControlClick;
+}(_ctrlCalculator__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./src/modules/calculator/control/ctrlKey.js":
+/*!***************************************************!*\
+  !*** ./src/modules/calculator/control/ctrlKey.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ControlKey; });
+/* harmony import */ var _ctrlCalculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ctrlCalculator */ "./src/modules/calculator/control/ctrlCalculator.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var ControlKey = /*#__PURE__*/function (_ControlCalc) {
+  _inherits(ControlKey, _ControlCalc);
+
+  var _super = _createSuper(ControlKey);
+
+  function ControlKey(event) {
+    var _this;
+
+    _classCallCheck(this, ControlKey);
+
+    _this = _super.call(this, _ctrlCalculator__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.event = event;
+    return _this;
+  }
+
+  _createClass(ControlKey, [{
+    key: "pressKey",
+    value: function pressKey() {
+      var funcValue = this.event.key;
+      if (this.event.key in this.numbers) funcValue = 'num';
+      if (this.operations.includes(this.event.key)) funcValue = 'oper';
+
+      switch (funcValue) {
+        case 'Escape':
+          this.clearDisplay();
+          break;
+
+        case 'Enter':
+          this.setResult('=');
+          break;
+
+        case 'num':
+          this.btnDisplay(this.event.key);
+          break;
+
+        case 'oper':
+          this.setFormula(this.event.key);
+          break;
+
+        case '.':
+          this.formatDecimal(this.event.key);
+          break;
+
+        case '(':
+          this.formatFormula(this.event.key);
+          break;
+
+        case ')':
+          this.formatFormula(this.event.key);
+          break;
+
+        case 'Backspace':
+          this.delValue();
+          break;
+
+        default:
+          break;
+      }
+    }
+  }]);
+
+  return ControlKey;
+}(_ctrlCalculator__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
 
 /***/ }),
 
@@ -17764,6 +18199,18 @@ var control = function control(e) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Calculator; });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -17774,27 +18221,14 @@ var Calculator = /*#__PURE__*/function () {
   function Calculator() {
     _classCallCheck(this, Calculator);
 
+    this.resultState = document.querySelector('#resultState');
     this.display = document.querySelector('#display');
     this.formula = document.querySelector('.formula');
     this.operations = ['-', '+', '/', '*'];
+    this.numbers = _toConsumableArray(Array(10).keys());
   }
 
   _createClass(Calculator, [{
-    key: "btnDisplay",
-    value: function btnDisplay(btnValue) {
-      if (this.display.value === '0') {
-        this.display.value = btnValue;
-      } else if (this.operations.includes(this.formula.innerText.slice(-1))) {
-        this.display.value = btnValue;
-      } else if (this.formula.innerText.slice(-1) === '(') {
-        this.display.value = btnValue;
-      } else if (this.formula.innerText.includes('=')) {
-        this.display.value = btnValue;
-      } else {
-        this.display.value += btnValue;
-      }
-    }
-  }, {
     key: "clearDisplay",
     value: function clearDisplay() {
       this.display.value = 0;
@@ -17805,41 +18239,19 @@ var Calculator = /*#__PURE__*/function () {
     value: function delValue() {
       var val = this.display.value.length;
       this.display.value = val === 1 ? '0' : this.display.value.slice(0, -1);
-      this.formula.innerText = this.formula.innerText.slice(0, -2);
     }
   }, {
     key: "formatDecimal",
     value: function formatDecimal(btnValue) {
-      this.display.value.slice(-1) === '.' ? this.display.value = btnValue : this.display.value += btnValue;
+      if (!this.display.value.includes('.')) this.display.value += btnValue;
     }
   }, {
     key: "result",
     value: function result() {
       try {
         var mathAccount = eval(this.formula.innerText.slice(0, -1)).toFixed(2);
-        this.display.value = mathAccount;
-        this.formula.innerText.slice(-1) === '=' ? this.formula.innerText += mathAccount : this.formula.innerText;
+        return mathAccount;
       } catch (e) {}
-    }
-  }, {
-    key: "setFormula",
-    value: function setFormula(btnValue) {
-      if (this.formula.innerText.includes('=')) {
-        this.formula.innerText = "".concat(this.display.value).concat(btnValue);
-      } else {
-        if (this.formula.innerText.slice(-1) === ')') {
-          this.formula.innerText += "".concat(btnValue);
-        } else {
-          this.formula.innerText += "".concat(this.display.value).concat(btnValue);
-        }
-      }
-
-      this.result();
-    }
-  }, {
-    key: "formatFormula",
-    value: function formatFormula(btnValue) {
-      this.formula.innerText.includes('=') ? this.formula.innerText = btnValue : this.formula.innerText += btnValue;
     }
   }]);
 
@@ -17861,121 +18273,167 @@ var Calculator = /*#__PURE__*/function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Display; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
-/* harmony import */ var _control_ctrlCalculator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlCalculator */ "./src/modules/calculator/control/ctrlCalculator.js");
+/* harmony import */ var _control_ctrlClick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlClick */ "./src/modules/calculator/control/ctrlClick.js");
+/* harmony import */ var _control_ctrlKey__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../control/ctrlKey */ "./src/modules/calculator/control/ctrlKey.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-var Display = function Display() {
-  var _this = this;
 
-  _classCallCheck(this, Display);
 
-  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.dvGrid = this.dom.createDiv({
-    id: 'grdCalculator',
-    text: ''
-  });
-  this.dvGrid.className = 'grdCalculator';
-  this.h1 = this.dom.createH1({
-    text: 'Calculator'
-  });
-  this.span = this.dom.createSpan({
-    id: 'spnResult',
-    text: ''
-  });
-  this.span.className = 'formula';
-  this.inpDisplay = this.dom.createInput({
-    type: 'text',
-    id: 'display'
-  });
-  this.inpDisplay.readOnly = 'readonly';
-  this.inpDisplay.value = 0;
-  this.inpDisplay.className = 'display';
-  this.itensGrid = [{
-    'itemClass': "func clear",
-    'text': 'C'
-  }, {
-    'itemClass': 'func lpar',
-    'text': '('
-  }, {
-    'itemClass': 'func rpar',
-    'text': ')'
-  }, {
-    'itemClass': 'func div',
-    'text': '/'
-  }, {
-    'itemClass': 'func num',
-    'text': 7
-  }, {
-    'itemClass': 'func num',
-    'text': 9
-  }, {
-    'itemClass': 'func num',
-    'text': 8
-  }, {
-    'itemClass': 'func mult',
-    'text': '*'
-  }, {
-    'itemClass': 'func num',
-    'text': 4
-  }, {
-    'itemClass': 'func num',
-    'text': 5
-  }, {
-    'itemClass': 'func num',
-    'text': 6
-  }, {
-    'itemClass': 'func plus',
-    'text': '+'
-  }, {
-    'itemClass': 'func num',
-    'text': 1
-  }, {
-    'itemClass': 'func num',
-    'text': 2
-  }, {
-    'itemClass': 'func num',
-    'text': 3
-  }, {
-    'itemClass': 'func sub',
-    'text': '-'
-  }, {
-    'itemClass': 'func dot',
-    'text': '.'
-  }, {
-    'itemClass': 'func num',
-    'text': 0
-  }, {
-    'itemClass': 'func del',
-    'text': '«'
-  }, {
-    'itemClass': 'func equal',
-    'text': '='
-  }];
-  this.dvGrid.appendChild(this.h1);
-  this.dvGrid.appendChild(this.span);
-  this.dvGrid.appendChild(this.inpDisplay);
-  this.itensGrid.forEach(function (element) {
-    var item = element.itemClass;
-    item = _this.dom.createDiv({
-      id: 'item',
-      text: element.text
+var Display = /*#__PURE__*/function (_Dom) {
+  _inherits(Display, _Dom);
+
+  var _super = _createSuper(Display);
+
+  function Display() {
+    var _this;
+
+    _classCallCheck(this, Display);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.dvGrid = _this.createDiv({
+      id: 'grdCalculator',
+      text: '',
+      "class": 'grdCalculator'
     });
-    item.classList = element.itemClass;
+    _this.h1 = _this.createH1({
+      text: 'Calculator'
+    });
+    _this.span = _this.createSpan({
+      id: 'spnResult',
+      text: '',
+      "class": 'formula'
+    });
+    _this.inpDisplay = _this.createInput({
+      type: 'text',
+      id: 'display',
+      "class": 'display'
+    });
+    _this.inpDisplay.readOnly = 'readonly';
+    _this.inpDisplay.value = 0;
+    _this.itensGrid = [{
+      'itemClass': "func clear",
+      'text': 'C'
+    }, {
+      'itemClass': 'func lpar',
+      'text': '('
+    }, {
+      'itemClass': 'func rpar',
+      'text': ')'
+    }, {
+      'itemClass': 'func div',
+      'text': '/'
+    }, {
+      'itemClass': 'func num',
+      'text': 7
+    }, {
+      'itemClass': 'func num',
+      'text': 9
+    }, {
+      'itemClass': 'func num',
+      'text': 8
+    }, {
+      'itemClass': 'func mult',
+      'text': '*'
+    }, {
+      'itemClass': 'func num',
+      'text': 4
+    }, {
+      'itemClass': 'func num',
+      'text': 5
+    }, {
+      'itemClass': 'func num',
+      'text': 6
+    }, {
+      'itemClass': 'func plus',
+      'text': '+'
+    }, {
+      'itemClass': 'func num',
+      'text': 1
+    }, {
+      'itemClass': 'func num',
+      'text': 2
+    }, {
+      'itemClass': 'func num',
+      'text': 3
+    }, {
+      'itemClass': 'func sub',
+      'text': '-'
+    }, {
+      'itemClass': 'func dot',
+      'text': '.'
+    }, {
+      'itemClass': 'func num',
+      'text': 0
+    }, {
+      'itemClass': 'func del',
+      'text': '«'
+    }, {
+      'itemClass': 'func equal',
+      'text': '='
+    }];
 
-    _this.dvGrid.appendChild(item);
-  });
-  this.dvGrid.addEventListener('click', function (event) {
-    event.preventDefault();
-    Object(_control_ctrlCalculator__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
-  });
-  document.addEventListener('keydown', function (event) {
-    event.preventDefault();
-    Object(_control_ctrlCalculator__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
-  });
-};
+    _this.dvGrid.appendChild(_this.h1);
+
+    _this.dvGrid.appendChild(_this.span);
+
+    _this.dvGrid.appendChild(_this.inpDisplay);
+
+    _this.itensGrid.forEach(function (element) {
+      var item = element.itemClass;
+      item = _this.createDiv({
+        id: 'item',
+        text: element.text
+      });
+      item.classList = element.itemClass;
+
+      _this.dvGrid.appendChild(item);
+    });
+
+    _this.inpResult = _this.createInput({
+      type: 'hidden',
+      id: 'resultState',
+      "class": 'result'
+    });
+    _this.inpResult.value = false;
+
+    _this.dvGrid.appendChild(_this.inpResult);
+
+    _this.dvGrid.addEventListener('click', function (event) {
+      event.preventDefault();
+      _this.control = new _control_ctrlClick__WEBPACK_IMPORTED_MODULE_1__["default"](event);
+
+      _this.control.clickButton();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      event.preventDefault();
+      _this.control = new _control_ctrlKey__WEBPACK_IMPORTED_MODULE_2__["default"](event);
+
+      _this.control.pressKey(event);
+    });
+    return _this;
+  }
+
+  return Display;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
@@ -18197,57 +18655,90 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CpfForm; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
 /* harmony import */ var _control_ctrlCPF__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlCPF */ "./src/modules/cpf/control/ctrlCPF.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-var CpfForm = function CpfForm() {
-  var _this = this;
 
-  _classCallCheck(this, CpfForm);
+var CpfForm = /*#__PURE__*/function (_Dom) {
+  _inherits(CpfForm, _Dom);
 
-  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.title = this.dom.createH1({
-    text: 'Valid CPF Generator'
-  });
-  this.form = this.dom.createForm({
-    id: 'formCPF',
-    method: 'dialog'
-  });
-  this.label = this.dom.createLabel({
-    id: 'lblCPF',
-    "for": 'inpCPF',
-    text: 'Type the CPF to check if is valid'
-  });
-  this.input = this.dom.createInput({
-    type: 'text',
-    id: 'inpCPF'
-  });
-  this.input.placeholder = '___.___.___-__';
-  this.input.maxLength = 14;
-  this.input.minLength = 14;
-  this.span = this.dom.createSpan({
-    id: 'spnValidate',
-    text: ''
-  });
-  this.button = this.dom.createButton({
-    type: 'submit',
-    id: 'btnSubmit',
-    text: 'Generate'
-  });
-  this.form.appendChild(this.title);
-  this.form.appendChild(this.label);
-  this.form.appendChild(this.input);
-  this.form.appendChild(this.span);
-  this.form.appendChild(this.button);
-  this.form.addEventListener('submit', function (event) {
-    _this.input.value = Object(_control_ctrlCPF__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
-  });
-  this.form.addEventListener('keyup', function (event) {
-    Object(_control_ctrlCPF__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
-  });
-};
+  var _super = _createSuper(CpfForm);
+
+  function CpfForm() {
+    var _this;
+
+    _classCallCheck(this, CpfForm);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.title = _this.createH1({
+      text: 'Valid CPF Generator'
+    });
+    _this.form = _this.createForm({
+      id: 'formCPF',
+      method: 'dialog'
+    });
+    _this.label = _this.createLabel({
+      id: 'lblCPF',
+      "for": 'inpCPF',
+      text: 'Type the CPF to check if is valid'
+    });
+    _this.input = _this.createInput({
+      type: 'text',
+      id: 'inpCPF'
+    });
+    _this.input.placeholder = '___.___.___-__';
+    _this.input.maxLength = 14;
+    _this.input.minLength = 14;
+    _this.span = _this.createSpan({
+      id: 'spnValidate',
+      text: ''
+    });
+    _this.button = _this.createButton({
+      type: 'submit',
+      id: 'btnSubmit',
+      text: 'Generate'
+    });
+
+    _this.form.appendChild(_this.title);
+
+    _this.form.appendChild(_this.label);
+
+    _this.form.appendChild(_this.input);
+
+    _this.form.appendChild(_this.span);
+
+    _this.form.appendChild(_this.button);
+
+    _this.form.addEventListener('submit', function (event) {
+      _this.input.value = Object(_control_ctrlCPF__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
+    });
+
+    _this.form.addEventListener('keyup', function (event) {
+      Object(_control_ctrlCPF__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
+    });
+
+    return _this;
+  }
+
+  return CpfForm;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
@@ -18280,6 +18771,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_js_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/js/main */ "./src/assets/js/main.js");
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/js/dom */ "./src/assets/js/dom.js");
 
+ //const urlPath = '/js_webpack/public'; //test
+
+var urlPath = '/public'; // dev
 
 var menuDOM = document.querySelector('#menu');
 var dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_1__["default"]();
@@ -18299,7 +18793,7 @@ var setMenu = function setMenu() {
     });
     menuDOM.appendChild(navMenu);
     navMenu.addEventListener('click', function () {
-      element !== 'home' ? location.replace("/public/".concat(element, "/")) : location.replace("/public/");
+      element !== 'home' ? location.replace("".concat(urlPath, "/").concat(element, "/")) : location.replace("".concat(urlPath, "/"));
     });
   });
 };
@@ -18474,109 +18968,151 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PassForm; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
 /* harmony import */ var _control_ctrlPassword__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlPassword */ "./src/modules/password/control/ctrlPassword.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-var PassForm = function PassForm() {
-  _classCallCheck(this, PassForm);
 
-  this.dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  this.title = this.dom.createH1({
-    text: 'Password Generator'
-  });
-  this.form = this.dom.createForm({
-    id: 'formPass',
-    method: 'dialog'
-  });
-  this.span = this.dom.createSpan({
-    id: 'spnPassword',
-    text: ''
-  });
-  this.lblChars = this.dom.createLabel({
-    id: 'chars',
-    "for": 'inpQtdChars',
-    text: 'Number of characters'
-  });
-  this.input = this.dom.createInput({
-    type: 'number',
-    id: 'inpQtdChars',
-    "class": 'qtdChars'
-  });
-  this.input.value = 6;
-  this.input.maxlength = '2';
-  this.input.max = 12;
-  this.input.minlength = '1';
-  this.input.min = 6;
-  this.input.required = true;
-  this.lblNumber = this.dom.createLabel({
-    id: 'number',
-    "for": 'inpNumber',
-    text: 'Numbers'
-  });
-  this.checkNumber = this.dom.createInput({
-    type: 'checkbox',
-    id: 'inpNumber',
-    "class": 'Number'
-  });
-  this.checkNumber.checked = true;
-  this.lblUpper = this.dom.createLabel({
-    id: 'upper',
-    "for": 'inpUpper',
-    text: 'Capital letters'
-  });
-  this.checkUpper = this.dom.createInput({
-    type: 'checkbox',
-    id: 'inpUpper',
-    "class": 'Upper'
-  });
-  this.checkUpper.checked = true;
-  this.lblLower = this.dom.createLabel({
-    id: 'lower',
-    "for": 'inpLower',
-    text: 'Small letters'
-  });
-  this.checkLower = this.dom.createInput({
-    type: 'checkbox',
-    id: 'inpLower',
-    "class": 'Lower'
-  });
-  this.checkLower.checked = true;
-  this.lblSpecial = this.dom.createLabel({
-    id: 'special',
-    "for": 'inpSpecial',
-    text: 'Special Characters'
-  });
-  this.checkSpecial = this.dom.createInput({
-    type: 'checkbox',
-    id: 'inpSpecial',
-    "class": 'Special'
-  });
-  this.checkSpecial.checked = true;
-  this.btnSubmit = this.dom.createButton({
-    type: 'submit',
-    id: 'btnSubmit',
-    text: 'Generate'
-  });
-  this.form.appendChild(this.title);
-  this.form.appendChild(this.span);
-  this.form.appendChild(this.lblChars);
-  this.lblChars.appendChild(this.input);
-  this.form.appendChild(this.lblNumber);
-  this.lblNumber.appendChild(this.checkNumber);
-  this.form.appendChild(this.lblUpper);
-  this.lblUpper.appendChild(this.checkUpper);
-  this.form.appendChild(this.lblLower);
-  this.lblLower.appendChild(this.checkLower);
-  this.form.appendChild(this.lblSpecial);
-  this.lblSpecial.appendChild(this.checkSpecial);
-  this.form.appendChild(this.btnSubmit);
-  this.form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    event.target.children['spnPassword'].innerText = Object(_control_ctrlPassword__WEBPACK_IMPORTED_MODULE_1__["default"])(event.target.children);
-  });
-};
+var PassForm = /*#__PURE__*/function (_Dom) {
+  _inherits(PassForm, _Dom);
+
+  var _super = _createSuper(PassForm);
+
+  function PassForm() {
+    var _this;
+
+    _classCallCheck(this, PassForm);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.title = _this.createH1({
+      text: 'Password Generator'
+    });
+    _this.form = _this.createForm({
+      id: 'formPass',
+      method: 'dialog'
+    });
+    _this.span = _this.createSpan({
+      id: 'spnPassword',
+      text: ''
+    });
+    _this.lblChars = _this.createLabel({
+      id: 'chars',
+      "for": 'inpQtdChars',
+      text: 'Number of characters'
+    });
+    _this.input = _this.createInput({
+      type: 'number',
+      id: 'inpQtdChars',
+      "class": 'qtdChars'
+    });
+    _this.input.value = 6;
+    _this.input.maxlength = '2';
+    _this.input.max = 12;
+    _this.input.minlength = '1';
+    _this.input.min = 6;
+    _this.input.required = true;
+    _this.lblNumber = _this.createLabel({
+      id: 'number',
+      "for": 'inpNumber',
+      text: 'Numbers'
+    });
+    _this.checkNumber = _this.createInput({
+      type: 'checkbox',
+      id: 'inpNumber',
+      "class": 'Number'
+    });
+    _this.checkNumber.checked = true;
+    _this.lblUpper = _this.createLabel({
+      id: 'upper',
+      "for": 'inpUpper',
+      text: 'Capital letters'
+    });
+    _this.checkUpper = _this.createInput({
+      type: 'checkbox',
+      id: 'inpUpper',
+      "class": 'Upper'
+    });
+    _this.checkUpper.checked = true;
+    _this.lblLower = _this.createLabel({
+      id: 'lower',
+      "for": 'inpLower',
+      text: 'Small letters'
+    });
+    _this.checkLower = _this.createInput({
+      type: 'checkbox',
+      id: 'inpLower',
+      "class": 'Lower'
+    });
+    _this.checkLower.checked = true;
+    _this.lblSpecial = _this.createLabel({
+      id: 'special',
+      "for": 'inpSpecial',
+      text: 'Special Characters'
+    });
+    _this.checkSpecial = _this.createInput({
+      type: 'checkbox',
+      id: 'inpSpecial',
+      "class": 'Special'
+    });
+    _this.checkSpecial.checked = true;
+    _this.btnSubmit = _this.createButton({
+      type: 'submit',
+      id: 'btnSubmit',
+      text: 'Generate'
+    });
+
+    _this.form.appendChild(_this.title);
+
+    _this.form.appendChild(_this.span);
+
+    _this.form.appendChild(_this.lblChars);
+
+    _this.lblChars.appendChild(_this.input);
+
+    _this.form.appendChild(_this.lblNumber);
+
+    _this.lblNumber.appendChild(_this.checkNumber);
+
+    _this.form.appendChild(_this.lblUpper);
+
+    _this.lblUpper.appendChild(_this.checkUpper);
+
+    _this.form.appendChild(_this.lblLower);
+
+    _this.lblLower.appendChild(_this.checkLower);
+
+    _this.form.appendChild(_this.lblSpecial);
+
+    _this.lblSpecial.appendChild(_this.checkSpecial);
+
+    _this.form.appendChild(_this.btnSubmit);
+
+    _this.form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      event.target.children['spnPassword'].innerText = Object(_control_ctrlPassword__WEBPACK_IMPORTED_MODULE_1__["default"])(event.target.children);
+    });
+
+    return _this;
+  }
+
+  return PassForm;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 

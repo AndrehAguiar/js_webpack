@@ -9,8 +9,8 @@ import { Home } from '../../modules/home/Home';
 
 const path = window.location.pathname;
 
-const urlPath = "/js_webpack/public"; // test
-//const urlPath = "/public"; // dev
+//const urlPath = "/js_webpack/public"; // test
+const urlPath = "/public"; // dev
 
 const container = document.querySelector('.container');
 

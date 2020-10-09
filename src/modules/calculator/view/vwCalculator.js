@@ -1,20 +1,19 @@
 import Dom from '../../../assets/js/dom';
-import controlCalc from '../control/ctrlCalculator';
+import ControlClick from '../control/ctrlClick';
+import ControlKey from '../control/ctrlKey';
 
-export default class Display {
+export default class Display extends Dom {
     constructor() {
-        this.dom = new Dom();
+        super(Dom);
 
-        this.dvGrid = this.dom.createDiv({ id: 'grdCalculator', text: '' });
-        this.dvGrid.className = 'grdCalculator';
-        this.h1 = this.dom.createH1({ text: 'Calculator' });
-        this.span = this.dom.createSpan({ id: 'spnResult', text: '' });
-        this.span.className = 'formula';
+        this.dvGrid = this.createDiv({ id: 'grdCalculator', text: '', class: 'grdCalculator' });
 
-        this.inpDisplay = this.dom.createInput({ type: 'text', id: 'display' });
+        this.h1 = this.createH1({ text: 'Calculator' });
+        this.span = this.createSpan({ id: 'spnResult', text: '', class: 'formula' });
+
+        this.inpDisplay = this.createInput({ type: 'text', id: 'display', class: 'display' });
         this.inpDisplay.readOnly = 'readonly';
         this.inpDisplay.value = 0;
-        this.inpDisplay.className = 'display';
 
         this.itensGrid = [
             { 'itemClass': `func clear`, 'text': 'C' },
@@ -46,20 +45,27 @@ export default class Display {
         this.itensGrid.forEach(element => {
 
             let item = element.itemClass;
-            item = this.dom.createDiv({ id: 'item', text: element.text });
+            item = this.createDiv({ id: 'item', text: element.text });
             item.classList = (element.itemClass);
             this.dvGrid.appendChild(item);
 
         });
 
+        this.inpResult = this.createInput({ type: 'hidden', id: 'resultState', class: 'result' });
+        this.inpResult.value = false;
+
+        this.dvGrid.appendChild(this.inpResult);
+
         this.dvGrid.addEventListener('click', event => {
             event.preventDefault();
-            controlCalc(event);
+            this.control = new ControlClick(event);
+            this.control.clickButton();
         });
 
         document.addEventListener('keydown', event => {
             event.preventDefault();
-            controlCalc(event);
+            this.control = new ControlKey(event);
+            this.control.pressKey(event);
         });
     }
 }
