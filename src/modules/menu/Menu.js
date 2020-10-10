@@ -3,8 +3,8 @@ import {
 } from '../../assets/js/main';
 import Dom from '../../assets/js/dom';
 
-//const urlPath = '/js_webpack/public'; //test
-const urlPath = '/public'; // dev
+const urlPath = '/js_webpack/public'; //test
+//const urlPath = '/public'; // dev
 
 const menuDOM = document.querySelector('#menu');
 const dom = new Dom();
