@@ -1,16 +1,17 @@
 import {
-    getCPF, getHome, getPassword, getBank, getCalculator, getRegister
+    getCPF, getHome, getPassword, getBank, getCalculator, getRegister, getIMC
 } from '../../assets/js/main';
 import Dom from '../../assets/js/dom';
 
-const urlPath = '/js_webpack/public';
-//const urlPath = '/public';
+//const urlPath = '/js_webpack/public'; //test
+const urlPath = '/public'; // dev
 
 const menuDOM = document.querySelector('#menu');
 const dom = new Dom();
 
 const menu = {
     home: getHome,
+    imc: getIMC,
     calculator: getCalculator,
     cpf: getCPF,
     password: getPassword,

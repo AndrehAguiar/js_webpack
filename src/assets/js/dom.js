@@ -67,6 +67,26 @@ export default class Dom {
             const dl = document.createElement('dl');
             dl.id = args.id;
             dl.innerText = args.text;
+            return dl;
         };
+        this.createDT = (args) => {
+            const dt = document.createElement('dt');
+            dt.id = args.id;
+            dt.innerText = args.text;
+            return dt;
+        }
+        this.createDD = (args) => {
+            const dd = document.createElement('dd');
+            dd.id = args.id;
+            dd.innerText = args.text;
+            return dd;
+        }
+        this.createP = (args) => {
+            const p = document.createElement('p');
+            p.id = args.id;
+            p.class = args.class;
+            p.text = args.text;
+            return p;
+        }
     }
 }

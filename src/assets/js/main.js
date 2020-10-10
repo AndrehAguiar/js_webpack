@@ -1,6 +1,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import CalcForm from '../../modules/calculator/view/vwCalculator';
+import ImcForm from '../../modules/imc/view/vwIMC';
 import CpfForm from '../../modules/cpf/view/vwCPF';
 import PassForm from '../../modules/password/view/vwPassword';
 import RegisterForm from '../../modules/register/view/vwForm';
@@ -9,8 +10,8 @@ import { Home } from '../../modules/home/Home';
 
 const path = window.location.pathname;
 
-const urlPath = "/js_webpack/public"; // test
-//const urlPath = "/public"; // dev
+//const urlPath = "/js_webpack/public"; // test
+const urlPath = "/public"; // dev
 
 const container = document.querySelector('.container');
 
@@ -18,6 +19,12 @@ const getHome = () => {
     container.innerHTML = Home;
 }
 
+const getIMC = () => {
+    const clsForm = new ImcForm();
+    container.appendChild(clsForm.dvTable);
+    container.appendChild(clsForm.dvForm);
+    container.classList.add('imc');
+}
 const getCalculator = () => {
     const clsForm = new CalcForm();
     container.appendChild(clsForm.dvGrid);
@@ -52,6 +59,9 @@ switch (path) {
     case `${urlPath}/home/`:
         getHome();
         break;
+    case `${urlPath}/imc/`:
+        getIMC();
+        break;
     case `${urlPath}/calculator/`:
         getCalculator();
         break;
@@ -70,4 +80,4 @@ switch (path) {
     default:
         getHome();
 }
-export { getCPF, getHome, getPassword, getBank, getCalculator, getRegister };
+export { getCPF, getHome, getPassword, getBank, getCalculator, getRegister, getIMC };

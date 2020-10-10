@@ -14732,6 +14732,28 @@ ___CSS_LOADER_EXPORT___.push([module.i, ".font-heading-lg{\r\n    font-weight: 9
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/assets/css/imc.css":
+/*!**********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/assets/css/imc.css ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".flexRow{\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-around;\r\n    border-bottom-style: double;\r\n}\r\n.flexRow>dl{\r\n    line-height: 1.8rem;\r\n}\r\n.flexRow>dl>dt{\r\n    font-weight: 900;\r\n    line-height: 3rem;\r\n    text-transform: uppercase;\r\n}\r\n.flexRow>dl>dd{\r\n    margin-left: 0;\r\n}\r\n.container>.flexCol>form{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n.container>.flexCol>form>span{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n.container>.flexCol>form>span>label{\r\n    font-weight: 600;\r\n}\r\n.container>.flexCol>form>span>input{\r\n    width: 80%;\r\n    padding: 0.5rem;\r\n    font-size: 1.2rem;\r\n}\r\n.container>.flexCol>form>button{\r\n    cursor: pointer;\r\n    font-size: 1.5rem;\r\n    line-height: 2rem;\r\n    font-weight: 800;\r\n    text-transform: uppercase;\r\n    background-color: var(--btnPrimary);\r\n    margin-top: 1rem;\r\n    border-radius: 0.5rem;\r\n    outline: none;\r\n}\r\n.container>.flexCol>form>button:hover,\r\n.container>.flexCol>form>button:active{\r\n    background-color: var(--btnHover);\r\n    outline: none;\r\n}\r\n#result>p{\r\n    padding: 1rem;\r\n    font-weight: 700;\r\n    text-transform: uppercase;\r\n    font-size: 1.2rem;\r\n    text-align: center;\r\n    margin-bottom: 0;\r\n}\r\n.valid{\r\n    background-color: greenyellow;\r\n}\r\n.invalid{\r\n    background-color: red;\r\n}", "",{"version":3,"sources":["webpack://src/assets/css/imc.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,mBAAmB;IACnB,6BAA6B;IAC7B,2BAA2B;AAC/B;AACA;IACI,mBAAmB;AACvB;AACA;IACI,gBAAgB;IAChB,iBAAiB;IACjB,yBAAyB;AAC7B;AACA;IACI,cAAc;AAClB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;AAC3B;AACA;IACI,aAAa;IACb,sBAAsB;AAC1B;AACA;IACI,gBAAgB;AACpB;AACA;IACI,UAAU;IACV,eAAe;IACf,iBAAiB;AACrB;AACA;IACI,eAAe;IACf,iBAAiB;IACjB,iBAAiB;IACjB,gBAAgB;IAChB,yBAAyB;IACzB,mCAAmC;IACnC,gBAAgB;IAChB,qBAAqB;IACrB,aAAa;AACjB;AACA;;IAEI,iCAAiC;IACjC,aAAa;AACjB;AACA;IACI,aAAa;IACb,gBAAgB;IAChB,yBAAyB;IACzB,iBAAiB;IACjB,kBAAkB;IAClB,gBAAgB;AACpB;AACA;IACI,6BAA6B;AACjC;AACA;IACI,qBAAqB;AACzB","sourcesContent":[".flexRow{\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-around;\r\n    border-bottom-style: double;\r\n}\r\n.flexRow>dl{\r\n    line-height: 1.8rem;\r\n}\r\n.flexRow>dl>dt{\r\n    font-weight: 900;\r\n    line-height: 3rem;\r\n    text-transform: uppercase;\r\n}\r\n.flexRow>dl>dd{\r\n    margin-left: 0;\r\n}\r\n.container>.flexCol>form{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n.container>.flexCol>form>span{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n.container>.flexCol>form>span>label{\r\n    font-weight: 600;\r\n}\r\n.container>.flexCol>form>span>input{\r\n    width: 80%;\r\n    padding: 0.5rem;\r\n    font-size: 1.2rem;\r\n}\r\n.container>.flexCol>form>button{\r\n    cursor: pointer;\r\n    font-size: 1.5rem;\r\n    line-height: 2rem;\r\n    font-weight: 800;\r\n    text-transform: uppercase;\r\n    background-color: var(--btnPrimary);\r\n    margin-top: 1rem;\r\n    border-radius: 0.5rem;\r\n    outline: none;\r\n}\r\n.container>.flexCol>form>button:hover,\r\n.container>.flexCol>form>button:active{\r\n    background-color: var(--btnHover);\r\n    outline: none;\r\n}\r\n#result>p{\r\n    padding: 1rem;\r\n    font-weight: 700;\r\n    text-transform: uppercase;\r\n    font-size: 1.2rem;\r\n    text-align: center;\r\n    margin-bottom: 0;\r\n}\r\n.valid{\r\n    background-color: greenyellow;\r\n}\r\n.invalid{\r\n    background-color: red;\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/assets/css/menu.css":
 /*!***********************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/assets/css/menu.css ***!
@@ -16068,6 +16090,35 @@ module.exports = content.locals || {};
 
 /***/ }),
 
+/***/ "./src/assets/css/imc.css":
+/*!********************************!*\
+  !*** ./src/assets/css/imc.css ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./imc.css */ "./node_modules/css-loader/dist/cjs.js!./src/assets/css/imc.css");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+
 /***/ "./src/assets/css/menu.css":
 /*!*********************************!*\
   !*** ./src/assets/css/menu.css ***!
@@ -16218,6 +16269,29 @@ var Dom = function Dom() {
     var dl = document.createElement('dl');
     dl.id = args.id;
     dl.innerText = args.text;
+    return dl;
+  };
+
+  this.createDT = function (args) {
+    var dt = document.createElement('dt');
+    dt.id = args.id;
+    dt.innerText = args.text;
+    return dt;
+  };
+
+  this.createDD = function (args) {
+    var dd = document.createElement('dd');
+    dd.id = args.id;
+    dd.innerText = args.text;
+    return dd;
+  };
+
+  this.createP = function (args) {
+    var p = document.createElement('p');
+    p.id = args.id;
+    p["class"] = args["class"];
+    p.text = args.text;
+    return p;
   };
 };
 
@@ -16229,7 +16303,7 @@ var Dom = function Dom() {
 /*!*******************************!*\
   !*** ./src/assets/js/main.js ***!
   \*******************************/
-/*! exports provided: getCPF, getHome, getPassword, getBank, getCalculator, getRegister */
+/*! exports provided: getCPF, getHome, getPassword, getBank, getCalculator, getRegister, getIMC */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16240,16 +16314,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBank", function() { return getBank; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCalculator", function() { return getCalculator; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRegister", function() { return getRegister; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIMC", function() { return getIMC; });
 /* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/stable */ "./node_modules/core-js/stable/index.js");
 /* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_calculator_view_vwCalculator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../modules/calculator/view/vwCalculator */ "./src/modules/calculator/view/vwCalculator.js");
-/* harmony import */ var _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../modules/cpf/view/vwCPF */ "./src/modules/cpf/view/vwCPF.js");
-/* harmony import */ var _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../modules/password/view/vwPassword */ "./src/modules/password/view/vwPassword.js");
-/* harmony import */ var _modules_register_view_vwForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/register/view/vwForm */ "./src/modules/register/view/vwForm.js");
-/* harmony import */ var _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/bank/view/vwBank */ "./src/modules/bank/view/vwBank.js");
-/* harmony import */ var _modules_home_Home__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/home/Home */ "./src/modules/home/Home.js");
+/* harmony import */ var _modules_imc_view_vwIMC__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../modules/imc/view/vwIMC */ "./src/modules/imc/view/vwIMC.js");
+/* harmony import */ var _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../modules/cpf/view/vwCPF */ "./src/modules/cpf/view/vwCPF.js");
+/* harmony import */ var _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/password/view/vwPassword */ "./src/modules/password/view/vwPassword.js");
+/* harmony import */ var _modules_register_view_vwForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/register/view/vwForm */ "./src/modules/register/view/vwForm.js");
+/* harmony import */ var _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/bank/view/vwBank */ "./src/modules/bank/view/vwBank.js");
+/* harmony import */ var _modules_home_Home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/home/Home */ "./src/modules/home/Home.js");
+
 
 
 
@@ -16265,7 +16342,14 @@ var urlPath = "/public"; // dev
 var container = document.querySelector('.container');
 
 var getHome = function getHome() {
-  container.innerHTML = _modules_home_Home__WEBPACK_IMPORTED_MODULE_7__["Home"];
+  container.innerHTML = _modules_home_Home__WEBPACK_IMPORTED_MODULE_8__["Home"];
+};
+
+var getIMC = function getIMC() {
+  var clsForm = new _modules_imc_view_vwIMC__WEBPACK_IMPORTED_MODULE_3__["default"]();
+  container.appendChild(clsForm.dvTable);
+  container.appendChild(clsForm.dvForm);
+  container.classList.add('imc');
 };
 
 var getCalculator = function getCalculator() {
@@ -16275,25 +16359,25 @@ var getCalculator = function getCalculator() {
 };
 
 var getCPF = function getCPF() {
-  var clsForm = new _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_3__["default"]();
+  var clsForm = new _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_4__["default"]();
   container.appendChild(clsForm.form);
   container.classList.add('cpf');
 };
 
 var getPassword = function getPassword() {
-  var clsForm = new _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_4__["default"]();
+  var clsForm = new _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_5__["default"]();
   container.appendChild(clsForm.form);
   container.classList.add('password');
 };
 
 var getRegister = function getRegister() {
-  var clsForm = new _modules_register_view_vwForm__WEBPACK_IMPORTED_MODULE_5__["default"]();
+  var clsForm = new _modules_register_view_vwForm__WEBPACK_IMPORTED_MODULE_6__["default"]();
   container.appendChild(clsForm.form);
   container.classList.add('registerForm');
 };
 
 var getBank = function getBank() {
-  var clsForm = new _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_6__["default"]();
+  var clsForm = new _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_7__["default"]();
   container.appendChild(clsForm.form);
   container.classList.add('bank');
   clsForm.form.insertAdjacentElement('afterend', clsForm.h2);
@@ -16302,6 +16386,10 @@ var getBank = function getBank() {
 switch (path) {
   case "".concat(urlPath, "/home/"):
     getHome();
+    break;
+
+  case "".concat(urlPath, "/imc/"):
+    getIMC();
     break;
 
   case "".concat(urlPath, "/calculator/"):
@@ -16348,12 +16436,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_menu_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_css_menu_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _assets_css_home_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/css/home.css */ "./src/assets/css/home.css");
 /* harmony import */ var _assets_css_home_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_css_home_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_css_form_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/css/form.css */ "./src/assets/css/form.css");
-/* harmony import */ var _assets_css_form_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_css_form_css__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _assets_css_calculator_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/css/calculator.css */ "./src/assets/css/calculator.css");
-/* harmony import */ var _assets_css_calculator_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_css_calculator_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _assets_css_bank_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/css/bank.css */ "./src/assets/css/bank.css");
-/* harmony import */ var _assets_css_bank_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_css_bank_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _assets_css_imc_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/css/imc.css */ "./src/assets/css/imc.css");
+/* harmony import */ var _assets_css_imc_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_css_imc_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_css_form_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/css/form.css */ "./src/assets/css/form.css");
+/* harmony import */ var _assets_css_form_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_css_form_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _assets_css_calculator_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/css/calculator.css */ "./src/assets/css/calculator.css");
+/* harmony import */ var _assets_css_calculator_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_css_calculator_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _assets_css_bank_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/css/bank.css */ "./src/assets/css/bank.css");
+/* harmony import */ var _assets_css_bank_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_css_bank_css__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -18759,6 +18850,362 @@ var Home = "<div class=\"course-overview--container--2OKKD\" data-purpose=\"dash
 
 /***/ }),
 
+/***/ "./src/modules/imc/control/ctrlIMC.js":
+/*!********************************************!*\
+  !*** ./src/modules/imc/control/ctrlIMC.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ControlIMC; });
+/* harmony import */ var _model_CalculateIMC__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../model/CalculateIMC */ "./src/modules/imc/model/CalculateIMC.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var ControlIMC = /*#__PURE__*/function (_CalculateIMC) {
+  _inherits(ControlIMC, _CalculateIMC);
+
+  var _super = _createSuper(ControlIMC);
+
+  function ControlIMC(event) {
+    var _this;
+
+    _classCallCheck(this, ControlIMC);
+
+    _this = _super.call(this, _model_CalculateIMC__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.event = event;
+    _this.peso = event.path[0][0].value;
+    _this.altura = event.path[0][1].value;
+    _this.imc = _this.getIMC();
+
+    _this.getResult = function () {
+      if (_this.imc >= 40) return 'Obesidade grau 3';
+      if (_this.imc >= 35) return 'Obesidade grau 2';
+      if (_this.imc >= 30) return 'Obesivade grau 1';
+      if (_this.imc >= 25) return 'Sobrepeso';
+      if (_this.imc >= 18.5) return 'Peso normal';
+      if (_this.imc < 18.5) return 'Abaixo do peso';
+    };
+
+    _this.setResult = function (msg, isValid) {
+      this.pResult = document.querySelector('.result p');
+      this.spResult = document.querySelector('.result');
+      isValid ? this.pResult.className = 'valid' : this.pResult.className = 'invalid';
+      this.pResult.innerText = msg;
+    };
+
+    _this.calcular = function () {
+      var args = {
+        'peso': _this.checkPeso(),
+        'altura': _this.checkAltura()
+      };
+
+      if (args.peso && args.altura) {
+        var msg = _this.getResult();
+
+        _this.setResult("Seu IMC \xE9 ".concat(_this.imc, ": (").concat(msg, ")"), true);
+      }
+    };
+
+    return _this;
+  }
+
+  return ControlIMC;
+}(_model_CalculateIMC__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./src/modules/imc/model/CalculateIMC.js":
+/*!***********************************************!*\
+  !*** ./src/modules/imc/model/CalculateIMC.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CalculateIMC; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var CalculateIMC = /*#__PURE__*/function () {
+  function CalculateIMC(altura, peso) {
+    var _this = this;
+
+    _classCallCheck(this, CalculateIMC);
+
+    this.peso = peso;
+    this.altura = altura;
+
+    this.checkAltura = function () {
+      if (_this.altura > 0) return _this.altura;
+      return _this.setResult('Altura inválida', false);
+    };
+
+    this.checkPeso = function () {
+      if (_this.peso > 0) return _this.peso;
+      return _this.setResult('Peso inválido', false);
+    };
+  }
+
+  _createClass(CalculateIMC, [{
+    key: "getIMC",
+    value: function getIMC() {
+      return (this.peso / Math.pow(this.altura, 2)).toFixed(2);
+    }
+  }]);
+
+  return CalculateIMC;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/modules/imc/view/vwIMC.js":
+/*!***************************************!*\
+  !*** ./src/modules/imc/view/vwIMC.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ImcForm; });
+/* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
+/* harmony import */ var _control_ctrlIMC__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlIMC */ "./src/modules/imc/control/ctrlIMC.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var ImcForm = /*#__PURE__*/function (_Dom) {
+  _inherits(ImcForm, _Dom);
+
+  var _super = _createSuper(ImcForm);
+
+  function ImcForm() {
+    var _this;
+
+    _classCallCheck(this, ImcForm);
+
+    _this = _super.call(this, _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.description = ["Menos que 18,5", "Entre 18,5 e 24,9", "Entre 25 e 29,9", "Entre 30 e 34,9", "Entre 35 e 39,9", "Mais que 39,9"];
+    _this.result = ["Resultado", "Abaixo do peso", "Peso normal", "Sobrepeso", "Obesidade grau 1", "Obesidade grau 2", "Obesidade grau 3"];
+    _this.title = _this.createH1({
+      text: 'IMC Table'
+    });
+    _this.dvTable = _this.createDiv({
+      id: 'flexCol',
+      text: '',
+      "class": 'flexCol'
+    });
+    _this.dvRowList = _this.createDiv({
+      id: 'flexRow',
+      text: '',
+      "class": 'flexRow'
+    });
+    _this.dlIMC = _this.createDL({
+      id: 'imcTable',
+      text: ''
+    });
+    _this.dtIMC = _this.createDT({
+      id: 'imcTitle',
+      text: 'IMC'
+    });
+
+    _this.dlIMC.appendChild(_this.dtIMC);
+
+    _this.dlResult = _this.createDL({
+      id: 'resultTable',
+      text: ''
+    });
+    _this.dtResult = _this.createDT({
+      id: 'resultTitle',
+      text: 'Resultado'
+    });
+
+    _this.dlResult.appendChild(_this.dtResult);
+
+    _this.setTable = function (val, idx) {
+      var dd = _this.createDD({
+        id: "".concat(idx),
+        text: "".concat(val)
+      });
+
+      _this.dlIMC.appendChild(dd);
+
+      dd = _this.createDD({
+        id: "".concat(idx),
+        text: "".concat(_this.result[idx])
+      });
+
+      _this.dlResult.appendChild(dd);
+    };
+
+    _this.description.forEach(_this.setTable);
+
+    _this.dvForm = _this.createDiv({
+      id: 'formIMC',
+      "class": 'flexCol',
+      text: ''
+    });
+    _this.form = _this.createForm({
+      id: 'calculator',
+      action: '',
+      method: 'dialog'
+    });
+    _this.subtitle = _this.createH2({
+      id: 'subtitle',
+      text: 'Calcule seu IMC'
+    });
+    _this.dvFormInputs = _this.createDiv({
+      id: 'flexRow',
+      text: '',
+      "class": 'flexRow'
+    });
+    _this.spInpPeso = _this.createSpan({
+      id: 'spPeso',
+      text: '',
+      clas: 'spPeso'
+    });
+    _this.lbPeso = _this.createLabel({
+      id: 'lbPeso',
+      "for": 'peso',
+      text: 'Peso(kg):'
+    });
+    _this.inpPeso = _this.createInput({
+      type: 'number',
+      id: 'peso'
+    });
+    _this.inpPeso.placeholder = '0.00';
+    _this.inpPeso.name = 'peso';
+    _this.inpPeso.required = true;
+    _this.inpPeso.step = '0.01';
+    _this.spInpAltura = _this.createSpan({
+      id: 'spAltura',
+      text: '',
+      "class": 'spAltura'
+    });
+    _this.lbAltura = _this.createLabel({
+      id: 'lbAltura',
+      "for": 'altura',
+      text: 'Altura(m):'
+    });
+    _this.inpAltura = _this.createInput({
+      type: 'number',
+      id: 'altura'
+    });
+    _this.inpAltura.placeholder = '0.00';
+    _this.inpAltura.name = 'peso';
+    _this.inpAltura.required = true;
+    _this.inpAltura.step = '0.01';
+    _this.spResult = _this.createSpan({
+      id: 'result',
+      text: '',
+      "class": 'result'
+    });
+    _this.pResult = _this.createP({
+      id: 'result',
+      text: '',
+      "class": 'result'
+    });
+    _this.btnSubmit = _this.createButton({
+      type: 'submit',
+      id: 'btnSubmit',
+      text: 'Calcular'
+    });
+
+    _this.dvTable.appendChild(_this.title);
+
+    _this.dvTable.appendChild(_this.dvRowList);
+
+    _this.dvRowList.appendChild(_this.dlIMC);
+
+    _this.dvRowList.appendChild(_this.dlResult);
+
+    _this.dvForm.appendChild(_this.form);
+
+    _this.form.appendChild(_this.subtitle);
+
+    _this.form.appendChild(_this.dvFormInputs);
+
+    _this.dvFormInputs.appendChild(_this.spInpPeso);
+
+    _this.spInpPeso.appendChild(_this.lbPeso);
+
+    _this.spInpPeso.appendChild(_this.inpPeso);
+
+    _this.form.appendChild(_this.dvFormInputs);
+
+    _this.dvFormInputs.appendChild(_this.spInpAltura);
+
+    _this.spInpAltura.appendChild(_this.lbAltura);
+
+    _this.spInpAltura.appendChild(_this.inpAltura);
+
+    _this.dvForm.appendChild(_this.spResult);
+
+    _this.spResult.appendChild(_this.pResult);
+
+    _this.form.appendChild(_this.btnSubmit);
+
+    _this.form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var imc = new _control_ctrlIMC__WEBPACK_IMPORTED_MODULE_1__["default"](event);
+      imc.calcular();
+    });
+
+    return _this;
+  }
+
+  return ImcForm;
+}(_assets_js_dom__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
 /***/ "./src/modules/menu/Menu.js":
 /*!**********************************!*\
   !*** ./src/modules/menu/Menu.js ***!
@@ -18779,6 +19226,7 @@ var menuDOM = document.querySelector('#menu');
 var dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_1__["default"]();
 var menu = {
   home: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getHome"],
+  imc: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getIMC"],
   calculator: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getCalculator"],
   cpf: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getCPF"],
   password: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getPassword"],
