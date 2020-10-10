@@ -16459,88 +16459,132 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/modules/bank/control/ctrlAccess.js":
+/***/ "./src/modules/bank/control/CtrlAccess.js":
 /*!************************************************!*\
-  !*** ./src/modules/bank/control/ctrlAccess.js ***!
+  !*** ./src/modules/bank/control/CtrlAccess.js ***!
   \************************************************/
-/*! exports provided: setAccess, setLogout, setUserAccess, checkAccess, revokAccess, getSession */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setAccess", function() { return setAccess; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setLogout", function() { return setLogout; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUserAccess", function() { return setUserAccess; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkAccess", function() { return checkAccess; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "revokAccess", function() { return revokAccess; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSession", function() { return getSession; });
-/* harmony import */ var _ctrlAccount_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ctrlAccount.js */ "./src/modules/bank/control/ctrlAccount.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CtrlSession; });
+/* harmony import */ var _model_Access__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../model/Access */ "./src/modules/bank/model/Access.js");
+/* harmony import */ var _CtrlAccount_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CtrlAccount.js */ "./src/modules/bank/control/CtrlAccount.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
-var getSession = function getSession() {
-  var strAccess = localStorage.getItem('Access');
-  if (!strAccess) return false;
-  var access = JSON.parse(strAccess);
-  return access;
-};
 
-var checkAccess = function checkAccess() {
-  var access = getSession();
-  if (!access) return true;
-  var date = new Date(access.date);
-  date.setHours(date.getHours + 3);
-  var now = new Date();
-  now.setHours(now.getHours + 3);
-  now.setHours(now.getHours() - 1);
-  return now > date;
-};
 
-var revokAccess = function revokAccess() {
-  localStorage.removeItem('Access');
-};
+var CtrlSession = /*#__PURE__*/function (_Access) {
+  _inherits(CtrlSession, _Access);
 
-var setLogout = function setLogout() {
-  revokAccess();
-  window.location.reload();
-};
+  var _super = _createSuper(CtrlSession);
 
-var setAccess = function setAccess(e) {
-  var clientName = e.target.children['inpName'].value;
-  var numAccount = e.target.children['inpAccount'].value;
-  var access = Object(_ctrlAccount_js__WEBPACK_IMPORTED_MODULE_0__["getClient"])(clientName, numAccount);
-  var elChild = document.querySelector("#".concat(e.target.id));
-  elChild.remove();
-  setUserAccess(access);
-};
+  function CtrlSession() {
+    var _this;
 
-var setUserAccess = function setUserAccess(access) {
-  if (!access) return;
-  access.registerAccess(access);
-};
+    _classCallCheck(this, CtrlSession);
+
+    _this = _super.call(this, _model_Access__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+    _this.getSession = function () {
+      var strAccess = localStorage.getItem('Access');
+      if (!strAccess) return false;
+      var access = JSON.parse(strAccess);
+      return access;
+    };
+
+    _this.revokAccess = function () {
+      localStorage.removeItem('Access');
+    };
+
+    _this.setLogout = function () {
+      _this.revokAccess();
+
+      window.location.reload();
+    };
+
+    _this.setUserAccess = function (access) {
+      if (!access) return;
+
+      _this.registerAccess(access);
+    };
+
+    _this.checkAccess = function () {
+      var access = _this.getSession();
+
+      if (!access) return true;
+      var date = new Date(access.date);
+      date.setHours(date.getHours + 3);
+      var now = new Date();
+      now.setHours(now.getHours + 3);
+      now.setHours(now.getHours() - 1);
+      return now > date;
+    };
+
+    _this.setAccess = function (e) {
+      var clientName = e.target.children['inpName'].value;
+      var numAccount = e.target.children['inpAccount'].value;
+      _this.ctrlAcount = new _CtrlAccount_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+      var access = _this.ctrlAcount.getClient(clientName, numAccount);
+
+      if (access) {
+        var elChild = document.querySelector("#".concat(e.target.id));
+        elChild.remove();
+
+        _this.setUserAccess(access);
+
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    return _this;
+  }
+
+  return CtrlSession;
+}(_model_Access__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 
 /***/ }),
 
-/***/ "./src/modules/bank/control/ctrlAccount.js":
+/***/ "./src/modules/bank/control/CtrlAccount.js":
 /*!*************************************************!*\
-  !*** ./src/modules/bank/control/ctrlAccount.js ***!
+  !*** ./src/modules/bank/control/CtrlAccount.js ***!
   \*************************************************/
-/*! exports provided: setAccount, getClient, withdraw, deposit */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setAccount", function() { return setAccount; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getClient", function() { return getClient; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withdraw", function() { return withdraw; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deposit", function() { return deposit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CtrlAccount; });
 /* harmony import */ var _model_Pessoa_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../model/Pessoa.js */ "./src/modules/bank/model/Pessoa.js");
 /* harmony import */ var _model_Account_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/Account.js */ "./src/modules/bank/model/Account.js");
 /* harmony import */ var _model_AccCurrent_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/AccCurrent.js */ "./src/modules/bank/model/AccCurrent.js");
 /* harmony import */ var _model_AccSavings_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../model/AccSavings.js */ "./src/modules/bank/model/AccSavings.js");
 /* harmony import */ var _model_Access_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../model/Access.js */ "./src/modules/bank/model/Access.js");
-/* harmony import */ var _ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ctrlAccess.js */ "./src/modules/bank/control/ctrlAccess.js");
+/* harmony import */ var _CtrlAccess_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CtrlAccess.js */ "./src/modules/bank/control/CtrlAccess.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
@@ -16548,302 +16592,440 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getAccounts = function getAccounts() {
-  var clients = JSON.parse(localStorage.getItem('Client'));
-  return clients === null ? {} : clients;
-};
 
-var registerPessoa = function registerPessoa(clients) {
-  var users = JSON.stringify(clients);
-  localStorage.setItem('Client', users);
-};
+var CtrlAccount = function CtrlAccount() {
+  var _this = this;
 
-var getClient = function getClient(clientName, numAccount) {
-  var clients = getAccounts();
-  var client = clients[numAccount];
+  _classCallCheck(this, CtrlAccount);
 
-  if (!client) {
-    alert('Account not found!');
-    return;
-  }
+  this.getAccounts = function () {
+    var clients = JSON.parse(localStorage.getItem('Client'));
+    return clients === null ? {} : clients;
+  };
 
-  var check = clientName === client.Account.name && numAccount === client.Account.number;
+  this.registerPessoa = function (clients) {
+    var users = JSON.stringify(clients);
+    localStorage.setItem('Client', users);
+  };
 
-  if (check) {
-    var user = new _model_Pessoa_js__WEBPACK_IMPORTED_MODULE_0__["default"](client.Account.name, client.Account.id);
-    var account = new _model_Account_js__WEBPACK_IMPORTED_MODULE_1__["default"](user, client.Account.number, client.Account.balance, client.Account.date);
-    var accCurrent = new _model_AccCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, client.limit);
-    var accSavings = new _model_AccSavings_js__WEBPACK_IMPORTED_MODULE_3__["default"](account, client.income);
-    account.balance = accSavings.sumIncome();
-    var access = new _model_Access_js__WEBPACK_IMPORTED_MODULE_4__["default"](account, accCurrent.limit, accSavings.income);
-    return access;
-  } else {
-    return false;
-  }
-};
+  this.withdraw = function (value) {
+    var session = new _CtrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["default"]().getSession();
+    var account = new _model_Account_js__WEBPACK_IMPORTED_MODULE_1__["default"](session.Account, session.Account.number, session.Account.balance);
+    account.setDate();
+    var current = new _model_AccCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, session.limit);
+    current.withdraw(value);
 
-var setAccount = function setAccount(e) {
-  var clients = getAccounts();
-  var name = e.target.children['inpName'].value;
-  var id = e.target.children['inpID'].value;
-  var user = new _model_Pessoa_js__WEBPACK_IMPORTED_MODULE_0__["default"](name, id);
-  var account = new _model_Account_js__WEBPACK_IMPORTED_MODULE_1__["default"](user);
-  account.createNumber();
-  var current = new _model_AccCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, 100);
-  var savings = new _model_AccSavings_js__WEBPACK_IMPORTED_MODULE_3__["default"](account, 0);
-  var client = new _model_Access_js__WEBPACK_IMPORTED_MODULE_4__["default"](account, current.limit, savings.income);
-  clients[account.number] = client;
-  registerPessoa(clients);
-  var elChild = document.querySelector("#".concat(e.target.id));
-  elChild.remove();
-  Object(_ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["setUserAccess"])(client);
-};
+    _this.updateAccount(account, current, session);
+  };
 
-var updateAccount = function updateAccount(account, current, session) {
-  account.balance = current.balance;
-  var client = new _model_Access_js__WEBPACK_IMPORTED_MODULE_4__["default"](account, current.limit, session.income);
-  var clients = getAccounts();
-  clients[account.number] = client;
-  registerPessoa(clients);
-  Object(_ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["setUserAccess"])(client);
-};
+  this.deposit = function (value) {
+    var session = new _CtrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["default"]().getSession();
+    var account = new _model_Account_js__WEBPACK_IMPORTED_MODULE_1__["default"](session.Account, session.Account.number, session.Account.balance);
+    account.setDate();
+    var current = new _model_AccCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, session.limit);
+    current.deposit(value);
 
-var withdraw = function withdraw(value) {
-  var session = Object(_ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["getSession"])();
-  var account = new _model_Account_js__WEBPACK_IMPORTED_MODULE_1__["default"](session.Account, session.Account.number, session.Account.balance);
-  account.setDate();
-  var current = new _model_AccCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, session.limit);
-  current.withdraw(value);
-  updateAccount(account, current, session);
-};
+    _this.updateAccount(account, current, session);
+  };
 
-var deposit = function deposit(value) {
-  var session = Object(_ctrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["getSession"])();
-  var account = new _model_Account_js__WEBPACK_IMPORTED_MODULE_1__["default"](session.Account, session.Account.number, session.Account.balance);
-  account.setDate();
-  var current = new _model_AccCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, session.limit);
-  current.deposit(value);
-  updateAccount(account, current, session);
+  this.updateAccount = function (account, current, session) {
+    account.balance = current.balance;
+    var client = new _model_Access_js__WEBPACK_IMPORTED_MODULE_4__["default"](account, current.limit, session.income);
+
+    var clients = _this.getAccounts();
+
+    clients[account.number] = client;
+
+    _this.registerPessoa(clients);
+
+    new _CtrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["default"]().setUserAccess(client);
+  };
+
+  this.getClient = function (clientName, numAccount) {
+    var clients = _this.getAccounts();
+
+    var client = clients[numAccount];
+
+    if (!client) {
+      alert('Account not found!');
+      return false;
+    }
+
+    var check = clientName === client.Account.name && numAccount === client.Account.number;
+
+    if (check) {
+      var user = new _model_Pessoa_js__WEBPACK_IMPORTED_MODULE_0__["default"](client.Account.name, client.Account.id);
+      var account = new _model_Account_js__WEBPACK_IMPORTED_MODULE_1__["default"](user, client.Account.number, client.Account.balance, client.Account.date);
+      var accCurrent = new _model_AccCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, client.limit);
+      var accSavings = new _model_AccSavings_js__WEBPACK_IMPORTED_MODULE_3__["default"](account, client.income);
+      account.balance = accSavings.sumIncome();
+      var access = new _model_Access_js__WEBPACK_IMPORTED_MODULE_4__["default"](account, accCurrent.limit, accSavings.income);
+      return access;
+    } else {
+      return false;
+    }
+  };
+
+  this.setAccount = function (e) {
+    var clients = _this.getAccounts();
+
+    var name = e.target.children['inpName'].value;
+    var id = e.target.children['inpID'].value;
+    var user = new _model_Pessoa_js__WEBPACK_IMPORTED_MODULE_0__["default"](name, id);
+    var account = new _model_Account_js__WEBPACK_IMPORTED_MODULE_1__["default"](user);
+    account.createNumber();
+    var current = new _model_AccCurrent_js__WEBPACK_IMPORTED_MODULE_2__["default"](account, 100);
+    var savings = new _model_AccSavings_js__WEBPACK_IMPORTED_MODULE_3__["default"](account, 0);
+    var client = new _model_Access_js__WEBPACK_IMPORTED_MODULE_4__["default"](account, current.limit, savings.income);
+    clients[account.number] = client;
+
+    _this.registerPessoa(clients);
+
+    var elChild = document.querySelector("#".concat(e.target.id));
+    elChild.remove();
+    new _CtrlAccess_js__WEBPACK_IMPORTED_MODULE_5__["default"]().setUserAccess(client);
+  };
 };
 
 
 
 /***/ }),
 
-/***/ "./src/modules/bank/control/ctrlAction.js":
+/***/ "./src/modules/bank/control/CtrlAction.js":
 /*!************************************************!*\
-  !*** ./src/modules/bank/control/ctrlAction.js ***!
+  !*** ./src/modules/bank/control/CtrlAction.js ***!
   \************************************************/
-/*! exports provided: action, optDeposit, optWithdraw */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "action", function() { return action; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "optDeposit", function() { return optDeposit; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "optWithdraw", function() { return optWithdraw; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CtrlAction; });
 /* harmony import */ var _view_vwResume__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../view/vwResume */ "./src/modules/bank/view/vwResume.js");
-/* harmony import */ var _ctrlAccount__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ctrlAccount */ "./src/modules/bank/control/ctrlAccount.js");
+/* harmony import */ var _CtrlAccount__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CtrlAccount */ "./src/modules/bank/control/CtrlAccount.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-var optWithdraw = function optWithdraw(inpWithdraw, bntWithdraw) {
-  var inpDopsit = document.querySelector('#inpDeposit');
-  var btnDopsit = document.querySelector('#btnDeposit');
-  var formDiv = document.querySelector('#dvInput');
 
-  if (inpDopsit !== null) {
-    inpDopsit.value = null;
-    formDiv.removeChild(inpDopsit);
-    formDiv.removeChild(btnDopsit);
+var CtrlAction = /*#__PURE__*/function (_CtrlAccount) {
+  _inherits(CtrlAction, _CtrlAccount);
+
+  var _super = _createSuper(CtrlAction);
+
+  function CtrlAction() {
+    var _this;
+
+    _classCallCheck(this, CtrlAction);
+
+    _this = _super.call(this, _CtrlAccount__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+    _this.optWithdraw = function (inpWithdraw, bntWithdraw) {
+      var inpDopsit = document.querySelector('#inpDeposit');
+      var btnDopsit = document.querySelector('#btnDeposit');
+      var formDiv = document.querySelector('#dvInput');
+
+      if (inpDopsit !== null) {
+        inpDopsit.value = null;
+        formDiv.removeChild(inpDopsit);
+        formDiv.removeChild(btnDopsit);
+      }
+
+      dvInput.appendChild(inpWithdraw);
+      dvInput.appendChild(bntWithdraw);
+    };
+
+    _this.optDeposit = function (inpDeposit, bntDeposit) {
+      var inpWithdraw = document.querySelector('#inpWithdraw');
+      var btnWithdraw = document.querySelector('#btnWithdraw');
+      var formDiv = document.querySelector('#dvInput');
+
+      if (inpWithdraw !== null) {
+        inpWithdraw.value = null;
+        formDiv.removeChild(inpWithdraw);
+        formDiv.removeChild(btnWithdraw);
+      }
+
+      dvInput.appendChild(inpDeposit);
+      dvInput.appendChild(bntDeposit);
+    };
+
+    return _this;
   }
 
-  dvInput.appendChild(inpWithdraw);
-  dvInput.appendChild(bntWithdraw);
-};
+  _createClass(CtrlAction, [{
+    key: "action",
+    value: function action(e) {
+      var action = e.submitter.value;
+      var content = document.querySelector('#content');
+      var optAccount = document.querySelector('#optAccount');
 
-var optDeposit = function optDeposit(inpDeposit, bntDeposit) {
-  var inpWithdraw = document.querySelector('#inpWithdraw');
-  var btnWithdraw = document.querySelector('#btnWithdraw');
-  var formDiv = document.querySelector('#dvInput');
+      switch (action) {
+        case 'Withdraw':
+          var withdrawValue = Number(e.target[0].value).toFixed(2);
+          this.withdraw(withdrawValue);
+          e.target.remove();
+          content.remove();
+          optAccount.remove();
+          new _view_vwResume__WEBPACK_IMPORTED_MODULE_0__["default"]();
+          break;
 
-  if (inpWithdraw !== null) {
-    inpWithdraw.value = null;
-    formDiv.removeChild(inpWithdraw);
-    formDiv.removeChild(btnWithdraw);
-  }
+        case 'Deposit':
+          var depositValue = Number(e.target[0].value).toFixed(2);
+          this.deposit(depositValue);
+          e.target.remove();
+          content.remove();
+          optAccount.remove();
+          new _view_vwResume__WEBPACK_IMPORTED_MODULE_0__["default"]();
+          break;
+      }
+    }
+  }]);
 
-  dvInput.appendChild(inpDeposit);
-  dvInput.appendChild(bntDeposit);
-};
-
-var action = function action(e) {
-  var action = e.submitter.value;
-  var content = document.querySelector('#content');
-  var optAccount = document.querySelector('#optAccount');
-
-  switch (action) {
-    case 'Withdraw':
-      var withdrawValue = Number(e.target[0].value).toFixed(2);
-      Object(_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__["withdraw"])(withdrawValue);
-      e.target.remove();
-      content.remove();
-      optAccount.remove();
-      new _view_vwResume__WEBPACK_IMPORTED_MODULE_0__["default"]();
-      break;
-
-    case 'Deposit':
-      var depositValue = Number(e.target[0].value).toFixed(2);
-      Object(_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__["deposit"])(depositValue);
-      e.target.remove();
-      content.remove();
-      optAccount.remove();
-      new _view_vwResume__WEBPACK_IMPORTED_MODULE_0__["default"]();
-      break;
-  }
-};
+  return CtrlAction;
+}(_CtrlAccount__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 
 
 /***/ }),
 
-/***/ "./src/modules/bank/control/ctrlBank.js":
+/***/ "./src/modules/bank/control/CtrlBank.js":
 /*!**********************************************!*\
-  !*** ./src/modules/bank/control/ctrlBank.js ***!
+  !*** ./src/modules/bank/control/CtrlBank.js ***!
   \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CtrlBank; });
 /* harmony import */ var _view_vwAccess__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../view/vwAccess */ "./src/modules/bank/view/vwAccess.js");
 /* harmony import */ var _view_vwAccount__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../view/vwAccount */ "./src/modules/bank/view/vwAccount.js");
 /* harmony import */ var _view_vwResume__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwResume */ "./src/modules/bank/view/vwResume.js");
 /* harmony import */ var _view_vwLogout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../view/vwLogout */ "./src/modules/bank/view/vwLogout.js");
-/* harmony import */ var _ctrlAccess__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
+/* harmony import */ var _CtrlAccess__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CtrlAccess */ "./src/modules/bank/control/CtrlAccess.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
 
 
 
-var resumeAccount = function resumeAccount() {
-  if (!document.querySelector('#content')) {
-    var btnLogout = document.querySelector('#btnLogout');
-    if (btnLogout) btnLogout.remove();
-    new _view_vwResume__WEBPACK_IMPORTED_MODULE_2__["default"]();
+
+var CtrlBank = /*#__PURE__*/function (_CtrlSession) {
+  _inherits(CtrlBank, _CtrlSession);
+
+  var _super = _createSuper(CtrlBank);
+
+  function CtrlBank() {
+    var _this;
+
+    _classCallCheck(this, CtrlBank);
+
+    _this = _super.call(this, _CtrlAccess__WEBPACK_IMPORTED_MODULE_4__["default"]);
+
+    _this.resumeAccount = function () {
+      if (!document.querySelector('#content')) {
+        var btnLogout = document.querySelector('#btnLogout');
+        if (btnLogout) btnLogout.remove();
+        new _view_vwResume__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      }
+    };
+
+    _this.accountForm = function () {
+      if (!document.querySelector('#formAccount')) {
+        var formAccess = document.querySelector('#formAccess');
+        if (formAccess) formAccess.remove();
+        new _view_vwAccount__WEBPACK_IMPORTED_MODULE_1__["default"]();
+      }
+    };
+
+    _this.accessForm = function () {
+      if (!document.querySelector('#formAccess')) {
+        var formAccount = document.querySelector('#formAccount');
+        if (formAccount) formAccount.remove();
+        new _view_vwAccess__WEBPACK_IMPORTED_MODULE_0__["default"]();
+      }
+    };
+
+    _this.logoutForm = function () {
+      if (!document.querySelector('#btnLogout')) {
+        var content = document.querySelector('#content');
+        var optAccount = document.querySelector('#optAccount');
+        var numAccount = document.querySelector('#numAccount');
+        if (numAccount) numAccount.remove();
+
+        if (optAccount || content) {
+          content.remove();
+          optAccount.remove();
+        }
+
+        new _view_vwLogout__WEBPACK_IMPORTED_MODULE_3__["default"]();
+      }
+    };
+
+    _this.setOption = function (event) {
+      var bankForm = document.querySelector('#bankForm');
+      if (bankForm) bankForm.remove();
+      var optUser = event.target.children[0].value;
+      var check = event.target.children[0];
+      check.checked = true;
+
+      switch (optUser) {
+        case 'account':
+          _this.checkAccess() ? _this.accountForm() : _this.logoutForm();
+          break;
+
+        case 'access':
+          _this.checkAccess() ? _this.accessForm() : _this.resumeAccount();
+          break;
+      }
+    };
+
+    return _this;
   }
-};
 
-var accountForm = function accountForm() {
-  if (!document.querySelector('#formAccount')) {
-    var formAccess = document.querySelector('#formAccess');
-    if (formAccess) formAccess.remove();
-    new _view_vwAccount__WEBPACK_IMPORTED_MODULE_1__["default"]();
-  }
-};
+  return CtrlBank;
+}(_CtrlAccess__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
-var accessForm = function accessForm() {
-  if (!document.querySelector('#formAccess')) {
-    var formAccount = document.querySelector('#formAccount');
-    if (formAccount) formAccount.remove();
-    new _view_vwAccess__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  }
-};
 
-var logoutForm = function logoutForm() {
-  if (!document.querySelector('#btnLogout')) {
-    var content = document.querySelector('#content');
-    var optAccount = document.querySelector('#optAccount');
-    var numAccount = document.querySelector('#numAccount');
-    if (numAccount) numAccount.remove();
-
-    if (optAccount || content) {
-      content.remove();
-      optAccount.remove();
-    }
-
-    new _view_vwLogout__WEBPACK_IMPORTED_MODULE_3__["default"]();
-  }
-};
-
-var setOption = function setOption(event) {
-  console.log(event);
-  var bankForm = document.querySelector('#bankForm');
-  if (bankForm) bankForm.remove();
-  var optUser = event.target.children[0].value;
-  var check = event.target.children[0];
-  check.checked = true;
-
-  switch (optUser) {
-    case 'account':
-      Object(_ctrlAccess__WEBPACK_IMPORTED_MODULE_4__["checkAccess"])() ? accountForm() : logoutForm();
-      break;
-
-    case 'access':
-      Object(_ctrlAccess__WEBPACK_IMPORTED_MODULE_4__["checkAccess"])() ? accessForm() : resumeAccount();
-      break;
-  }
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (setOption);
 
 /***/ }),
 
-/***/ "./src/modules/bank/control/ctrlResume.js":
+/***/ "./src/modules/bank/control/CtrlResume.js":
 /*!************************************************!*\
-  !*** ./src/modules/bank/control/ctrlResume.js ***!
+  !*** ./src/modules/bank/control/CtrlResume.js ***!
   \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ctrlAccess__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CtrlResume; });
+/* harmony import */ var _CtrlAccess__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CtrlAccess */ "./src/modules/bank/control/CtrlAccess.js");
 /* harmony import */ var _view_vwCurrent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../view/vwCurrent */ "./src/modules/bank/view/vwCurrent.js");
 /* harmony import */ var _view_vwSavings__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwSavings */ "./src/modules/bank/view/vwSavings.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
 
-var createSavings = function createSavings(session) {
-  if (!document.querySelector('#spnIncome')) {
-    var spnLimit = document.querySelector('#spnLimit');
-    if (spnLimit) spnLimit.remove();
-    if (document.querySelector('#bankForm')) bankForm.remove();
-    new _view_vwSavings__WEBPACK_IMPORTED_MODULE_2__["default"](session);
+
+var CtrlResume = /*#__PURE__*/function (_CtrlSession) {
+  _inherits(CtrlResume, _CtrlSession);
+
+  var _super = _createSuper(CtrlResume);
+
+  function CtrlResume() {
+    var _this;
+
+    _classCallCheck(this, CtrlResume);
+
+    _this = _super.call(this, _CtrlAccess__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+    _this.createSavings = function (session) {
+      if (!document.querySelector('#spnIncome')) {
+        var spnLimit = document.querySelector('#spnLimit');
+        if (spnLimit) spnLimit.remove();
+        if (document.querySelector('#bankForm')) bankForm.remove();
+        new _view_vwSavings__WEBPACK_IMPORTED_MODULE_2__["default"](session);
+      }
+    };
+
+    _this.createCurrent = function (session) {
+      if (!document.querySelector('#spnLimit')) {
+        if (document.querySelector('#spnIncome')) spnIncome.remove();
+        if (document.querySelector('#bankForm')) bankForm.remove();
+        new _view_vwCurrent__WEBPACK_IMPORTED_MODULE_1__["default"](session);
+      }
+    };
+
+    return _this;
   }
-};
 
-var createCurrent = function createCurrent(session) {
-  if (!document.querySelector('#spnLimit')) {
-    if (document.querySelector('#spnIncome')) spnIncome.remove();
-    if (document.querySelector('#bankForm')) bankForm.remove();
-    new _view_vwCurrent__WEBPACK_IMPORTED_MODULE_1__["default"](session);
-  }
-};
+  _createClass(CtrlResume, [{
+    key: "resumeAccount",
+    value: function resumeAccount(e) {
+      var session = this.getSession();
+      if (!e) return session;
+      var optAccount = e.target.children[0].value;
+      e.target.children[0].checked = true;
 
-var resumeAccount = function resumeAccount(e) {
-  var session = Object(_ctrlAccess__WEBPACK_IMPORTED_MODULE_0__["getSession"])();
-  if (!e) return session;
-  var optAccount = e.target.children[0].value;
-  e.target.children[0].checked = true;
+      switch (optAccount) {
+        case 'savings':
+          this.createSavings(session);
+          break;
 
-  switch (optAccount) {
-    case 'savings':
-      createSavings(session);
-      break;
+        case 'current':
+          this.createCurrent(session);
+          break;
+      }
 
-    case 'current':
-      createCurrent(session);
-      break;
-  }
+      var numAccount = document.querySelector('#numAccount');
+      if (numAccount) numAccount.remove();
+    }
+  }]);
 
-  var numAccount = document.querySelector('#numAccount');
-  if (numAccount) numAccount.remove();
-};
+  return CtrlResume;
+}(_CtrlAccess__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (resumeAccount);
+
 
 /***/ }),
 
@@ -17195,7 +17377,7 @@ var Pessoa = function Pessoa(name, id) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AccessForm; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
-/* harmony import */ var _control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
+/* harmony import */ var _control_CtrlAccess__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/CtrlAccess */ "./src/modules/bank/control/CtrlAccess.js");
 /* harmony import */ var _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwResume.js */ "./src/modules/bank/view/vwResume.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -17268,8 +17450,9 @@ var AccessForm = /*#__PURE__*/function (_Dom) {
 
     _this.formAccess.addEventListener('submit', function (event) {
       event.preventDefault();
-      Object(_control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__["setAccess"])(event);
-      new _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      _this.ctrlAccess = new _control_CtrlAccess__WEBPACK_IMPORTED_MODULE_1__["default"]();
+      _this.chkAccess = _this.ctrlAccess.setAccess(event);
+      if (_this.chkAccess) new _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
     });
 
     return _this;
@@ -17293,7 +17476,7 @@ var AccessForm = /*#__PURE__*/function (_Dom) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return accountForm; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
-/* harmony import */ var _control_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAccount */ "./src/modules/bank/control/ctrlAccount.js");
+/* harmony import */ var _control_CtrlAccount__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/CtrlAccount */ "./src/modules/bank/control/CtrlAccount.js");
 /* harmony import */ var _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/vwResume.js */ "./src/modules/bank/view/vwResume.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -17366,7 +17549,10 @@ var accountForm = /*#__PURE__*/function (_Dom) {
 
     _this.formAccount.addEventListener('submit', function (event) {
       event.preventDefault();
-      Object(_control_ctrlAccount__WEBPACK_IMPORTED_MODULE_1__["setAccount"])(event);
+      _this.ctrlAccount = new _control_CtrlAccount__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+      _this.ctrlAccount.setAccount(event);
+
       new _view_vwResume_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
     });
 
@@ -17391,7 +17577,7 @@ var accountForm = /*#__PURE__*/function (_Dom) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Action; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
-/* harmony import */ var _control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAction */ "./src/modules/bank/control/ctrlAction.js");
+/* harmony import */ var _control_CtrlAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/CtrlAction */ "./src/modules/bank/control/CtrlAction.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -17480,17 +17666,22 @@ var Action = /*#__PURE__*/function (_Dom) {
 
     _this.labelWithdraw.addEventListener('click', function (event) {
       event.preventDefault();
-      Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["optWithdraw"])(_this.inpWithdraw, _this.bntWithdraw);
+      _this.ctrlAction = new _control_CtrlAction__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+      _this.ctrlAction.optWithdraw(_this.inpWithdraw, _this.bntWithdraw);
     });
 
     _this.labelDeposit.addEventListener('click', function (event) {
       event.preventDefault();
-      Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["optDeposit"])(_this.inpDeposit, _this.bntDeposit);
+      _this.ctrlAction = new _control_CtrlAction__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+      _this.ctrlAction.optDeposit(_this.inpDeposit, _this.bntDeposit);
     });
 
     _this.bankForm.addEventListener('submit', function (event) {
       event.preventDefault();
-      Object(_control_ctrlAction__WEBPACK_IMPORTED_MODULE_1__["action"])(event);
+      this.ctrlAction = new _control_CtrlAction__WEBPACK_IMPORTED_MODULE_1__["default"]();
+      this.ctrlAction.action(event);
     });
 
     return _this;
@@ -17514,7 +17705,7 @@ var Action = /*#__PURE__*/function (_Dom) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BankForm; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
-/* harmony import */ var _control_ctrlBank__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlBank */ "./src/modules/bank/control/ctrlBank.js");
+/* harmony import */ var _control_CtrlBank__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/CtrlBank */ "./src/modules/bank/control/CtrlBank.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -17600,7 +17791,9 @@ var BankForm = /*#__PURE__*/function (_Dom) {
 
     _this.form.addEventListener('click', function (e) {
       e.preventDefault();
-      Object(_control_ctrlBank__WEBPACK_IMPORTED_MODULE_1__["default"])(e);
+      _this.ctrlBank = new _control_CtrlBank__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+      _this.ctrlBank.setOption(e);
     });
 
     return _this;
@@ -17692,7 +17885,7 @@ var CreateCurrent = /*#__PURE__*/function (_Dom) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LogoutForm; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
-/* harmony import */ var _control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlAccess */ "./src/modules/bank/control/ctrlAccess.js");
+/* harmony import */ var _control_CtrlAccess__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/CtrlAccess */ "./src/modules/bank/control/CtrlAccess.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -17738,8 +17931,9 @@ var LogoutForm = /*#__PURE__*/function (_Dom) {
 
     _this.btnLogout.addEventListener('click', function (event) {
       event.preventDefault();
-      console.log(event);
-      Object(_control_ctrlAccess__WEBPACK_IMPORTED_MODULE_1__["setLogout"])();
+      _this.ctrlAccess = new _control_CtrlAccess__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+      _this.ctrlAccess.setLogout();
     });
 
     return _this;
@@ -17763,7 +17957,7 @@ var LogoutForm = /*#__PURE__*/function (_Dom) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResumeAccount; });
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/dom */ "./src/assets/js/dom.js");
-/* harmony import */ var _control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/ctrlResume */ "./src/modules/bank/control/ctrlResume.js");
+/* harmony import */ var _control_CtrlResume__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../control/CtrlResume */ "./src/modules/bank/control/CtrlResume.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -17853,7 +18047,8 @@ var ResumeAccount = /*#__PURE__*/function (_Dom) {
 
     _this.formOptAccount.insertAdjacentElement('afterend', _this.content);
 
-    _this.session = Object(_control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    _this.ctrlResume = new _control_CtrlResume__WEBPACK_IMPORTED_MODULE_1__["default"]();
+    _this.session = _this.ctrlResume.resumeAccount();
     _this.subtitle.innerText = "Ol\xE1, ".concat(_this.session.Account.name, "!");
     _this.h3 = _this.createH3({
       text: "Acc: ".concat(_this.session.Account.number)
@@ -17866,7 +18061,9 @@ var ResumeAccount = /*#__PURE__*/function (_Dom) {
 
     _this.formOptAccount.addEventListener('click', function (event) {
       event.preventDefault();
-      Object(_control_ctrlResume__WEBPACK_IMPORTED_MODULE_1__["default"])(event);
+      _this.ctrlResume = new _control_CtrlResume__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+      _this.ctrlResume.resumeAccount(event);
     });
 
     return _this;

@@ -1,5 +1,5 @@
 import Dom from '../../../assets/js/dom';
-import { setAccess } from '../control/ctrlAccess';
+import CtrlAccess from '../control/CtrlAccess';
 import Resume from '../view/vwResume.js';
 
 export default class AccessForm extends Dom {
@@ -32,8 +32,9 @@ export default class AccessForm extends Dom {
 
         this.formAccess.addEventListener('submit', event => {
             event.preventDefault();
-            setAccess(event);
-            new Resume();
+            this.ctrlAccess = new CtrlAccess();
+            this.chkAccess = this.ctrlAccess.setAccess(event);
+            if (this.chkAccess) new Resume();
         });
     }
 }

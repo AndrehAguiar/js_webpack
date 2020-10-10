@@ -1,5 +1,5 @@
 import Dom from '../../../assets/js/dom';
-import resume from '../control/ctrlResume';
+import CtrlResume from '../control/CtrlResume';
 
 export default class ResumeAccount extends Dom {
     constructor() {
@@ -38,7 +38,9 @@ export default class ResumeAccount extends Dom {
         this.subtitle.insertAdjacentElement('afterend', this.formOptAccount);
         this.formOptAccount.insertAdjacentElement('afterend', this.content);
 
-        this.session = resume();
+        this.ctrlResume = new CtrlResume();
+        this.session = this.ctrlResume.resumeAccount();
+
         this.subtitle.innerText = `Olá, ${this.session.Account.name}!`;
 
         this.h3 = this.createH3({ text: `Acc: ${this.session.Account.number}` });
@@ -49,7 +51,8 @@ export default class ResumeAccount extends Dom {
 
         this.formOptAccount.addEventListener('click', event => {
             event.preventDefault();
-            resume(event);
+            this.ctrlResume = new CtrlResume();
+            this.ctrlResume.resumeAccount(event);
         });
     }
 }

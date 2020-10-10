@@ -1,5 +1,5 @@
 import Dom from '../../../assets/js/dom';
-import setOption from '../control/ctrlBank';
+import CtrlBank from '../control/CtrlBank';
 
 export default class BankForm extends Dom {
     constructor() {
@@ -33,7 +33,8 @@ export default class BankForm extends Dom {
 
         this.form.addEventListener('click', e => {
             e.preventDefault();
-            setOption(e);
+            this.ctrlBank = new CtrlBank();
+            this.ctrlBank.setOption(e);
         })
     }
 };

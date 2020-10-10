@@ -1,5 +1,5 @@
 import Dom from '../../../assets/js/dom';
-import { setAccount } from '../control/ctrlAccount';
+import CtrlAccount from '../control/CtrlAccount';
 import Resume from '../view/vwResume.js';
 
 export default class accountForm extends Dom {
@@ -33,7 +33,8 @@ export default class accountForm extends Dom {
 
         this.formAccount.addEventListener('submit', event => {
             event.preventDefault();
-            setAccount(event);
+            this.ctrlAccount = new CtrlAccount();
+            this.ctrlAccount.setAccount(event);
             new Resume()
         });
     }

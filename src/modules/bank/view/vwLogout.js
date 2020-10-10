@@ -1,5 +1,5 @@
 import Dom from '../../../assets/js/dom';
-import { setLogout } from '../control/ctrlAccess';
+import CtrlAccess from '../control/CtrlAccess';
 
 export default class LogoutForm extends Dom {
     constructor() {
@@ -16,8 +16,8 @@ export default class LogoutForm extends Dom {
 
         this.btnLogout.addEventListener('click', event => {
             event.preventDefault();
-            console.log(event);
-            setLogout();
+            this.ctrlAccess = new CtrlAccess();
+            this.ctrlAccess.setLogout();
         });
     }
 }

@@ -1,5 +1,5 @@
 import Dom from "../../../assets/js/dom";
-import { optDeposit, optWithdraw, action } from '../control/ctrlAction';
+import CtrlAction from '../control/CtrlAction';
 
 export default class Action extends Dom {
     constructor() {
@@ -36,19 +36,21 @@ export default class Action extends Dom {
 
         this.labelWithdraw.addEventListener('click', event => {
             event.preventDefault();
-            optWithdraw(this.inpWithdraw, this.bntWithdraw);
+            this.ctrlAction = new CtrlAction();
+            this.ctrlAction.optWithdraw(this.inpWithdraw, this.bntWithdraw);
         });
 
         this.labelDeposit.addEventListener('click', event => {
             event.preventDefault();
-            optDeposit(this.inpDeposit, this.bntDeposit);
+            this.ctrlAction = new CtrlAction();
+            this.ctrlAction.optDeposit(this.inpDeposit, this.bntDeposit);
         });
 
         this.bankForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            action(event);
+            this.ctrlAction = new CtrlAction();
+            this.ctrlAction.action(event);
 
         });
-
     }
 }

@@ -1,5 +1,4 @@
 import Dom from "../../../assets/js/dom";
-
 import Action from "./vwAction";
 
 export default class CreateSavings extends Dom {

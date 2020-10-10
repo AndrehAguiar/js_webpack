@@ -1,61 +1,67 @@
 import Resume from '../view/vwResume';
-import { withdraw, deposit } from './ctrlAccount';
+import CtrlAccount from './CtrlAccount';
 
-const optWithdraw = (inpWithdraw, bntWithdraw) => {
-    const inpDopsit = document.querySelector('#inpDeposit');
-    const btnDopsit = document.querySelector('#btnDeposit');
-    const formDiv = document.querySelector('#dvInput');
-    if (inpDopsit !== null) {
-        inpDopsit.value = null;
-        formDiv.removeChild(inpDopsit);
-        formDiv.removeChild(btnDopsit);
+export default class CtrlAction extends CtrlAccount {
+    constructor() {
+        super(CtrlAccount);
+
+        this.optWithdraw = (inpWithdraw, bntWithdraw) => {
+            const inpDopsit = document.querySelector('#inpDeposit');
+            const btnDopsit = document.querySelector('#btnDeposit');
+            const formDiv = document.querySelector('#dvInput');
+            if (inpDopsit !== null) {
+                inpDopsit.value = null;
+                formDiv.removeChild(inpDopsit);
+                formDiv.removeChild(btnDopsit);
+            }
+
+            dvInput.appendChild(inpWithdraw);
+            dvInput.appendChild(bntWithdraw);
+        }
+
+        this.optDeposit = (inpDeposit, bntDeposit) => {
+            const inpWithdraw = document.querySelector('#inpWithdraw');
+            const btnWithdraw = document.querySelector('#btnWithdraw');
+            const formDiv = document.querySelector('#dvInput');
+
+            if (inpWithdraw !== null) {
+                inpWithdraw.value = null;
+                formDiv.removeChild(inpWithdraw);
+                formDiv.removeChild(btnWithdraw);
+            }
+
+            dvInput.appendChild(inpDeposit);
+            dvInput.appendChild(bntDeposit);
+        }
     }
 
-    dvInput.appendChild(inpWithdraw);
-    dvInput.appendChild(bntWithdraw);
-}
 
-const optDeposit = (inpDeposit, bntDeposit) => {
-    const inpWithdraw = document.querySelector('#inpWithdraw');
-    const btnWithdraw = document.querySelector('#btnWithdraw');
-    const formDiv = document.querySelector('#dvInput');
+    action(e) {
+        const action = e.submitter.value;
 
-    if (inpWithdraw !== null) {
-        inpWithdraw.value = null;
-        formDiv.removeChild(inpWithdraw);
-        formDiv.removeChild(btnWithdraw);
-    }
+        const content = document.querySelector('#content');
+        const optAccount = document.querySelector('#optAccount');
 
-    dvInput.appendChild(inpDeposit);
-    dvInput.appendChild(bntDeposit);
-}
+        switch (action) {
+            case 'Withdraw':
+                const withdrawValue = Number(e.target[0].value).toFixed(2);
+                this.withdraw(withdrawValue);
 
-const action = (e) => {
-    const action = e.submitter.value;
+                e.target.remove();
+                content.remove();
+                optAccount.remove();
+                new Resume();
+                break;
 
-    const content = document.querySelector('#content');
-    const optAccount = document.querySelector('#optAccount');
+            case 'Deposit':
+                const depositValue = Number(e.target[0].value).toFixed(2);
+                this.deposit(depositValue);
 
-    switch (action) {
-        case 'Withdraw':
-            const withdrawValue = Number(e.target[0].value).toFixed(2);
-            withdraw(withdrawValue);
-
-            e.target.remove();
-            content.remove();
-            optAccount.remove();
-            new Resume();
-            break;
-
-        case 'Deposit':
-            const depositValue = Number(e.target[0].value).toFixed(2);
-            deposit(depositValue);
-
-            e.target.remove();
-            content.remove();
-            optAccount.remove();
-            new Resume();
-            break;
+                e.target.remove();
+                content.remove();
+                optAccount.remove();
+                new Resume();
+                break;
+        }
     }
 }
-export { action, optDeposit, optWithdraw };
