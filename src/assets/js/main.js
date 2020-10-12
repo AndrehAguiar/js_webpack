@@ -12,6 +12,8 @@ import { Home, style } from '../../modules/home/Home';
 export default class Main {
     constructor() {
         this.path = window.location.pathname;
+
+        console.log(this.path);
         //this.urlPath = "/js_webpack/public"; // test
         this.urlPath = "/public"; // dev
         this.head = document.querySelector('head');
