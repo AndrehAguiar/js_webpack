@@ -34,21 +34,21 @@ export default class ImcForm extends Dom {
 
         const dlIMC = this.createDL({ id: 'imcTable', text: '' });
         const dtIMC = this.createDT({ id: 'imcTitle', text: 'IMC' });
-        dlIMC.appendChild(this.dtIMC);
+        dlIMC.appendChild(dtIMC);
 
         const dlResult = this.createDL({ id: 'resultTable', text: '' });
         const dtResult = this.createDT({ id: 'resultTitle', text: 'Resultado' });
-        dlResult.appendChild(this.dtResult);
+        dlResult.appendChild(dtResult);
 
         const setTable = (val, idx) => {
             let dd = this.createDD({ id: `${idx}`, text: `${val}` });
-            this.dlIMC.appendChild(dd);
+            dlIMC.appendChild(dd);
 
             dd = this.createDD({ id: `${idx}`, text: `${this.result[idx]}` });
-            this.dlResult.appendChild(dd);
+            dlResult.appendChild(dd);
         }
 
-        this.description.forEach(this.setTable);
+        this.description.forEach(setTable);
 
         this.dvForm = this.createDiv({ id: 'formIMC', class: 'flexCol', text: '' });
         const form = this.createForm({ id: 'calculator', action: '', method: 'dialog' });

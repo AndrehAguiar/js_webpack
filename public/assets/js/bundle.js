@@ -1437,20 +1437,12 @@ var Dom = function Dom() {
 /*!*******************************!*\
   !*** ./src/assets/js/main.js ***!
   \*******************************/
-/*! exports provided: getCPF, getHome, getTimer, getPassword, getBank, getCalculator, getRegister, getIMC, getTask */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCPF", function() { return getCPF; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHome", function() { return getHome; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTimer", function() { return getTimer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPassword", function() { return getPassword; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBank", function() { return getBank; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCalculator", function() { return getCalculator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRegister", function() { return getRegister; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getIMC", function() { return getIMC; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTask", function() { return getTask; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Main; });
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_calculator_view_vwCalculator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../modules/calculator/view/vwCalculator */ "./src/modules/calculator/view/vwCalculator.js");
@@ -1462,6 +1454,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_register_view_vwForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/register/view/vwForm */ "./src/modules/register/view/vwForm.js");
 /* harmony import */ var _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/bank/view/vwBank */ "./src/modules/bank/view/vwBank.js");
 /* harmony import */ var _modules_home_Home__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../modules/home/Home */ "./src/modules/home/Home.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
 
@@ -1472,113 +1469,154 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var path = window.location.pathname; //const urlPath = "/js_webpack/public"; // test
 
-var urlPath = "/public"; // dev
 
-var head = document.querySelector('head');
-var container = document.querySelector('.container');
+var Main = /*#__PURE__*/function () {
+  function Main() {
+    var _this = this;
 
-var getHome = function getHome() {
-  head.appendChild(_modules_home_Home__WEBPACK_IMPORTED_MODULE_9__["style"]);
-  container.innerHTML = _modules_home_Home__WEBPACK_IMPORTED_MODULE_9__["Home"];
-};
+    _classCallCheck(this, Main);
 
-var getTask = function getTask() {
-  var clsForm = new _modules_task_view_vwTask__WEBPACK_IMPORTED_MODULE_3__["default"]();
-  head.appendChild(clsForm.style);
-  container.appendChild(clsForm.dvTask);
-  container.classList.add('task');
-};
+    this.path = window.location.pathname;
+    this.urlPath = "/js_webpack/public"; // test
+    //this.urlPath = "/public"; // dev
 
-var getTimer = function getTimer() {
-  var clsForm = new _modules_timer_view_vwTimer__WEBPACK_IMPORTED_MODULE_2__["default"]();
-  head.appendChild(clsForm.style);
-  container.appendChild(clsForm.dvTimer);
-  container.classList.add('timer');
-};
+    this.head = document.querySelector('head');
+    this.container = document.querySelector('.container');
 
-var getIMC = function getIMC() {
-  var clsForm = new _modules_imc_view_vwIMC__WEBPACK_IMPORTED_MODULE_4__["default"]();
-  head.appendChild(clsForm.style);
-  container.appendChild(clsForm.dvTable);
-  container.appendChild(clsForm.dvForm);
-  container.classList.add('imc');
-};
+    this.getHome = function () {
+      _this.head.appendChild(_modules_home_Home__WEBPACK_IMPORTED_MODULE_9__["style"]);
 
-var getCalculator = function getCalculator() {
-  var clsForm = new _modules_calculator_view_vwCalculator__WEBPACK_IMPORTED_MODULE_1__["default"]();
-  head.appendChild(clsForm.style);
-  container.appendChild(clsForm.dvGrid);
-  container.classList.add('calculator');
-};
+      _this.container.innerHTML = _modules_home_Home__WEBPACK_IMPORTED_MODULE_9__["Home"];
+    };
 
-var getCPF = function getCPF() {
-  var clsForm = new _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_5__["default"]();
-  container.appendChild(clsForm.form);
-  container.classList.add('cpf');
-};
+    this.getTask = function () {
+      var clsForm = new _modules_task_view_vwTask__WEBPACK_IMPORTED_MODULE_3__["default"]();
 
-var getPassword = function getPassword() {
-  var clsForm = new _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_6__["default"]();
-  container.appendChild(clsForm.form);
-  container.classList.add('password');
-};
+      _this.head.appendChild(clsForm.style);
 
-var getRegister = function getRegister() {
-  var clsForm = new _modules_register_view_vwForm__WEBPACK_IMPORTED_MODULE_7__["default"]();
-  container.appendChild(clsForm.form);
-  container.classList.add('registerForm');
-};
+      _this.container.appendChild(clsForm.dvTask);
 
-var getBank = function getBank() {
-  var clsForm = new _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_8__["default"]();
-  head.appendChild(clsForm.style);
-  container.appendChild(clsForm.form);
-  container.classList.add('bank');
-  clsForm.form.insertAdjacentElement('afterend', clsForm.h2);
-};
+      _this.container.classList.add('task');
+    };
 
-switch (path) {
-  case "".concat(urlPath, "/home/"):
-    getHome();
-    break;
+    this.getTimer = function () {
+      var clsForm = new _modules_timer_view_vwTimer__WEBPACK_IMPORTED_MODULE_2__["default"]();
 
-  case "".concat(urlPath, "/timer/"):
-    getTimer();
-    break;
+      _this.head.appendChild(clsForm.style);
 
-  case "".concat(urlPath, "/task/"):
-    getTask();
-    break;
+      _this.container.appendChild(clsForm.dvTimer);
 
-  case "".concat(urlPath, "/imc/"):
-    getIMC();
-    break;
+      _this.container.classList.add('timer');
+    };
 
-  case "".concat(urlPath, "/calculator/"):
-    getCalculator();
-    break;
+    this.getIMC = function () {
+      var clsForm = new _modules_imc_view_vwIMC__WEBPACK_IMPORTED_MODULE_4__["default"]();
 
-  case "".concat(urlPath, "/cpf/"):
-    getCPF();
-    break;
+      _this.head.appendChild(clsForm.style);
 
-  case "".concat(urlPath, "/password/"):
-    getPassword();
-    break;
+      _this.container.appendChild(clsForm.dvTable);
 
-  case "".concat(urlPath, "/register/"):
-    getRegister();
-    break;
+      _this.container.appendChild(clsForm.dvForm);
 
-  case "".concat(urlPath, "/bank/"):
-    getBank();
-    break;
+      _this.container.classList.add('imc');
+    };
 
-  default:
-    getHome();
-}
+    this.getCalculator = function () {
+      var clsForm = new _modules_calculator_view_vwCalculator__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+      _this.head.appendChild(clsForm.style);
+
+      _this.container.appendChild(clsForm.dvGrid);
+
+      _this.container.classList.add('calculator');
+    };
+
+    this.getCPF = function () {
+      var clsForm = new _modules_cpf_view_vwCPF__WEBPACK_IMPORTED_MODULE_5__["default"]();
+
+      _this.container.appendChild(clsForm.form);
+
+      _this.container.classList.add('cpf');
+    };
+
+    this.getPassword = function () {
+      var clsForm = new _modules_password_view_vwPassword__WEBPACK_IMPORTED_MODULE_6__["default"]();
+
+      _this.container.appendChild(clsForm.form);
+
+      _this.container.classList.add('password');
+    };
+
+    this.getRegister = function () {
+      var clsForm = new _modules_register_view_vwForm__WEBPACK_IMPORTED_MODULE_7__["default"]();
+
+      _this.container.appendChild(clsForm.form);
+
+      _this.container.classList.add('registerForm');
+    };
+
+    this.getBank = function () {
+      var clsForm = new _modules_bank_view_vwBank__WEBPACK_IMPORTED_MODULE_8__["default"]();
+
+      _this.head.appendChild(clsForm.style);
+
+      _this.container.appendChild(clsForm.form);
+
+      _this.container.classList.add('bank');
+
+      clsForm.form.insertAdjacentElement('afterend', clsForm.h2);
+    };
+  }
+
+  _createClass(Main, [{
+    key: "setPath",
+    value: function setPath() {
+      switch (this.path) {
+        case "".concat(this.urlPath, "/home/"):
+          this.getHome();
+          break;
+
+        case "".concat(this.urlPath, "/timer/"):
+          this.getTimer();
+          break;
+
+        case "".concat(this.urlPath, "/task/"):
+          this.getTask();
+          break;
+
+        case "".concat(this.urlPath, "/imc/"):
+          this.getIMC();
+          break;
+
+        case "".concat(this.urlPath, "/calculator/"):
+          this.getCalculator();
+          break;
+
+        case "".concat(this.urlPath, "/cpf/"):
+          this.getCPF();
+          break;
+
+        case "".concat(this.urlPath, "/password/"):
+          this.getPassword();
+          break;
+
+        case "".concat(this.urlPath, "/register/"):
+          this.getRegister();
+          break;
+
+        case "".concat(this.urlPath, "/bank/"):
+          this.getBank();
+          break;
+
+        default:
+          this.getHome();
+      }
+    }
+  }]);
+
+  return Main;
+}();
 
 
 
@@ -1600,7 +1638,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (function () {
-  Object(_modules_menu_Menu__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  var menu = new _modules_menu_Menu__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  menu.setMenu();
 })();
 
 /***/ }),
@@ -4170,7 +4209,7 @@ var ImcForm = /*#__PURE__*/function (_Dom) {
       text: 'IMC'
     });
 
-    dlIMC.appendChild(_this.dtIMC);
+    dlIMC.appendChild(dtIMC);
 
     var dlResult = _this.createDL({
       id: 'resultTable',
@@ -4182,7 +4221,7 @@ var ImcForm = /*#__PURE__*/function (_Dom) {
       text: 'Resultado'
     });
 
-    dlResult.appendChild(_this.dtResult);
+    dlResult.appendChild(dtResult);
 
     var setTable = function setTable(val, idx) {
       var dd = _this.createDD({
@@ -4190,17 +4229,15 @@ var ImcForm = /*#__PURE__*/function (_Dom) {
         text: "".concat(val)
       });
 
-      _this.dlIMC.appendChild(dd);
-
+      dlIMC.appendChild(dd);
       dd = _this.createDD({
         id: "".concat(idx),
         text: "".concat(_this.result[idx])
       });
-
-      _this.dlResult.appendChild(dd);
+      dlResult.appendChild(dd);
     };
 
-    _this.description.forEach(_this.setTable);
+    _this.description.forEach(setTable);
 
     _this.dvForm = _this.createDiv({
       id: 'formIMC',
@@ -4334,40 +4371,85 @@ var ImcForm = /*#__PURE__*/function (_Dom) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Menu; });
 /* harmony import */ var _assets_js_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/js/main */ "./src/assets/js/main.js");
 /* harmony import */ var _assets_js_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/js/dom */ "./src/assets/js/dom.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
- //const urlPath = '/js_webpack/public'; //test
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var urlPath = '/public'; // dev
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-var menuDOM = document.querySelector('#menu');
-var dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_1__["default"]();
-var menu = {
-  home: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getHome"],
-  timer: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getTimer"],
-  task: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getTask"],
-  imc: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getIMC"],
-  calculator: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getCalculator"],
-  cpf: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getCPF"],
-  password: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getPassword"],
-  register: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getRegister"],
-  bank: _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["getBank"]
-};
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var setMenu = function setMenu() {
-  Object.keys(menu).forEach(function (element) {
-    var navMenu = dom.createNav({
-      id: element
-    });
-    menuDOM.appendChild(navMenu);
-    navMenu.addEventListener('click', function () {
-      element !== 'home' ? location.replace("".concat(urlPath, "/").concat(element, "/")) : location.replace("".concat(urlPath, "/"));
-    });
-  });
-};
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-/* harmony default export */ __webpack_exports__["default"] = (setMenu);
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Menu = /*#__PURE__*/function (_Main) {
+  _inherits(Menu, _Main);
+
+  var _super = _createSuper(Menu);
+
+  function Menu() {
+    var _this;
+
+    _classCallCheck(this, Menu);
+
+    _this = _super.call(this, _assets_js_main__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    _this.menuDOM = document.querySelector('#menu');
+    _this.menu = {
+      home: _this.getHome,
+      timer: _this.getTimer,
+      task: _this.getTask,
+      imc: _this.getIMC,
+      calculator: _this.getCalculator,
+      cpf: _this.getCPF,
+      password: _this.getPassword,
+      register: _this.getRegister,
+      bank: _this.getBank
+    };
+    return _this;
+  }
+
+  _createClass(Menu, [{
+    key: "setMenu",
+    value: function setMenu() {
+      var _this2 = this;
+
+      var dom = new _assets_js_dom__WEBPACK_IMPORTED_MODULE_1__["default"]();
+      Object.keys(this.menu).forEach(function (element) {
+        var navMenu = dom.createNav({
+          id: element
+        });
+
+        _this2.menuDOM.appendChild(navMenu);
+
+        navMenu.addEventListener('click', function () {
+          element !== 'home' ? location.replace("".concat(_this2.urlPath, "/").concat(element, "/")) : location.replace("".concat(_this2.urlPath, "/"));
+        });
+      });
+      this.setPath();
+    }
+  }]);
+
+  return Menu;
+}(_assets_js_main__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
 
 /***/ }),
 
@@ -4806,7 +4888,6 @@ var ControlRegister = /*#__PURE__*/function (_ValidForm) {
           }
 
           if (input.classList.contains('inpCPF')) {
-            console.log(_this.validateCPF);
             if (!_this.validateCPF(input)) isValid = false;
           }
 

@@ -50,7 +50,6 @@ export default class ControlRegister extends ValidForm {
                 }
 
                 if (input.classList.contains('inpCPF')) {
-                    console.log(this.validateCPF)
                     if (!this.validateCPF(input)) isValid = false;
                 }
 

@@ -9,111 +9,102 @@ import RegisterForm from '../../modules/register/view/vwForm';
 import BankForm from '../../modules/bank/view/vwBank';
 import { Home, style } from '../../modules/home/Home';
 
-const path = window.location.pathname;
+export default class Main {
+    constructor() {
+        this.path = window.location.pathname;
+        this.urlPath = "/js_webpack/public"; // test
+        //this.urlPath = "/public"; // dev
+        this.head = document.querySelector('head');
+        this.container = document.querySelector('.container');
+        this.getHome = () => {
+            this.head.appendChild(style);
+            this.container.innerHTML = Home;
+        }
 
-const urlPath = "/js_webpack/public"; // test
-//const urlPath = "/public"; // dev
+        this.getTask = () => {
+            const clsForm = new TaskForm();
+            this.head.appendChild(clsForm.style);
+            this.container.appendChild(clsForm.dvTask);
+            this.container.classList.add('task');
+        }
 
-const head = document.querySelector('head');
-const container = document.querySelector('.container');
+        this.getTimer = () => {
+            const clsForm = new TimerForm();
+            this.head.appendChild(clsForm.style);
+            this.container.appendChild(clsForm.dvTimer);
+            this.container.classList.add('timer');
+        }
 
-const getHome = () => {
-    head.appendChild(style);
-    container.innerHTML = Home;
-}
+        this.getIMC = () => {
+            const clsForm = new ImcForm();
+            this.head.appendChild(clsForm.style);
+            this.container.appendChild(clsForm.dvTable);
+            this.container.appendChild(clsForm.dvForm);
+            this.container.classList.add('imc');
+        }
+        this.getCalculator = () => {
+            const clsForm = new CalcForm();
+            this.head.appendChild(clsForm.style);
+            this.container.appendChild(clsForm.dvGrid);
+            this.container.classList.add('calculator');
+        }
 
-const getTask = () => {
-    const clsForm = new TaskForm();
-    head.appendChild(clsForm.style);
-    container.appendChild(clsForm.dvTask);
-    container.classList.add('task');
-}
+        this.getCPF = () => {
+            const clsForm = new CpfForm();
+            this.container.appendChild(clsForm.form);
+            this.container.classList.add('cpf');
+        }
 
-const getTimer = () => {
-    const clsForm = new TimerForm();
-    head.appendChild(clsForm.style);
-    container.appendChild(clsForm.dvTimer);
-    container.classList.add('timer');
-}
+        this.getPassword = () => {
+            const clsForm = new PassForm();
+            this.container.appendChild(clsForm.form);
+            this.container.classList.add('password');
+        }
+        this.getRegister = () => {
+            const clsForm = new RegisterForm();
+            this.container.appendChild(clsForm.form);
+            this.container.classList.add('registerForm');
+        }
 
-const getIMC = () => {
-    const clsForm = new ImcForm();
-    head.appendChild(clsForm.style);
-    container.appendChild(clsForm.dvTable);
-    container.appendChild(clsForm.dvForm);
-    container.classList.add('imc');
+        this.getBank = () => {
+            const clsForm = new BankForm();
+            this.head.appendChild(clsForm.style);
+            this.container.appendChild(clsForm.form);
+            this.container.classList.add('bank');
+            clsForm.form.insertAdjacentElement('afterend', clsForm.h2);
+        }
+    }
+    setPath() {
+        switch (this.path) {
+            case `${this.urlPath}/home/`:
+                this.getHome();
+                break;
+            case `${this.urlPath}/timer/`:
+                this.getTimer();
+                break;
+            case `${this.urlPath}/task/`:
+                this.getTask();
+                break;
+            case `${this.urlPath}/imc/`:
+                this.getIMC();
+                break;
+            case `${this.urlPath}/calculator/`:
+                this.getCalculator();
+                break;
+            case `${this.urlPath}/cpf/`:
+                this.getCPF();
+                break;
+            case `${this.urlPath}/password/`:
+                this.getPassword();
+                break;
+            case `${this.urlPath}/register/`:
+                this.getRegister();
+                break;
+            case `${this.urlPath}/bank/`:
+                this.getBank();
+                break;
+            default:
+                this.getHome();
+        }
+    }
 }
-const getCalculator = () => {
-    const clsForm = new CalcForm();
-    head.appendChild(clsForm.style);
-    container.appendChild(clsForm.dvGrid);
-    container.classList.add('calculator');
-}
-
-const getCPF = () => {
-    const clsForm = new CpfForm();
-    container.appendChild(clsForm.form);
-    container.classList.add('cpf');
-}
-
-const getPassword = () => {
-    const clsForm = new PassForm();
-    container.appendChild(clsForm.form);
-    container.classList.add('password');
-}
-const getRegister = () => {
-    const clsForm = new RegisterForm();
-    container.appendChild(clsForm.form);
-    container.classList.add('registerForm');
-}
-
-const getBank = () => {
-    const clsForm = new BankForm();
-    head.appendChild(clsForm.style);
-    container.appendChild(clsForm.form);
-    container.classList.add('bank');
-    clsForm.form.insertAdjacentElement('afterend', clsForm.h2);
-}
-
-switch (path) {
-    case `${urlPath}/home/`:
-        getHome();
-        break;
-    case `${urlPath}/timer/`:
-        getTimer();
-        break;
-    case `${urlPath}/task/`:
-        getTask();
-        break;
-    case `${urlPath}/imc/`:
-        getIMC();
-        break;
-    case `${urlPath}/calculator/`:
-        getCalculator();
-        break;
-    case `${urlPath}/cpf/`:
-        getCPF();
-        break;
-    case `${urlPath}/password/`:
-        getPassword();
-        break;
-    case `${urlPath}/register/`:
-        getRegister();
-        break;
-    case `${urlPath}/bank/`:
-        getBank();
-        break;
-    default:
-        getHome();
-}
-export {
-    getCPF,
-    getHome,
-    getTimer,
-    getPassword,
-    getBank,
-    getCalculator,
-    getRegister,
-    getIMC,
-    getTask
-};

@@ -1,44 +1,34 @@
-import {
-    getCPF,
-    getHome,
-    getPassword,
-    getBank,
-    getCalculator,
-    getRegister,
-    getIMC,
-    getTimer,
-    getTask
-} from '../../assets/js/main';
+import Main from '../../assets/js/main';
 import Dom from '../../assets/js/dom';
 
-const urlPath = '/js_webpack/public'; //test
-//const urlPath = '/public'; // dev
+export default class Menu extends Main {
+    constructor() {
+        super(Main);
+        this.menuDOM = document.querySelector('#menu');
+        this.menu = {
+            home: this.getHome,
+            timer: this.getTimer,
+            task: this.getTask,
+            imc: this.getIMC,
+            calculator: this.getCalculator,
+            cpf: this.getCPF,
+            password: this.getPassword,
+            register: this.getRegister,
+            bank: this.getBank
+        }
+    }
+    setMenu() {
+        const dom = new Dom();
+        Object.keys(this.menu).forEach(element => {
+            let navMenu = dom.createNav({ id: element });
+            this.menuDOM.appendChild(navMenu);
 
-const menuDOM = document.querySelector('#menu');
-const dom = new Dom();
-
-const menu = {
-    home: getHome,
-    timer: getTimer,
-    task: getTask,
-    imc: getIMC,
-    calculator: getCalculator,
-    cpf: getCPF,
-    password: getPassword,
-    register: getRegister,
-    bank: getBank
+            navMenu.addEventListener('click', () => {
+                element !== 'home'
+                    ? location.replace(`${this.urlPath}/${element}/`)
+                    : location.replace(`${this.urlPath}/`);
+            });
+        });
+        this.setPath();
+    }
 }
-
-const setMenu = () => {
-    Object.keys(menu).forEach(element => {
-        let navMenu = dom.createNav({ id: element });
-        menuDOM.appendChild(navMenu);
-
-        navMenu.addEventListener('click', function () {
-            element !== 'home'
-                ? location.replace(`${urlPath}/${element}/`)
-                : location.replace(`${urlPath}/`);
-        })
-    });
-}
-export default setMenu;
