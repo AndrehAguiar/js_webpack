@@ -1,23 +1,23 @@
 import Dom from '../../../assets/js/dom';
 import CtrlAccess from '../control/CtrlAccess';
 
-export default class LogoutForm extends Dom {
+export default class LogoutForm {
     constructor() {
 
-        super(Dom);
+        const dom = new Dom();
+        const ctrlAccess = new CtrlAccess();
 
-        this.subTitle = document.querySelector('#subTitle');
-        this.subTitle.innerText = 'Logout first';
+        const subTitle = document.querySelector('#subTitle');
+        subTitle.innerText = 'Logout first';
 
-        this.btnLogout = this.createButton({ type: 'button', text: 'Logout', id: 'btnLogout' });
-        this.btnLogout.value = 'Logout';
+        const btnLogout = dom.createButton({ type: 'button', text: 'Logout', id: 'btnLogout' });
+        btnLogout.value = 'Logout';
 
-        this.subTitle.insertAdjacentElement('afterend', this.btnLogout);
+        subTitle.insertAdjacentElement('afterend', btnLogout);
 
-        this.btnLogout.addEventListener('click', event => {
+        btnLogout.addEventListener('click', event => {
             event.preventDefault();
-            this.ctrlAccess = new CtrlAccess();
-            this.ctrlAccess.setLogout();
+            ctrlAccess.setLogout();
         });
     }
 }

@@ -1,40 +1,45 @@
 import Dom from '../../../assets/js/dom';
+import Style from '../assets/style';
 import CtrlBank from '../control/CtrlBank';
 
-export default class BankForm extends Dom {
+export default class BankForm {
     constructor() {
 
-        super(Dom);
+        const dom = new Dom();
+        const css = new Style();
+        const ctrlBank = new CtrlBank();
 
-        this.h1 = this.createH1({ text: 'Bank' });
-        this.h2 = this.createH2({ text: 'Select an option' });
+        this.style = dom.createStyle({ text: css.style });
+
+        this.form = dom.createForm({ id: 'option', method: 'dialog', action: '' });
+
+        const h1 = dom.createH1({ text: 'Bank' });
+        this.h2 = dom.createH2({ text: 'Select an option' });
         this.h2.id = 'subTitle';
 
-        this.form = this.createForm({ id: 'option', method: 'dialog', action: '' });
 
-        this.labelAcc = this.createLabel({ id: 'accAccount', text: 'Access Account', for: 'accAccount' });
-        this.accAccount = this.createInput({ type: 'radio', id: 'accAccount' });
-        this.accAccount.value = 'access';
-        this.accAccount.name = 'optAccount';
+        const labelAcc = dom.createLabel({ id: 'accAccount', text: 'Access Account', for: 'accAccount' });
+        const accAccount = dom.createInput({ type: 'radio', id: 'accAccount' });
+        accAccount.value = 'access';
+        accAccount.name = 'optAccount';
 
-        this.labelNew = this.createLabel({ id: 'newAccount', text: 'Create Account', for: 'newAccount' });
-        this.newAccount = this.createInput({ type: 'radio', id: 'newAccount' });
-        this.newAccount.value = 'account';
-        this.newAccount.name = 'optAccount';
+        const labelNew = dom.createLabel({ id: 'newAccount', text: 'Create Account', for: 'newAccount' });
+        const newAccount = dom.createInput({ type: 'radio', id: 'newAccount' });
+        newAccount.value = 'account';
+        newAccount.name = 'optAccount';
 
-        this.dvContent = this.createDiv({ id: 'barOption', text: '' });
+        const dvContent = dom.createDiv({ id: 'barOption', text: '' });
 
-        this.form.appendChild(this.h1);
-        this.form.appendChild(this.dvContent);
-        this.dvContent.appendChild(this.labelAcc);
-        this.labelAcc.appendChild(this.accAccount);
-        this.dvContent.appendChild(this.labelNew);
-        this.labelNew.appendChild(this.newAccount);
+        this.form.appendChild(h1);
+        this.form.appendChild(dvContent);
+        dvContent.appendChild(labelAcc);
+        labelAcc.appendChild(accAccount);
+        dvContent.appendChild(labelNew);
+        labelNew.appendChild(newAccount);
 
         this.form.addEventListener('click', e => {
             e.preventDefault();
-            this.ctrlBank = new CtrlBank();
-            this.ctrlBank.setOption(e);
+            ctrlBank.setOption(e);
         })
     }
 };

@@ -1,60 +1,62 @@
 import Dom from '../../../assets/js/dom';
-import ctrlPass from '../control/ctrlPassword';
+import CtrlPassword from '../control/ctrlPassword';
 
-export default class PassForm extends Dom {
+export default class PassForm {
     constructor() {
 
-        super(Dom);
+        const dom = new Dom();
 
-        this.title = this.createH1({ text: 'Password Generator' });
-        this.form = this.createForm({ id: 'formPass', method: 'dialog' });
+        this.form = dom.createForm({ id: 'formPass', method: 'dialog' });
 
-        this.span = this.createSpan({ id: 'spnPassword', text: '' });
+        const title = dom.createH1({ text: 'Password Generator' });
 
-        this.lblChars = this.createLabel({ id: 'chars', for: 'inpQtdChars', text: 'Number of characters' });
-        this.input = this.createInput({ type: 'number', id: 'inpQtdChars', class: 'qtdChars' });
-        this.input.value = 6;
-        this.input.maxlength = '2';
-        this.input.max = 12;
-        this.input.minlength = '1';
-        this.input.min = 6;
-        this.input.required = true;
+        const span = dom.createSpan({ id: 'spnPassword', text: '' });
 
-        this.lblNumber = this.createLabel({ id: 'number', for: 'inpNumber', text: 'Numbers' });
-        this.checkNumber = this.createInput({ type: 'checkbox', id: 'inpNumber', class: 'Number' });
-        this.checkNumber.checked = true;
+        const lblChars = dom.createLabel({ id: 'chars', for: 'inpQtdChars', text: 'Number of characters' });
+        const input = dom.createInput({ type: 'number', id: 'inpQtdChars', class: 'qtdChars' });
+        input.value = 6;
+        input.maxlength = '2';
+        input.max = 12;
+        input.minlength = '1';
+        input.min = 6;
+        input.required = true;
 
-        this.lblUpper = this.createLabel({ id: 'upper', for: 'inpUpper', text: 'Capital letters' });
-        this.checkUpper = this.createInput({ type: 'checkbox', id: 'inpUpper', class: 'Upper' });
-        this.checkUpper.checked = true;
+        const lblNumber = dom.createLabel({ id: 'number', for: 'inpNumber', text: 'Numbers' });
+        const checkNumber = dom.createInput({ type: 'checkbox', id: 'inpNumber', class: 'Number' });
+        checkNumber.checked = true;
 
-        this.lblLower = this.createLabel({ id: 'lower', for: 'inpLower', text: 'Small letters' });
-        this.checkLower = this.createInput({ type: 'checkbox', id: 'inpLower', class: 'Lower' });
-        this.checkLower.checked = true;
+        const lblUpper = dom.createLabel({ id: 'upper', for: 'inpUpper', text: 'Capital letters' });
+        const checkUpper = dom.createInput({ type: 'checkbox', id: 'inpUpper', class: 'Upper' });
+        checkUpper.checked = true;
 
-        this.lblSpecial = this.createLabel({ id: 'special', for: 'inpSpecial', text: 'Special Characters' });
-        this.checkSpecial = this.createInput({ type: 'checkbox', id: 'inpSpecial', class: 'Special' });
-        this.checkSpecial.checked = true;
+        const lblLower = dom.createLabel({ id: 'lower', for: 'inpLower', text: 'Small letters' });
+        const checkLower = dom.createInput({ type: 'checkbox', id: 'inpLower', class: 'Lower' });
+        checkLower.checked = true;
 
-        this.btnSubmit = this.createButton({ type: 'submit', id: 'btnSubmit', text: 'Generate' })
+        const lblSpecial = dom.createLabel({ id: 'special', for: 'inpSpecial', text: 'Special Characters' });
+        const checkSpecial = dom.createInput({ type: 'checkbox', id: 'inpSpecial', class: 'Special' });
+        checkSpecial.checked = true;
 
-        this.form.appendChild(this.title);
-        this.form.appendChild(this.span);
-        this.form.appendChild(this.lblChars);
-        this.lblChars.appendChild(this.input);
-        this.form.appendChild(this.lblNumber);
-        this.lblNumber.appendChild(this.checkNumber);
-        this.form.appendChild(this.lblUpper);
-        this.lblUpper.appendChild(this.checkUpper);
-        this.form.appendChild(this.lblLower);
-        this.lblLower.appendChild(this.checkLower);
-        this.form.appendChild(this.lblSpecial);
-        this.lblSpecial.appendChild(this.checkSpecial);
-        this.form.appendChild(this.btnSubmit);
+        const btnSubmit = dom.createButton({ type: 'submit', id: 'btnSubmit', text: 'Generate' })
+
+        this.form.appendChild(title);
+        this.form.appendChild(span);
+        this.form.appendChild(lblChars);
+        lblChars.appendChild(input);
+        this.form.appendChild(lblNumber);
+        lblNumber.appendChild(checkNumber);
+        this.form.appendChild(lblUpper);
+        lblUpper.appendChild(checkUpper);
+        this.form.appendChild(lblLower);
+        lblLower.appendChild(checkLower);
+        this.form.appendChild(lblSpecial);
+        lblSpecial.appendChild(checkSpecial);
+        this.form.appendChild(btnSubmit);
 
         this.form.addEventListener('submit', event => {
             event.preventDefault();
-            event.target.children['spnPassword'].innerText = ctrlPass(event.target.children);
+            const control = new CtrlPassword();
+            event.target.children['spnPassword'].innerText = control.ctrlPass(event.target.children);
         });
     }
 

@@ -1,55 +1,53 @@
 import Dom from "../../../assets/js/dom";
 import CtrlAction from '../control/CtrlAction';
 
-export default class Action extends Dom {
+export default class Action {
     constructor() {
 
-        super(Dom);
+        const dom = new Dom();
+        const ctrlAction = new CtrlAction();
 
-        this.bankForm = this.createForm({ id: 'bankForm', action: '', method: 'dialog' });
+        this.bankForm = dom.createForm({ id: 'bankForm', action: '', method: 'dialog' });
 
-        this.labelWithdraw = this.createLabel({ for: 'inpWithdraw', text: 'Withdraw', id: 'lblWidraw' });
-        this.inpWithdraw = this.createInput({ type: 'number', id: 'inpWithdraw' });
-        this.inpWithdraw.placeholder = '0.00';
-        this.inpWithdraw.step = '0.01';
-        this.inpWithdraw.name = 'withdraw';
-        this.inpWithdraw.required = true;
+        const labelWithdraw = dom.createLabel({ for: 'inpWithdraw', text: 'Withdraw', id: 'lblWidraw' });
+        const inpWithdraw = dom.createInput({ type: 'number', id: 'inpWithdraw' });
+        inpWithdraw.placeholder = '0.00';
+        inpWithdraw.step = '0.01';
+        inpWithdraw.name = 'withdraw';
+        inpWithdraw.required = true;
 
-        this.bntWithdraw = this.createButton({ type: 'submit', text: 'Withdraw', id: 'btnWithdraw' });
-        this.bntWithdraw.value = 'Withdraw';
+        const bntWithdraw = dom.createButton({ type: 'submit', text: 'Withdraw', id: 'btnWithdraw' });
+        bntWithdraw.value = 'Withdraw';
 
-        this.labelDeposit = this.createLabel({ for: 'inpDeposit', text: 'Deposit', id: 'lblDeposit' });
-        this.inpDeposit = this.createInput({ type: 'number', id: 'inpDeposit' });
-        this.inpDeposit.placeholder = '0.00';
-        this.inpDeposit.step = '0.01';
-        this.inpDeposit.name = 'deposit';
-        this.inpDeposit.required = true;
+        const labelDeposit = dom.createLabel({ for: 'inpDeposit', text: 'Deposit', id: 'lblDeposit' });
+        const inpDeposit = dom.createInput({ type: 'number', id: 'inpDeposit' });
+        inpDeposit.placeholder = '0.00';
+        inpDeposit.step = '0.01';
+        inpDeposit.name = 'deposit';
+        inpDeposit.required = true;
 
-        this.bntDeposit = this.createButton({ type: 'submit', text: 'Deposit', id: 'btnDeposit' });
-        this.bntDeposit.value = 'Deposit';
+        const bntDeposit = dom.createButton({ type: 'submit', text: 'Deposit', id: 'btnDeposit' });
+        bntDeposit.value = 'Deposit';
 
-        this.dvInput = this.createDiv({ id: 'dvInput', text: '' });
+        const dvInput = dom.createDiv({ id: 'dvInput', text: '' });
 
-        this.bankForm.appendChild(this.labelWithdraw);
-        this.bankForm.appendChild(this.labelDeposit);
-        this.bankForm.appendChild(this.dvInput);
+        this.bankForm.appendChild(labelWithdraw);
+        this.bankForm.appendChild(labelDeposit);
+        this.bankForm.appendChild(dvInput);
 
-        this.labelWithdraw.addEventListener('click', event => {
+        labelWithdraw.addEventListener('click', event => {
             event.preventDefault();
-            this.ctrlAction = new CtrlAction();
-            this.ctrlAction.optWithdraw(this.inpWithdraw, this.bntWithdraw);
+            ctrlAction.optWithdraw(inpWithdraw, bntWithdraw);
         });
 
-        this.labelDeposit.addEventListener('click', event => {
+        labelDeposit.addEventListener('click', event => {
             event.preventDefault();
-            this.ctrlAction = new CtrlAction();
-            this.ctrlAction.optDeposit(this.inpDeposit, this.bntDeposit);
+            ctrlAction.optDeposit(inpDeposit, bntDeposit);
         });
 
         this.bankForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            this.ctrlAction = new CtrlAction();
-            this.ctrlAction.action(event);
+            ctrlAction.action(event);
 
         });
     }

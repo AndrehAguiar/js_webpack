@@ -2,39 +2,39 @@ import Dom from '../../../assets/js/dom';
 import CtrlAccess from '../control/CtrlAccess';
 import Resume from '../view/vwResume.js';
 
-export default class AccessForm extends Dom {
+export default class AccessForm {
     constructor() {
 
-        super(Dom);
+        const dom = new Dom();
+        const ctrlAccess = new CtrlAccess();
 
-        this.subTitle = document.querySelector('#subTitle');
-        this.subTitle.innerText = 'Access account';
+        const subTitle = document.querySelector('#subTitle');
+        subTitle.innerText = 'Access account';
 
-        this.formAccess = this.createForm({ id: 'formAccess', method: 'dialog', action: '' });
-        this.inpName = this.createInput({ type: 'text', id: 'inpName' });
-        this.inpName.name = 'nameAccount';
-        this.inpName.placeholder = 'Type your name';
-        this.inpName.required = true;
+        this.formAccess = dom.createForm({ id: 'formAccess', method: 'dialog', action: '' });
+        const inpName = dom.createInput({ type: 'text', id: 'inpName' });
+        inpName.name = 'nameAccount';
+        inpName.placeholder = 'Type your name';
+        inpName.required = true;
 
-        this.inpAccount = this.createInput({ type: 'text', id: 'inpAccount' });
-        this.inpAccount.name = 'numAccount';
-        this.inpAccount.placeholder = 'Enter the account number'
-        this.inpAccount.required = true;
+        const inpAccount = dom.createInput({ type: 'text', id: 'inpAccount' });
+        inpAccount.name = 'numAccount';
+        inpAccount.placeholder = 'Enter the account number'
+        inpAccount.required = true;
 
-        this.bntSubmit = this.createButton({ type: 'submit', id: 'btnAccess', text: 'Access' });
-        this.bntSubmit.value = 'Access';
+        const bntSubmit = dom.createButton({ type: 'submit', id: 'btnAccess', text: 'Access' });
+        bntSubmit.value = 'Access';
 
-        this.formAccess.appendChild(this.inpName);
-        this.formAccess.appendChild(this.inpAccount);
-        this.formAccess.appendChild(this.bntSubmit);
+        this.formAccess.appendChild(inpName);
+        this.formAccess.appendChild(inpAccount);
+        this.formAccess.appendChild(bntSubmit);
 
-        this.subTitle.insertAdjacentElement('afterend', this.formAccess);
+        subTitle.insertAdjacentElement('afterend', this.formAccess);
 
         this.formAccess.addEventListener('submit', event => {
             event.preventDefault();
-            this.ctrlAccess = new CtrlAccess();
-            this.chkAccess = this.ctrlAccess.setAccess(event);
-            if (this.chkAccess) new Resume();
+            const chkAccess = ctrlAccess.setAccess(event);
+            if (chkAccess) new Resume();
         });
     }
 }

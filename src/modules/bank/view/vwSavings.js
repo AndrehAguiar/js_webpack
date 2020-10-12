@@ -1,17 +1,17 @@
 import Dom from "../../../assets/js/dom";
 import Action from "./vwAction";
 
-export default class CreateSavings extends Dom {
+export default class CreateSavings {
     constructor(session) {
-        super(Dom);
+        const dom = new Dom();
         this.session = session;
 
-        this.spnIncome = this.createSpan({ id: 'spnIncome', text: 'Income: R$ ' });
+        const spnIncome = dom.createSpan({ id: 'spnIncome', text: 'Income: R$ ' });
 
-        this.content = document.querySelector('#content');
-        this.content.appendChild(this.spnIncome);
-        this.spnIncome.innerText += Number(this.session.income.toFixed(2));
+        const content = document.querySelector('#content');
+        content.appendChild(spnIncome);
+        spnIncome.innerText += Number(this.session.income.toFixed(2));
 
-        this.content.insertAdjacentElement('afterend', new Action().bankForm);
+        content.insertAdjacentElement('afterend', new Action().bankForm);
     }
 }

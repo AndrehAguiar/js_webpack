@@ -1,5 +1,10 @@
 export default class Dom {
     constructor() {
+        this.createStyle = (args) => {
+            const style = document.createElement('style');
+            style.innerText = args.text;
+            return style;
+        }
         this.createH1 = (args) => {
             const h1 = document.createElement('h1');
             h1.innerText = args.text;
@@ -61,6 +66,7 @@ export default class Dom {
             button.type = args.type;
             button.id = args.id;
             button.innerText = args.text;
+            button.className = args.class;
             return button;
         };
         this.createDL = (args) => {
@@ -87,6 +93,25 @@ export default class Dom {
             p.class = args.class;
             p.text = args.text;
             return p;
+        }
+        this.createUL = (args) => {
+            const ul = document.createElement('ul');
+            ul.id = args.id;
+            ul.className = args.class;
+            return ul;
+        }
+        this.createOL = (args) => {
+            const ol = document.createElement('ol');
+            ol.id = args.id;
+            ol.className = args.class;
+            return ol;
+        }
+        this.createLI = (args) => {
+            const li = document.createElement('li');
+            li.id = args.id;
+            li.className = args.class;
+            li.innerText = args.text;
+            return li;
         }
     }
 }

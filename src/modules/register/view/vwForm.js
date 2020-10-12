@@ -4,60 +4,61 @@ import ControlRegister from '../control/ctrlRegister';
 export default class RegiterForm {
     constructor() {
 
-        this.dom = new Dom();
+        const dom = new Dom();
 
-        this.title = this.dom.createH1({ text: 'Register Form' });
-        this.form = this.dom.createForm({ id: 'registerForm', action: '', method: 'dialog' });
+        this.form = dom.createForm({ id: 'registerForm', action: '', method: 'dialog' });
 
-        this.lblName = this.dom.createLabel({ for: 'inpName', id: 'lbName', text: 'Name:' });
-        this.inpName = this.dom.createInput({ type: 'text', id: 'inpName' });
-        this.inpName.className = 'validate';
-        this.inpName.placeholder = 'Type your name';
+        const title = dom.createH1({ text: 'Register Form' });
 
-        this.lblLastName = this.dom.createLabel({ for: 'inpLastName', id: 'lbLastName', text: 'Last Name:' });
-        this.inpLastName = this.dom.createInput({ type: 'text', id: 'inpLastName' });
-        this.inpLastName.className = 'validate';
-        this.inpLastName.placeholder = 'Type your last name';
+        const lblName = dom.createLabel({ for: 'inpName', id: 'lbName', text: 'Name:' });
+        const inpName = dom.createInput({ type: 'text', id: 'inpName' });
+        inpName.className = 'validate';
+        inpName.placeholder = 'Type your name';
 
-        this.lblCPF = this.dom.createLabel({ id: 'lblCPF', for: 'inpCPF', text: 'Type the CPF:' });
-        this.inpCPF = this.dom.createInput({ type: 'text', id: 'inpCPF' });
-        this.inpCPF.className = 'validate';
-        this.inpCPF.classList.add('inpCPF');
-        this.inpCPF.placeholder = '___.___.___-__';
-        this.inpCPF.maxLength = 14;
-        this.inpCPF.minLength = 14;
+        const lblLastName = dom.createLabel({ for: 'inpLastName', id: 'lbLastName', text: 'Last Name:' });
+        const inpLastName = dom.createInput({ type: 'text', id: 'inpLastName' });
+        inpLastName.className = 'validate';
+        inpLastName.placeholder = 'Type your last name';
 
-        this.lblUser = this.dom.createLabel({ for: 'inpLogin', id: 'lbLogin', text: 'Username:' });
-        this.inpUser = this.dom.createInput({ type: 'text', id: 'inpLogin' });
-        this.inpUser.className = 'validate';
-        this.inpUser.placeholder = 'Create a login user';
+        const lblCPF = dom.createLabel({ id: 'lblCPF', for: 'inpCPF', text: 'Type the CPF:' });
+        const inpCPF = dom.createInput({ type: 'text', id: 'inpCPF' });
+        inpCPF.className = 'validate';
+        inpCPF.classList.add('inpCPF');
+        inpCPF.placeholder = '___.___.___-__';
+        inpCPF.maxLength = 14;
+        inpCPF.minLength = 14;
 
-        this.lblPass = this.dom.createLabel({ for: 'inpPassord', id: 'lbPassword', text: 'Password:' });
-        this.inpPass = this.dom.createInput({ type: 'password', id: 'inpPassword' });
-        this.inpPass.className = 'validate';
-        this.inpPass.placeholder = 'Create a password';
+        const lblUser = dom.createLabel({ for: 'inpLogin', id: 'lbLogin', text: 'Username:' });
+        const inpUser = dom.createInput({ type: 'text', id: 'inpLogin' });
+        inpUser.className = 'validate';
+        inpUser.placeholder = 'Create a login user';
 
-        this.lblConfirmPass = this.dom.createLabel({ for: 'inpConfirmPass', id: 'lbConfirmPass', text: 'Confirm Password:' });
-        this.inpConfirmPass = this.dom.createInput({ type: 'password', id: 'inpConfirmPass' });
-        this.inpConfirmPass.className = 'validate';
-        this.inpConfirmPass.placeholder = 'Retype the password';
+        const lblPass = dom.createLabel({ for: 'inpPassord', id: 'lbPassword', text: 'Password:' });
+        const inpPass = dom.createInput({ type: 'password', id: 'inpPassword' });
+        inpPass.className = 'validate';
+        inpPass.placeholder = 'Create a password';
 
-        this.btnSubmit = this.dom.createButton({ type: 'submit', id: 'btnSubmit', text: 'Register' });
+        const lblConfirmPass = dom.createLabel({ for: 'inpConfirmPass', id: 'lbConfirmPass', text: 'Confirm Password:' });
+        const inpConfirmPass = dom.createInput({ type: 'password', id: 'inpConfirmPass' });
+        inpConfirmPass.className = 'validate';
+        inpConfirmPass.placeholder = 'Retype the password';
 
-        this.form.appendChild(this.title);
-        this.form.appendChild(this.lblName);
-        this.form.appendChild(this.inpName);
-        this.form.appendChild(this.lblLastName);
-        this.form.appendChild(this.inpLastName);
-        this.form.appendChild(this.lblCPF);
-        this.form.appendChild(this.inpCPF);
-        this.form.appendChild(this.lblUser);
-        this.form.appendChild(this.inpUser);
-        this.form.appendChild(this.lblPass);
-        this.form.appendChild(this.inpPass);
-        this.form.appendChild(this.lblConfirmPass);
-        this.form.appendChild(this.inpConfirmPass);
-        this.form.appendChild(this.btnSubmit);
+        const btnSubmit = dom.createButton({ type: 'submit', id: 'btnSubmit', text: 'Register' });
+
+        this.form.appendChild(title);
+        this.form.appendChild(lblName);
+        this.form.appendChild(inpName);
+        this.form.appendChild(lblLastName);
+        this.form.appendChild(inpLastName);
+        this.form.appendChild(lblCPF);
+        this.form.appendChild(inpCPF);
+        this.form.appendChild(lblUser);
+        this.form.appendChild(inpUser);
+        this.form.appendChild(lblPass);
+        this.form.appendChild(inpPass);
+        this.form.appendChild(lblConfirmPass);
+        this.form.appendChild(inpConfirmPass);
+        this.form.appendChild(btnSubmit);
 
         this.form.addEventListener('submit', event => {
             event.preventDefault();

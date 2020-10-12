@@ -1,17 +1,18 @@
 import Dom from "../../../assets/js/dom";
 import Action from "./vwAction";
 
-export default class CreateCurrent extends Dom {
+export default class CreateCurrent {
     constructor(session) {
-        super(Dom);
         this.session = session;
 
-        this.spnLimit = this.createSpan({ id: 'spnLimit', text: 'Limit: R$ ' });
+        const dom = new Dom();
 
-        this.content = document.querySelector('#content');
-        this.content.appendChild(this.spnLimit);
-        this.spnLimit.innerText += Number(session.limit).toFixed(2);
+        const spnLimit = dom.createSpan({ id: 'spnLimit', text: 'Limit: R$ ' });
 
-        this.content.insertAdjacentElement('afterend', new Action().bankForm);
+        const content = document.querySelector('#content');
+        content.appendChild(spnLimit);
+        spnLimit.innerText += Number(this.session.limit).toFixed(2);
+
+        content.insertAdjacentElement('afterend', new Action().bankForm);
     }
 }

@@ -1,34 +1,34 @@
 import Dom from '../../../assets/js/dom';
 import ctrlCPF from '../control/ctrlCPF';
 
-export default class CpfForm extends Dom {
+export default class CpfForm {
     constructor() {
 
-        super(Dom);
+        const dom = new Dom();
 
-        this.title = this.createH1({ text: 'Valid CPF Generator' });
+        this.form = dom.createForm({ id: 'formCPF', method: 'dialog' });
 
-        this.form = this.createForm({ id: 'formCPF', method: 'dialog' });
+        const title = dom.createH1({ text: 'Valid CPF Generator' });
 
-        this.label = this.createLabel({ id: 'lblCPF', for: 'inpCPF', text: 'Type the CPF to check if is valid' })
-        this.input = this.createInput({ type: 'text', id: 'inpCPF' });
-        this.input.placeholder = '___.___.___-__';
-        this.input.maxLength = 14;
-        this.input.minLength = 14;
+        const label = dom.createLabel({ id: 'lblCPF', for: 'inpCPF', text: 'Type the CPF to check if is valid' })
+        const input = dom.createInput({ type: 'text', id: 'inpCPF' });
+        input.placeholder = '___.___.___-__';
+        input.maxLength = 14;
+        input.minLength = 14;
 
-        this.span = this.createSpan({ id: 'spnValidate', text: '' });
+        const span = dom.createSpan({ id: 'spnValidate', text: '' });
 
-        this.button = this.createButton({ type: 'submit', id: 'btnSubmit', text: 'Generate' });
+        const button = dom.createButton({ type: 'submit', id: 'btnSubmit', text: 'Generate' });
 
 
-        this.form.appendChild(this.title);
-        this.form.appendChild(this.label);
-        this.form.appendChild(this.input);
-        this.form.appendChild(this.span);
-        this.form.appendChild(this.button);
+        this.form.appendChild(title);
+        this.form.appendChild(label);
+        this.form.appendChild(input);
+        this.form.appendChild(span);
+        this.form.appendChild(button);
 
         this.form.addEventListener('submit', event => {
-            this.input.value = ctrlCPF(event);
+            input.value = ctrlCPF(event);
         });
 
         this.form.addEventListener('keyup', event => {

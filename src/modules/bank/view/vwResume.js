@@ -1,58 +1,57 @@
 import Dom from '../../../assets/js/dom';
 import CtrlResume from '../control/CtrlResume';
 
-export default class ResumeAccount extends Dom {
+export default class ResumeAccount {
     constructor() {
 
-        super(Dom);
+        const dom = new Dom();
 
-        this.subtitle = document.querySelector('#subTitle');
+        const subtitle = document.querySelector('#subTitle');
 
-        this.formOptAccount = this.createForm({ id: 'optAccount', action: '', method: 'dialog' });
+        const formOptAccount = dom.createForm({ id: 'optAccount', action: '', method: 'dialog' });
 
-        this.dvBarOption = this.createDiv({ id: 'barAccount', text: '' });
+        const dvBarOption = dom.createDiv({ id: 'barAccount', text: '' });
 
-        this.labelCurrent = this.createLabel({ id: 'inpCurrent', text: 'Current Account', for: 'inpCurrent' });
-        this.inpCurrent = this.createInput({ type: 'radio', id: 'inpCurrent' });
-        this.inpCurrent.name = 'optAccount';
-        this.inpCurrent.value = 'current';
+        const labelCurrent = dom.createLabel({ id: 'inpCurrent', text: 'Current Account', for: 'inpCurrent' });
+        const inpCurrent = dom.createInput({ type: 'radio', id: 'inpCurrent' });
+        inpCurrent.name = 'optAccount';
+        inpCurrent.value = 'current';
 
-        this.labelSavings = this.createLabel({ id: 'inpSavings', text: 'Savings Account', for: 'inpSavings' });
-        this.inpSavings = this.createInput({ type: 'radio', id: 'inpSavings' });
-        this.inpSavings.name = 'optAccount';
-        this.inpSavings.value = 'savings';
+        const labelSavings = dom.createLabel({ id: 'inpSavings', text: 'Savings Account', for: 'inpSavings' });
+        const inpSavings = dom.createInput({ type: 'radio', id: 'inpSavings' });
+        inpSavings.name = 'optAccount';
+        inpSavings.value = 'savings';
 
-        this.content = this.createDiv({ id: 'content', text: '' });
-        this.balance = this.createSpan({ id: 'spnBalance', text: 'Balance: R$ ' });
+        const content = dom.createDiv({ id: 'content', text: '' });
+        const balance = dom.createSpan({ id: 'spnBalance', text: 'Balance: R$ ' });
 
-        this.formOptAccount.appendChild(this.dvBarOption);
+        formOptAccount.appendChild(dvBarOption);
 
-        this.dvBarOption.appendChild(this.labelCurrent);
-        this.labelCurrent.appendChild(this.inpCurrent);
+        dvBarOption.appendChild(labelCurrent);
+        labelCurrent.appendChild(inpCurrent);
 
-        this.dvBarOption.appendChild(this.labelSavings);
-        this.labelSavings.appendChild(this.inpSavings);
+        dvBarOption.appendChild(labelSavings);
+        labelSavings.appendChild(inpSavings);
 
-        this.content.appendChild(this.balance);
+        content.appendChild(balance);
 
-        this.subtitle.insertAdjacentElement('afterend', this.formOptAccount);
-        this.formOptAccount.insertAdjacentElement('afterend', this.content);
+        subtitle.insertAdjacentElement('afterend', formOptAccount);
+        formOptAccount.insertAdjacentElement('afterend', content);
 
-        this.ctrlResume = new CtrlResume();
-        this.session = this.ctrlResume.resumeAccount();
+        const ctrlResume = new CtrlResume();
+        const session = ctrlResume.resumeAccount();
 
-        this.subtitle.innerText = `Olá, ${this.session.Account.name}!`;
+        subtitle.innerText = `Olá, ${session.Account.name}!`;
 
-        this.h3 = this.createH3({ text: `Acc: ${this.session.Account.number}` });
-        this.h3.id = 'numAccount';
-        this.subtitle.insertAdjacentElement('afterend', this.h3);
+        const h3 = dom.createH3({ text: `Acc: ${session.Account.number}` });
+        h3.id = 'numAccount';
+        subtitle.insertAdjacentElement('afterend', h3);
 
-        this.balance.innerText += Number(this.session.Account.balance).toFixed(2);
+        balance.innerText += Number(session.Account.balance).toFixed(2);
 
-        this.formOptAccount.addEventListener('click', event => {
+        formOptAccount.addEventListener('click', event => {
             event.preventDefault();
-            this.ctrlResume = new CtrlResume();
-            this.ctrlResume.resumeAccount(event);
+            ctrlResume.resumeAccount(event);
         });
     }
 }

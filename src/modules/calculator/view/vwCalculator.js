@@ -1,21 +1,25 @@
 import Dom from '../../../assets/js/dom';
 import ControlClick from '../control/ctrlClick';
 import ControlKey from '../control/ctrlKey';
+import Style from '../assets/style';
 
-export default class Display extends Dom {
+export default class Display {
     constructor() {
-        super(Dom);
 
-        this.dvGrid = this.createDiv({ id: 'grdCalculator', text: '', class: 'grdCalculator' });
+        const dom = new Dom();
 
-        this.h1 = this.createH1({ text: 'Calculator' });
-        this.span = this.createSpan({ id: 'spnResult', text: '', class: 'formula' });
+        const css = new Style();
+        this.style = dom.createStyle({ text: css.style });
+        this.dvGrid = dom.createDiv({ id: 'grdCalculator', text: '', class: 'grdCalculator' });
 
-        this.inpDisplay = this.createInput({ type: 'text', id: 'display', class: 'display' });
-        this.inpDisplay.readOnly = 'readonly';
-        this.inpDisplay.value = 0;
+        const h1 = dom.createH1({ text: 'Calculator' });
+        const span = dom.createSpan({ id: 'spnResult', text: '', class: 'formula' });
 
-        this.itensGrid = [
+        const inpDisplay = dom.createInput({ type: 'text', id: 'display', class: 'display' });
+        inpDisplay.readOnly = 'readonly';
+        inpDisplay.value = 0;
+
+        const itensGrid = [
             { 'itemClass': `func clear`, 'text': 'C' },
             { 'itemClass': 'func lpar', 'text': '(' },
             { 'itemClass': 'func rpar', 'text': ')' },
@@ -38,34 +42,34 @@ export default class Display extends Dom {
             { 'itemClass': 'func equal', 'text': '=' },
         ]
 
-        this.dvGrid.appendChild(this.h1);
-        this.dvGrid.appendChild(this.span);
-        this.dvGrid.appendChild(this.inpDisplay);
+        this.dvGrid.appendChild(h1);
+        this.dvGrid.appendChild(span);
+        this.dvGrid.appendChild(inpDisplay);
 
-        this.itensGrid.forEach(element => {
+        itensGrid.forEach(element => {
 
             let item = element.itemClass;
-            item = this.createDiv({ id: 'item', text: element.text });
+            item = dom.createDiv({ id: 'item', text: element.text });
             item.classList = (element.itemClass);
             this.dvGrid.appendChild(item);
 
         });
 
-        this.inpResult = this.createInput({ type: 'hidden', id: 'resultState', class: 'result' });
-        this.inpResult.value = false;
+        const inpResult = dom.createInput({ type: 'hidden', id: 'resultState', class: 'result' });
+        inpResult.value = false;
 
-        this.dvGrid.appendChild(this.inpResult);
+        this.dvGrid.appendChild(inpResult);
 
         this.dvGrid.addEventListener('click', event => {
             event.preventDefault();
-            this.control = new ControlClick(event);
-            this.control.clickButton();
+            const control = new ControlClick(event);
+            control.clickButton();
         });
 
         document.addEventListener('keydown', event => {
             event.preventDefault();
-            this.control = new ControlKey(event);
-            this.control.pressKey(event);
+            const control = new ControlKey(event);
+            control.pressKey();
         });
     }
 }

@@ -1,9 +1,13 @@
 import Dom from '../../../assets/js/dom';
 import ControlIMC from '../control/ctrlIMC';
+import Style from '../assets/style';
 
 export default class ImcForm extends Dom {
     constructor() {
         super(Dom);
+
+        this.css = new Style();
+        this.style = this.createStyle({ text: this.css.style });
 
         this.description = [
             `Menos que 18,5`,
@@ -23,20 +27,20 @@ export default class ImcForm extends Dom {
             `Obesidade grau 3`
         ]
 
-        this.title = this.createH1({ text: 'IMC Table' });
         this.dvTable = this.createDiv({ id: 'flexCol', text: '', class: 'flexCol' });
+        const title = this.createH1({ text: 'IMC Table' });
 
-        this.dvRowList = this.createDiv({ id: 'flexRow', text: '', class: 'flexRow' });
+        const dvRowList = this.createDiv({ id: 'flexRow', text: '', class: 'flexRow' });
 
-        this.dlIMC = this.createDL({ id: 'imcTable', text: '' });
-        this.dtIMC = this.createDT({ id: 'imcTitle', text: 'IMC' });
-        this.dlIMC.appendChild(this.dtIMC);
+        const dlIMC = this.createDL({ id: 'imcTable', text: '' });
+        const dtIMC = this.createDT({ id: 'imcTitle', text: 'IMC' });
+        dlIMC.appendChild(this.dtIMC);
 
-        this.dlResult = this.createDL({ id: 'resultTable', text: '' });
-        this.dtResult = this.createDT({ id: 'resultTitle', text: 'Resultado' });
-        this.dlResult.appendChild(this.dtResult);
+        const dlResult = this.createDL({ id: 'resultTable', text: '' });
+        const dtResult = this.createDT({ id: 'resultTitle', text: 'Resultado' });
+        dlResult.appendChild(this.dtResult);
 
-        this.setTable = (val, idx) => {
+        const setTable = (val, idx) => {
             let dd = this.createDD({ id: `${idx}`, text: `${val}` });
             this.dlIMC.appendChild(dd);
 
@@ -47,56 +51,56 @@ export default class ImcForm extends Dom {
         this.description.forEach(this.setTable);
 
         this.dvForm = this.createDiv({ id: 'formIMC', class: 'flexCol', text: '' });
-        this.form = this.createForm({ id: 'calculator', action: '', method: 'dialog' });
-        this.subtitle = this.createH2({ id: 'subtitle', text: 'Calcule seu IMC' });
+        const form = this.createForm({ id: 'calculator', action: '', method: 'dialog' });
+        const subtitle = this.createH2({ id: 'subtitle', text: 'Calcule seu IMC' });
 
-        this.dvFormInputs = this.createDiv({ id: 'flexRow', text: '', class: 'flexRow' });
+        const dvFormInputs = this.createDiv({ id: 'flexRow', text: '', class: 'flexRow' });
 
-        this.spInpPeso = this.createSpan({ id: 'spPeso', text: '', clas: 'spPeso' });
-        this.lbPeso = this.createLabel({ id: 'lbPeso', for: 'peso', text: 'Peso(kg):' });
-        this.inpPeso = this.createInput({ type: 'number', id: 'peso' });
-        this.inpPeso.placeholder = '0.00';
-        this.inpPeso.name = 'peso';
-        this.inpPeso.required = true;
-        this.inpPeso.step = '0.01';
+        const spInpPeso = this.createSpan({ id: 'spPeso', text: '', clas: 'spPeso' });
+        const lbPeso = this.createLabel({ id: 'lbPeso', for: 'peso', text: 'Peso(kg):' });
+        const inpPeso = this.createInput({ type: 'number', id: 'peso' });
+        inpPeso.placeholder = '0.00';
+        inpPeso.name = 'peso';
+        inpPeso.required = true;
+        inpPeso.step = '0.01';
 
-        this.spInpAltura = this.createSpan({ id: 'spAltura', text: '', class: 'spAltura' });
-        this.lbAltura = this.createLabel({ id: 'lbAltura', for: 'altura', text: 'Altura(m):' });
-        this.inpAltura = this.createInput({ type: 'number', id: 'altura' });
-        this.inpAltura.placeholder = '0.00';
-        this.inpAltura.name = 'peso';
-        this.inpAltura.required = true;
-        this.inpAltura.step = '0.01';
+        const spInpAltura = this.createSpan({ id: 'spAltura', text: '', class: 'spAltura' });
+        const lbAltura = this.createLabel({ id: 'lbAltura', for: 'altura', text: 'Altura(m):' });
+        const inpAltura = this.createInput({ type: 'number', id: 'altura' });
+        inpAltura.placeholder = '0.00';
+        inpAltura.name = 'peso';
+        inpAltura.required = true;
+        inpAltura.step = '0.01';
 
-        this.spResult = this.createSpan({ id: 'result', text: '', class: 'result' });
-        this.pResult = this.createP({ id: 'result', text: '', class: 'result' });
+        const spResult = this.createSpan({ id: 'result', text: '', class: 'result' });
+        const pResult = this.createP({ id: 'result', text: '', class: 'result' });
 
-        this.btnSubmit = this.createButton({ type: 'submit', id: 'btnSubmit', text: 'Calcular' });
+        const btnSubmit = this.createButton({ type: 'submit', id: 'btnSubmit', text: 'Calcular' });
 
-        this.dvTable.appendChild(this.title);
-        this.dvTable.appendChild(this.dvRowList);
-        this.dvRowList.appendChild(this.dlIMC);
-        this.dvRowList.appendChild(this.dlResult);
+        this.dvTable.appendChild(title);
+        this.dvTable.appendChild(dvRowList);
+        dvRowList.appendChild(dlIMC);
+        dvRowList.appendChild(dlResult);
 
-        this.dvForm.appendChild(this.form);
+        this.dvForm.appendChild(form);
 
-        this.form.appendChild(this.subtitle);
-        this.form.appendChild(this.dvFormInputs);
-        this.dvFormInputs.appendChild(this.spInpPeso);
-        this.spInpPeso.appendChild(this.lbPeso);
-        this.spInpPeso.appendChild(this.inpPeso);
+        form.appendChild(subtitle);
+        form.appendChild(dvFormInputs);
+        dvFormInputs.appendChild(spInpPeso);
+        spInpPeso.appendChild(lbPeso);
+        spInpPeso.appendChild(inpPeso);
 
-        this.form.appendChild(this.dvFormInputs);
-        this.dvFormInputs.appendChild(this.spInpAltura);
-        this.spInpAltura.appendChild(this.lbAltura);
-        this.spInpAltura.appendChild(this.inpAltura);
+        form.appendChild(dvFormInputs);
+        dvFormInputs.appendChild(spInpAltura);
+        spInpAltura.appendChild(lbAltura);
+        spInpAltura.appendChild(inpAltura);
 
-        this.dvForm.appendChild(this.spResult);
-        this.spResult.appendChild(this.pResult);
+        this.dvForm.appendChild(spResult);
+        spResult.appendChild(pResult);
 
-        this.form.appendChild(this.btnSubmit);
+        form.appendChild(btnSubmit);
 
-        this.form.addEventListener('submit', event => {
+        form.addEventListener('submit', event => {
             event.preventDefault();
             const imc = new ControlIMC(event);
             imc.calcular();

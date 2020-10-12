@@ -1,3 +1,10 @@
+import Dom from '../../assets/js/dom';
+import Style from './assets/style';
+
+const dom = new Dom();
+const css = new Style();
+const style = dom.createStyle({ text: css.style });
+
 const Home = `<div class="course-overview--container--2OKKD" data-purpose="dashboard-overview-container">
     <div class="course-overview--heading--290FL" data-purpose="course-headline">
         <div class="font-heading-lg mb-space-sm">About this course</div>
@@ -234,4 +241,4 @@ const Home = `<div class="course-overview--container--2OKKD" data-purpose="dashb
     </div>
 </div>
 </section>`;
-export { Home };
+export { Home, style };

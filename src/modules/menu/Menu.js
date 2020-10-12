@@ -1,5 +1,13 @@
 import {
-    getCPF, getHome, getPassword, getBank, getCalculator, getRegister, getIMC
+    getCPF,
+    getHome,
+    getPassword,
+    getBank,
+    getCalculator,
+    getRegister,
+    getIMC,
+    getTimer,
+    getTask
 } from '../../assets/js/main';
 import Dom from '../../assets/js/dom';
 
@@ -11,6 +19,8 @@ const dom = new Dom();
 
 const menu = {
     home: getHome,
+    timer: getTimer,
+    task: getTask,
     imc: getIMC,
     calculator: getCalculator,
     cpf: getCPF,
