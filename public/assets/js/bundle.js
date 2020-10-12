@@ -1477,9 +1477,9 @@ var Main = /*#__PURE__*/function () {
 
     _classCallCheck(this, Main);
 
-    this.path = window.location.pathname;
-    this.urlPath = "/js_webpack/public"; // test
-    //this.urlPath = "/public"; // dev
+    this.path = window.location.pathname; //this.urlPath = "/js_webpack/public"; // test
+
+    this.urlPath = "/public"; // dev
 
     this.head = document.querySelector('head');
     this.container = document.querySelector('.container');
